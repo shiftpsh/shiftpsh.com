@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { sizeUnder } from '../utils/layout'
+import { sizeUnder } from '../utils/Layout'
 
 const TopNavigationContainer = styled.nav`
   position: fixed;
