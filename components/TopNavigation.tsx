@@ -51,7 +51,7 @@ const TopNavigation: React.FC = (props) => {
         </a>
       </TopLinkItem>
       <a href="#">
-        <Logo src="/shiftpsh-logo-2019.svg" alt="shiftpsh Logo" />
+        <Logo src="/res/shiftpsh-logo-2019.svg" alt="shiftpsh Logo" />
       </a>
     </TopNavigationContainer>
   )
