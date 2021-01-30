@@ -24,7 +24,6 @@ const GlobalStyle = createGlobalStyle<{ theme: ShiftTheme }>`
     overflow-x: hidden;
     font-size: calc(10px + 0.7vmin);
     letter-spacing: -0.05ch;
-    line-height: 1.5;
   }
   
   /* TODO move to ShiftTheme */
@@ -36,6 +35,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ShiftTheme }>`
   body {
     width: 100%;
     overflow-x: hidden;
+    line-height: 1.5;
   }
   
   b {

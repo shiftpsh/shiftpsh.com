@@ -1,13 +1,14 @@
 import styled from 'styled-components'
 import { sizeUnder } from '../utils/Layout'
+import ContentPadding from '../layouts/ContentPadding'
 
-const TopNavigationContainer = styled.nav`
+const TopNavigationContainer = styled(ContentPadding)`
   position: fixed;
   display: flex;
   align-items: center;
   gap: 32px;
   top: 48px;
-  right: 64px;
+  right: 0;
   height: 48px;
   z-index: 1000;
 `
@@ -22,7 +23,7 @@ const TopLinkItem = styled.div`
   text-transform: uppercase;
   letter-spacing: 0.2ch;
   font-weight: 600;
-  & a {
+  & a, & a:link, & a:visited {
     color: inherit;
     text-decoration: none;
   }
@@ -33,7 +34,7 @@ const TopLinkItem = styled.div`
 
 const TopNavigation: React.FC = (props) => {
   return (
-    <TopNavigationContainer>
+    <TopNavigationContainer as="nav">
       <TopLinkItem>
         <a href="https://blog.shift.moe" rel="noopener noreferrer">
           Blog
