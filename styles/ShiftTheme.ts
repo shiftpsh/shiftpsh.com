@@ -53,5 +53,9 @@ const Light: ShiftTheme = {
   backgroundColor: White,
 }
 
+const castShadow = (theme: ShiftTheme, size: number) => {
+  return `0 ${size}px ${size * 2}px ${theme.textColor.alpha(0.15).toString()}`
+}
+
 export type { ShiftTheme }
-export { Breakpoints, Light }
+export { Breakpoints, Light, castShadow }
