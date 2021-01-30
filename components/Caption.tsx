@@ -24,6 +24,7 @@ const CaptionForeground = styled.div`
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
+  letter-spacing: -0.1ch;
   & ::selection {
     color: ${({ theme }) => theme.textColor.toString()};
     background: ${({ theme }) => theme.textColorInverted.alpha(0.5).toString()};
