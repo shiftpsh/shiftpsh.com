@@ -21,13 +21,12 @@ const TopLinkItem = styled.div`
   display: flex;
   text-transform: uppercase;
   letter-spacing: 0.2ch;
-  font-size: smaller;
   font-weight: 600;
   & a {
     color: inherit;
     text-decoration: none;
   }
-  ${sizeUnder.md`
+  ${sizeUnder.sm`
     display: none;
   `}
 `
