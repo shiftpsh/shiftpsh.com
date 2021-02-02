@@ -101,9 +101,9 @@ const ShiftAsADeveloper: React.FC = () => {
                 융합소프트웨어전공 학생들을 대상으로 기업 코딩 테스트 대비
                 알고리즘 문제해결 전략에 대한 강의를 진행했습니다.
               </p>
-              <Space h="2em" />
             </Collapse>
           </ProfileList>
+          <Space h="2em" />
           <Subsubcaption>Education</Subsubcaption>
           <ProfileList>
             <li>
