@@ -47,9 +47,9 @@ interface Props {
 const Caption: React.FC<Props> = (props) => {
   return (
     <>
-      {props.content.split('\n').map((s) => (
+      {props.content.split('\n').map((s, i) => (
         <>
-          <CaptionContainer>
+          <CaptionContainer key={i}>
             <CaptionBackground />
             <CaptionForeground>{s}</CaptionForeground>
           </CaptionContainer>

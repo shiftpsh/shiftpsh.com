@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import { sizeUnder } from '../utils/Layout'
 import ContentPadding from '../layouts/ContentPadding'
+import { sizeUnder } from '../utils/Layout'
 
 const TopNavigationContainer = styled(ContentPadding)`
   position: fixed;
@@ -41,13 +41,13 @@ const TopNavigation: React.FC = (props) => {
         </a>
       </TopLinkItem>
       <TopLinkItem>
-        <a href="https://github.com/shiftpsh" rel="noopener noreferrer">
-          Github
+        <a href="https://twitter.com/shiftpsh" rel="noopener noreferrer">
+          Twitter
         </a>
       </TopLinkItem>
       <TopLinkItem>
-        <a href="https://twitter.com/shiftpsh" rel="noopener noreferrer">
-          Twitter
+        <a href="https://github.com/shiftpsh" rel="noopener noreferrer">
+          Github
         </a>
       </TopLinkItem>
       <a href="#">
