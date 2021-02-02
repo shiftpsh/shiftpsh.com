@@ -47,9 +47,19 @@ const GlobalStyle = createGlobalStyle<{ theme: ShiftTheme }>`
   }
   
   a:link, a:visited {
-    color: ${({ theme }) => theme.shiftPink.toString()};
+    /* color: ${({ theme }) => theme.shiftPink.toString()}; */
+    color: inherit;
+  }
+
+  sup {
+    vertical-align: top;
+    font-size: 0.6em;
   }
   
+  sub {
+    vertical-align: bottom;
+    font-size: 0.6em;
+  }
 `
 
 export default GlobalStyle

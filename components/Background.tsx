@@ -3,10 +3,12 @@ import styled, { useTheme } from 'styled-components'
 import { ShiftTheme } from '../styles/ShiftTheme'
 
 const BackgroundContainer = styled.div`
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
 `
 
 const BackgroundSvg = styled.svg`
