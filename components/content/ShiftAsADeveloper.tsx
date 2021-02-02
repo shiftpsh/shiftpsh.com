@@ -3,6 +3,7 @@ import ContentPadding from '../../layouts/ContentPadding'
 import Article from '../Article'
 import Button from '../Button'
 import Caption from '../Caption'
+import Collapse from '../Collapse'
 import Descrption from '../Descrption'
 import OuterLink from '../OuterLink'
 import ProfileList from '../ProfileList'
@@ -50,6 +51,9 @@ const ShiftAsADeveloper: React.FC = () => {
             </OuterLink>{' '}
             소프트웨어 엔지니어<Descrption>, 2020. 6 &ndash;</Descrption>
           </li>
+          <Collapse shown={state.detailsShown} as="li">
+            테스트
+          </Collapse>
           <li>
             <OuterLink href="https://hyperconnect.com/">
               <b>HYPERCONNECT</b>
