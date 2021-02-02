@@ -2,6 +2,7 @@ import Color from 'color'
 
 interface ShiftTheme {
   fontFamily: string
+  monospaceFontFamily: string
   shiftPink: Color
   shiftPinkShade: Color
   shiftYellow: Color
@@ -27,6 +28,14 @@ const GothamNotoFontFamily = [
   .map((f) => (f.includes(' ') ? `"${f}"` : f))
   .join(',')
 
+const GothamNotoMonospaceFontFamily = [
+  'Gotham SSm Tabular A',
+  'Gotham SSm Tabular B',
+  'monospace',
+]
+  .map((f) => (f.includes(' ') ? `"${f}"` : f))
+  .join(',')
+
 const White = Color.rgb(255, 255, 255)
 const ShiftPink = Color.rgb(255, 59, 87)
 const ShiftPinkShade = Color.rgb(244, 47, 85)
@@ -44,6 +53,7 @@ const Breakpoints = {
 
 const Light: ShiftTheme = {
   fontFamily: GothamNotoFontFamily,
+  monospaceFontFamily: GothamNotoMonospaceFontFamily,
   shiftPink: ShiftPink,
   shiftPinkShade: ShiftPinkShade,
   shiftYellow: ShiftYellow,
@@ -59,3 +69,4 @@ const castShadow = (theme: ShiftTheme, size: number) => {
 
 export type { ShiftTheme }
 export { Breakpoints, Light, castShadow }
+

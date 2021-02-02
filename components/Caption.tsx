@@ -1,3 +1,4 @@
+import React from 'react'
 import styled from 'styled-components'
 import { sizeUnder } from '../utils/Layout'
 
@@ -48,13 +49,13 @@ const Caption: React.FC<Props> = (props) => {
   return (
     <>
       {props.content.split('\n').map((s, i) => (
-        <>
-          <CaptionContainer key={i}>
+        <React.Fragment key={i}>
+          <CaptionContainer>
             <CaptionBackground />
             <CaptionForeground>{s}</CaptionForeground>
           </CaptionContainer>
           <br />
-        </>
+        </React.Fragment>
       ))}
     </>
   )
