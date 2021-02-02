@@ -61,7 +61,7 @@ const ShiftAsADeveloper: React.FC = () => {
                     주 업무입니다.
                   </li>
                 </ProfileList>
-                <Space h="1em" />
+                <Space h="2em" />
               </Collapse>
             </li>
             <li>
@@ -88,7 +88,7 @@ const ShiftAsADeveloper: React.FC = () => {
                   </li>
                   <li>JUnit과 Robolectric을 사용해 테스트를 작성했습니다.</li>
                 </ProfileList>
-                <Space h="1em" />
+                <Space h="2em" />
               </Collapse>
             </li>
             <Collapse shown={state.detailsShown} as="li">
@@ -101,7 +101,7 @@ const ShiftAsADeveloper: React.FC = () => {
                 융합소프트웨어전공 학생들을 대상으로 기업 코딩 테스트 대비
                 알고리즘 문제해결 전략에 대한 강의를 진행했습니다.
               </p>
-              <Space h="1em" />
+              <Space h="2em" />
             </Collapse>
           </ProfileList>
           <Subsubcaption>Education</Subsubcaption>
@@ -116,6 +116,7 @@ const ShiftAsADeveloper: React.FC = () => {
               </Collapse>
             </li>
           </ProfileList>
+          <Space h="2em" />
           <Subsubcaption>Honors and Awards</Subsubcaption>
           <ProfileList>
             <li>
@@ -154,6 +155,7 @@ const ShiftAsADeveloper: React.FC = () => {
                   <Collapse shown={state.detailsShown}>
                     <p>팀 Redshift(박수현, 박건, 이준석)로 출전했습니다.</p>
                   </Collapse>
+                  <Space h="2em" />
                 </li>
               </ProfileList>
             </li>
@@ -176,6 +178,9 @@ const ShiftAsADeveloper: React.FC = () => {
                   <b>2019</b> Finalist<Descrption>, 2020. 7. 30</Descrption>
                 </li>
               </ProfileList>
+              <Collapse shown={state.detailsShown}>
+                <Space h="2em" />
+              </Collapse>
             </li>
             <Collapse shown={state.detailsShown} as="li">
               <OuterLink href="https://acm.sogang.ac.kr/spc">
@@ -187,6 +192,7 @@ const ShiftAsADeveloper: React.FC = () => {
                   <Descrption>, 2018. 11. 23</Descrption>
                 </li>
               </ProfileList>
+              <Space h="2em" />
             </Collapse>
             <Collapse shown={state.detailsShown} as="li">
               <b>서강대학교 공학부 Dean's List</b>
@@ -195,6 +201,7 @@ const ShiftAsADeveloper: React.FC = () => {
               </ProfileList>
             </Collapse>
           </ProfileList>
+          <Space h="2em" />
           <Subsubcaption>Other Experiences</Subsubcaption>
           <ProfileList>
             <li>
@@ -219,7 +226,7 @@ const ShiftAsADeveloper: React.FC = () => {
                   </OuterLink>
                   의 스폰서를 받고 있습니다.
                 </p>
-                <Space h="1em" />
+                <Space h="2em" />
               </Collapse>
             </li>
             <li>
@@ -232,7 +239,7 @@ const ShiftAsADeveloper: React.FC = () => {
                   전국 24개교의 프로그래밍 대회 동아리 연합입니다. 동아리 연합
                   대회 UCPC를 총괄했습니다.
                 </p>
-                <Space h="1em" />
+                <Space h="2em" />
               </Collapse>
             </li>
             <li>
@@ -245,7 +252,7 @@ const ShiftAsADeveloper: React.FC = () => {
                   서강대학교의 알고리즘 문제해결 동아리입니다. 알고리즘 스터디를
                   진행하고, 학회 전반을 운영했습니다.
                 </p>
-                <Space h="1em" />
+                <Space h="2em" />
               </Collapse>
             </li>
             <li>
@@ -259,24 +266,44 @@ const ShiftAsADeveloper: React.FC = () => {
                   활동하는 유저 중 상위 {numberFormat((2664 / 99392) * 100, 2)}
                   %에 해당됩니다.
                 </p>
-                <Space h="1em" />
+                <Space h="2em" />
               </Collapse>
             </li>
             <li>
               프로그래밍 대회 다수 출제 및 검수
               <Collapse shown={state.detailsShown}>
                 <ProfileList>
-                    <li><b>UCPC 2020</b> 전국 대학생 프로그래밍 대회 동아리 연합 대회 &mdash; 운영 및 출제 총괄</li>
-                    <li><b>SPC 2019</b> 서강대학교 프로그래밍 대회 &mdash; 운영 및 출제 총괄</li>
-                    <li><b>SUAPC 2021w</b> 신촌지역 대학생 프로그래밍 대회 동아리 연합 대회 &mdash; 출제</li>
-                    <li><b>SUAPC 2020</b> 신촌지역 대학생 프로그래밍 대회 동아리 연합 대회 &mdash; 출제</li>
-                    <li><b>SNUPC 2020</b> 서울대학교 프로그래밍 경시대회 &mdash; 검수</li>
-                    <li><b>SPC 2020</b> 서강대학교 프로그래밍 대회 &mdash; 검수</li>
-                    <li><b>2020 Uni-CODE</b> UNIST 프로그래밍 대회 &mdash; 검수</li>
+                  <li>
+                    <b>UCPC 2020</b> 전국 대학생 프로그래밍 대회 동아리 연합
+                    대회 &mdash; 운영 및 출제 총괄
+                  </li>
+                  <li>
+                    <b>SPC 2019</b> 서강대학교 프로그래밍 대회 &mdash; 운영 및
+                    출제 총괄
+                  </li>
+                  <li>
+                    <b>SUAPC 2021w</b> 신촌지역 대학생 프로그래밍 대회 동아리
+                    연합 대회 &mdash; 출제
+                  </li>
+                  <li>
+                    <b>SUAPC 2020</b> 신촌지역 대학생 프로그래밍 대회 동아리
+                    연합 대회 &mdash; 출제
+                  </li>
+                  <li>
+                    <b>SNUPC 2020</b> 서울대학교 프로그래밍 경시대회 &mdash;
+                    검수
+                  </li>
+                  <li>
+                    <b>SPC 2020</b> 서강대학교 프로그래밍 대회 &mdash; 검수
+                  </li>
+                  <li>
+                    <b>2020 Uni-CODE</b> UNIST 프로그래밍 대회 &mdash; 검수
+                  </li>
                 </ProfileList>
               </Collapse>
             </li>
           </ProfileList>
+          <Space h="2em" />
         </Article>
       </ContentPadding>
     </>
