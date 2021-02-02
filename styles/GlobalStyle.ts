@@ -34,7 +34,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ShiftTheme }>`
   
   body {
     width: 100%;
-    overflow-x: hidden;
+    overflow: hidden;
     line-height: 1.5;
   }
   
@@ -49,6 +49,13 @@ const GlobalStyle = createGlobalStyle<{ theme: ShiftTheme }>`
   a:link, a:visited {
     /* color: ${({ theme }) => theme.shiftPink.toString()}; */
     color: inherit;
+    text-decoration: underline dashed 1px;
+    transition: background .3s ease;
+    &:hover {
+      background: ${({ theme }) =>
+        theme.shiftPink.mix(theme.backgroundColor, 0.5).toString()};
+      text-decoration: underline solid 1px;
+    }
   }
 
   sup {

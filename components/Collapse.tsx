@@ -63,6 +63,7 @@ const Collapse: React.FC<Props> = (props) => {
         transformOrigin: 'top',
         opacity: state.prevShown || props.shown ? 1 : 0,
         transition: `height .3s ease, opacity .3s ease`,
+        pointerEvents: state.prevShown || props.shown ? 'all' : 'none',
       }}
     >
       <div ref={contentsRef}>{props.children}</div>
