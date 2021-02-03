@@ -36,6 +36,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ShiftTheme }>`
     width: 100%;
     overflow: hidden;
     line-height: 1.5;
+    background: ${({ theme }) => theme.backgroundColor.toString()};
   }
   
   b {

@@ -7,6 +7,7 @@ const ButtonContainer = styled.button`
   padding: 8px 16px;
   min-height: 48px;
   transition: background 0.3s ease, color 0.3s ease;
+  color: inherit;
   &:hover {
     background: ${({ theme }) => theme.textColor};
     color: ${({ theme }) => theme.textColorInverted};

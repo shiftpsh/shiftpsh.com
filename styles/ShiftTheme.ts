@@ -63,10 +63,22 @@ const Light: ShiftTheme = {
   backgroundColor: White,
 }
 
+const Dark: ShiftTheme = {
+  fontFamily: GothamNotoFontFamily,
+  monospaceFontFamily: GothamNotoMonospaceFontFamily,
+  shiftPink: ShiftPink,
+  shiftPinkShade: ShiftPinkShade,
+  shiftYellow: ShiftYellow,
+  shiftYellowShade: ShiftYellowShade,
+  textColor: White,
+  textColorInverted: ShiftBlack,
+  backgroundColor: ShiftBlack,
+}
+
 const castShadow = (theme: ShiftTheme, size: number) => {
   return `0 ${size}px ${size * 2}px ${theme.textColor.alpha(0.15).toString()}`
 }
 
 export type { ShiftTheme }
-export { Breakpoints, Light, castShadow }
+export { Breakpoints, Light, Dark, castShadow }
 

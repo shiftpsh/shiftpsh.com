@@ -96,7 +96,7 @@ const Background: React.FC = (props) => {
             id="svg-main-path"
             transform="translate(0 80) rotate(0 420 270)"
             d="M770.2 332.3L465.5 27.6A93.8 93.8 0 0 0 407.9.4q-4.5-.4-9-.4a94 94 0 0 0-66.6 27.6L27.6 332.3a94.2 94.2 0 0 0 0 133.2 94.2 94.2 0 0 0 133.2 0l238-238.2L579.6 408l57.5 57.5a94.2 94.2 0 0 0 133.2-133.2z"
-            fill={theme.textColor.alpha(0.1).toString()}
+            fill={theme.backgroundColor.darken(0.1).toString()}
           ></path>
         </g>
       </BackgroundSvg>
