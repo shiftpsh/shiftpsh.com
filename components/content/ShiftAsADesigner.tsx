@@ -103,7 +103,7 @@ const ShiftAsADesigner: React.FC = () => {
               <Collapse shown={state.detailsShown}>
                 <Space h="2em" />
               </Collapse>
-              프로그래밍 대회에서 포스터 디자인, 삽화 제작 및 조판
+              여러 프로그래밍 대회에서 포스터 디자인, 삽화 제작 및 조판
               <Collapse shown={state.detailsShown}>
                 <ProfileList>
                   <li>
@@ -131,7 +131,7 @@ const ShiftAsADesigner: React.FC = () => {
               </Collapse>
             </li>
             <li>
-              커뮤니티 또는 행사에서 로고 및 포스터 디자인
+              여러 커뮤니티 또는 행사에서 로고 및 포스터 디자인
               <Collapse shown={state.detailsShown}>
                 <ProfileList>
                   <li>
