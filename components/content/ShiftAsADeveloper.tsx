@@ -135,7 +135,8 @@ const ShiftAsADeveloper: React.FC = () => {
                     <OuterLink href="https://blog.shift.moe/2018/09/05/camera2-overview/">
                       리거시 Camera1 API 대신 Camera2 API를 이용해 기존 로직을
                       구현하고 앱에 적용했습니다.
-                    </OuterLink>
+                    </OuterLink>{' '}
+                    적용 과정을 사내에서 발표했습니다.
                   </li>
                   <li>
                     <OuterLink href="https://junit.org/">JUnit</OuterLink>과{' '}
@@ -187,6 +188,7 @@ const ShiftAsADeveloper: React.FC = () => {
                   본선에는 약 90개 팀이 출전합니다.
                 </p>
               </Collapse>
+              <Space h="0.5em" />
               <ProfileList>
                 <li>
                   <b>
@@ -227,6 +229,7 @@ const ShiftAsADeveloper: React.FC = () => {
                   대회입니다. 결승에는 약 140명 가량이 출전합니다.
                 </p>
               </Collapse>
+              <Space h="0.5em" />
               <ProfileList>
                 <li>
                   <b>2020</b> Finalist<Descrption>, 2020. 11. 7</Descrption>
@@ -357,6 +360,15 @@ const ShiftAsADeveloper: React.FC = () => {
               </Collapse>
             </li>
             <li>
+              <OuterLink href="https://stackoverflow.com/users/2688304/shiftpsh">
+                StackOverflow
+              </OuterLink>{' '}
+              [kotlin] 상위 5%, [android] 상위 10%
+              <Collapse shown={state.detailsShown}>
+                <Space h="2em" />
+              </Collapse>
+            </li>
+            <li>
               <OuterLink href="https://codeforces.com/profile/shiftpsh">
                 Codeforces
               </OuterLink>{' '}
@@ -385,7 +397,7 @@ const ShiftAsADeveloper: React.FC = () => {
               <Space h="2em" />
             </Collapse>
             <li>
-              프로그래밍 대회 다수 출제 및 검수
+              여러 프로그래밍 대회 운영, 출제 및 검수
               <Collapse shown={state.detailsShown}>
                 <ProfileList>
                   <li>
@@ -424,7 +436,76 @@ const ShiftAsADeveloper: React.FC = () => {
                 Android와 웹 프론트엔드 분야에서 해커톤 참여 팀들의 질문들을
                 해결해 주는 등의 업무를 수행했습니다.
               </p>
+              <Space h="2em" />
             </Collapse>
+            <Collapse shown={state.detailsShown} as="li">
+              서강대학교 중앙 컴퓨터 동아리{' '}
+              <OuterLink href="https://www.facebook.com/theSogangComputerClub/">
+                SGCC
+              </OuterLink>{' '}
+              동아리원<Descrption>, 2018. 3 &ndash; (현재)</Descrption>
+            </Collapse>
+            <Collapse shown={state.detailsShown} as="li">
+              서강대학교 컴퓨터공학과 학회 Release 학회원
+              <Descrption>, 2019. 9 &ndash; (현재)</Descrption>
+            </Collapse>
+          </ProfileList>
+          <Space h="2em" />
+          <Subsubcaption>Side Projects</Subsubcaption>
+
+          <ProfileList>
+            <li>
+              <OuterLink href="https://ask.shiftp.sh">
+                <b>ask.shiftp.sh</b>
+              </OuterLink>{' '}
+              트위터 한정 익명 질문 플랫폼
+              <Descrption>
+                , 2018. 4 &ndash;, 1인 개발 / EC2, RDS, PHP, Twitter API
+              </Descrption>
+              <Collapse shown={state.detailsShown}>
+                <p>
+                  기존에 사용하던 익명 질문 플랫폼에서 스팸 질문들이 오던 것이
+                  불편해 새로 제작했습니다. 인증된 트위터 유저들끼리만 질문과
+                  답변을 주고받는 것이 가능합니다.
+                </p>
+                <ProfileList>
+                  <li>
+                    Progressive Web App이며, 질문에 대한 답변이 달리면 데스크톱
+                    알림을 통해 답변이 달렸다는 사실을 알 수 있습니다.
+                  </li>
+                </ProfileList>
+                <Space h="2em" />
+              </Collapse>
+            </li>
+            <li>
+              <b>Jubeatbook</b> 아케이드 게임 기록 관리 어플리케이션
+              <Descrption>
+                , 2015. 1 &ndash; 2017. 12(개발 중단), 프로젝트 기획 및 총괄 /
+                Firebase, Java → EC2, RDS, PHP, Kotlin
+              </Descrption>
+              <Collapse shown={state.detailsShown}>
+                <p>
+                  KONAMI의 아케이드 게임{' '}
+                  <OuterLink href="https://p.eagate.573.jp/game/jubeat/">
+                    Jubeat
+                  </OuterLink>
+                  에서 기록한 점수 등을 관리해 주는 Android/iOS
+                  어플리케이션입니다. 프로젝트를 총괄하면서 백엔드와 Android
+                  프론트엔드 개발을 주로 했고, 디자인도 했습니다.
+                </p>
+                <ProfileList>
+                  <li>
+                    유저 개개인의 기록 페이지를 파싱하고 유저의 점수들을 분석해,
+                    같은 난이도의 패턴이더라도 어떤 곡이 상대적으로 더 쉽고
+                    어려운지 정리해 주는 시스템을 개발했습니다.
+                  </li>
+                  <li>
+                    Play 스토어에서 배포했으며, 프로젝트 중단 직전 누적 설치
+                    수는 10,000+회였습니다.
+                  </li>
+                </ProfileList>
+              </Collapse>
+            </li>
           </ProfileList>
           <Space h="2em" />
         </Article>
