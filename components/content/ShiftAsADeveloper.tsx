@@ -15,6 +15,8 @@ interface State {
   detailsShown: boolean
 }
 
+// TODO move contents to markdown etc
+
 const ShiftAsADeveloper: React.FC = () => {
   const [state, setState] = useState<State>({
     detailsShown: false,
@@ -54,11 +56,56 @@ const ShiftAsADeveloper: React.FC = () => {
               </OuterLink>{' '}
               소프트웨어 엔지니어<Descrption>, 2020. 6 &ndash;</Descrption>
               <Collapse shown={state.detailsShown}>
-                <p>엔진스튜디오에서 산업기능요원으로 일하고 있습니다.</p>
+                <p>
+                  넥슨컴퍼니 산하 엔진스튜디오에서 산업기능요원으로 일하고
+                  있습니다.{' '}
+                  <OuterLink href="https://www.typescriptlang.org/">
+                    Typescript
+                  </OuterLink>
+                  , <OuterLink href="https://nodejs.org/">Node.js</OuterLink>와{' '}
+                  <OuterLink href="https://reactjs.org/">React</OuterLink>,
+                  CSS를 사용한 프론트엔드 엔지니어링이 주 업무입니다.
+                </p>
+                <Space h="0.5em" />
                 <ProfileList>
                   <li>
-                    Typescript, Node.js와 React를 사용한 프론트엔드 엔지니어링이
-                    주 업무입니다.
+                    <b>
+                      <OuterLink href="https://www.nypc.co.kr/main/main.do">
+                        NYPC 넥슨 청소년 프로그래밍 챌린지
+                      </OuterLink>{' '}
+                      2020
+                    </b>
+                    <ProfileList>
+                      <li>
+                        대회 시스템 설계와{' '}
+                        <OuterLink href="https://contest.nypc.co.kr">
+                          참가자용 프론트엔드
+                        </OuterLink>{' '}
+                        개발에 참여했습니다.
+                      </li>
+                      <li>
+                        관리자용 클라이언트와 내부 공개용 대회 순위 페이지,
+                        그리고{' '}
+                        <OuterLink href="https://nypc.github.io/2020/">
+                          외부 공개용 문제 업로드 페이지
+                        </OuterLink>
+                        를 개발했습니다.
+                      </li>
+                      <li>
+                        참가자용 프론트엔드는{' '}
+                        <OuterLink href="https://reactjs.org/">React</OuterLink>
+                        로 인터페이스를 구성하고, WebSocket을 이용해 대회 서버와
+                        통신하도록 구현했습니다.
+                      </li>
+                      <li>
+                        외부 공개용 문제 업로드 페이지는{' '}
+                        <OuterLink href="https://jekyllrb.com/">
+                          Jekyll
+                        </OuterLink>
+                        을 이용해 문제를 Markdown으로 작성하면 이를 기반으로
+                        정적 사이트를 생성하도록 구성했습니다.
+                      </li>
+                    </ProfileList>
                   </li>
                 </ProfileList>
                 <Space h="2em" />
@@ -72,13 +119,17 @@ const ShiftAsADeveloper: React.FC = () => {
               <Descrption>, 2018. 6 &ndash; 2018. 8</Descrption>
               <Collapse shown={state.detailsShown}>
                 <p>
-                  하이퍼커넥트의 신규 프로덕트 발굴 팀 Hyper X에서 Android
-                  엔지니어로 일했습니다.
+                  하이퍼커넥트의 신규 프로덕트 발굴 팀{' '}
+                  <OuterLink href="https://hyperconnect.github.io/2018/07/20/hyper-x-interview.html">
+                    Hyper X
+                  </OuterLink>
+                  에서 Android 엔지니어로 일했습니다.
                 </p>
                 <ProfileList>
                   <li>
-                    Kotlin과 RxJava를 사용하여 Android 어플리케이션 개발에
-                    참여했습니다.
+                    <OuterLink href="https://kotlinlang.org/">Kotlin</OuterLink>
+                    과 <OuterLink href="http://reactivex.io/">RxJava</OuterLink>
+                    를 사용하여 Android 어플리케이션 개발에 참여했습니다.
                   </li>
                   <li>
                     <OuterLink href="https://blog.shift.moe/2018/09/05/camera2-overview/">
@@ -86,7 +137,13 @@ const ShiftAsADeveloper: React.FC = () => {
                       구현하고 앱에 적용했습니다.
                     </OuterLink>
                   </li>
-                  <li>JUnit과 Robolectric을 사용해 테스트를 작성했습니다.</li>
+                  <li>
+                    <OuterLink href="https://junit.org/">JUnit</OuterLink>과{' '}
+                    <OuterLink href="http://robolectric.org/">
+                      Robolectric
+                    </OuterLink>
+                    을 사용해 테스트를 작성했습니다.
+                  </li>
                 </ProfileList>
                 <Space h="2em" />
               </Collapse>
@@ -226,6 +283,50 @@ const ShiftAsADeveloper: React.FC = () => {
                   </OuterLink>
                   의 스폰서를 받고 있습니다.
                 </p>
+                <ProfileList>
+                  <li>
+                    프론트엔드는{' '}
+                    <OuterLink href="https://reactjs.org/">React</OuterLink>와{' '}
+                    <OuterLink href="https://nextjs.org/">Next.js</OuterLink>,
+                    그리고{' '}
+                    <OuterLink href="https://www.typescriptlang.org/">
+                      Typescript
+                    </OuterLink>
+                    를 사용해 제작하고 있습니다. 인터페이스는
+                    <OuterLink href="https://styled-components.com/">
+                      styled-components
+                    </OuterLink>
+                    로 구성하고 있으며,{' '}
+                    <OuterLink href="https://www.docker.com/">Docker</OuterLink>
+                    를 사용해 배포하고 있습니다.
+                  </li>
+                  <li>
+                    백엔드는{' '}
+                    <OuterLink href="https://kotlinlang.org/">Kotlin</OuterLink>
+                    과 PHP 7,{' '}
+                    <OuterLink href="https://mariadb.org/">MariaDB</OuterLink>를
+                    사용해 제작하고 있으며, 점차{' '}
+                    <OuterLink href="https://nodejs.org/">Node.js</OuterLink>로
+                    마이그레이션하고 있습니다.{' '}
+                    <OuterLink href="https://www.nginx.com/">NGINX</OuterLink>를
+                    사용하고 있습니다.
+                  </li>
+                  <li>
+                    서버는{' '}
+                    <OuterLink href="https://aws.amazon.com/ko/">AWS</OuterLink>
+                    를 사용하고 있으며, AWS 서비스 중에서도 EC2, RDS, S3, SQS,
+                    Lambda를 주로 사용하고 있습니다.
+                  </li>
+                  <li>
+                    백준 온라인 저지의 공식 기능으로 통합되기 전까지는
+                    WebExtensions 표준 기반의 브라우저 플러그인을 제작해
+                    배포했습니다.{' '}
+                    <OuterLink href="https://github.com/shiftpsh/solvedac-plugin">
+                      shiftpsh/solvedac-plugin
+                    </OuterLink>
+                    에 소스가 공개되어 있습니다.
+                  </li>
+                </ProfileList>
                 <Space h="2em" />
               </Collapse>
             </li>
@@ -261,6 +362,7 @@ const ShiftAsADeveloper: React.FC = () => {
               </OuterLink>{' '}
               최고 레이팅 2,117 (Master)
               <Collapse shown={state.detailsShown}>
+                {/* TODO load information automatically */}
                 <p>
                   러시아 기반의 프로그래밍 대회 플랫폼입니다. 레이팅 2,117은
                   활동하는 유저 중 상위 {numberFormat((2664 / 99392) * 100, 2)}
@@ -269,6 +371,19 @@ const ShiftAsADeveloper: React.FC = () => {
                 <Space h="2em" />
               </Collapse>
             </li>
+            <Collapse shown={state.detailsShown} as="li">
+              <OuterLink href="https://atcoder.jp/users/shiftpsh">
+                AtCoder
+              </OuterLink>{' '}
+              최고 레이팅 1,874 (1級)
+              {/* TODO load information automatically */}
+              <p>
+                일본 기반의 프로그래밍 대회 플랫폼입니다. 레이팅 1,874는
+                활동하는 유저 중 상위 {numberFormat((1605 / 71529) * 100, 2)}
+                %에 해당됩니다.
+              </p>
+              <Space h="2em" />
+            </Collapse>
             <li>
               프로그래밍 대회 다수 출제 및 검수
               <Collapse shown={state.detailsShown}>
@@ -300,8 +415,16 @@ const ShiftAsADeveloper: React.FC = () => {
                     <b>2020 Uni-CODE</b> UNIST 프로그래밍 대회 &mdash; 검수
                   </li>
                 </ProfileList>
+                <Space h="2em" />
               </Collapse>
             </li>
+            <Collapse shown={state.detailsShown} as="li">
+              고려대학교 해커톤 KOREA HACKS 2021 멘토
+              <p>
+                Android와 웹 프론트엔드 분야에서 해커톤 참여 팀들의 질문들을
+                해결해 주는 등의 업무를 수행했습니다.
+              </p>
+            </Collapse>
           </ProfileList>
           <Space h="2em" />
         </Article>
