@@ -22,6 +22,8 @@ const BackgroundSvg = styled.svg`
 interface State {
   clientX: number
   clientY: number
+  interpolatedX: number
+  interpolatedY: number
   viewportX: number
   viewportY: number
 }
@@ -31,6 +33,8 @@ const Background: React.FC = (props) => {
   const [state, setState] = useState<State>({
     clientX: 0,
     clientY: 0,
+    interpolatedX: 0,
+    interpolatedY: 0,
     viewportX: 1,
     viewportY: 1,
   })
@@ -44,13 +48,24 @@ const Background: React.FC = (props) => {
       const { innerHeight: viewportX, innerWidth: viewportY } = window
       setState((prevState) => ({ ...prevState, viewportX, viewportY }))
     }
+    const interpolateFrames = () => {
+      setState((prevState) => ({
+        ...prevState,
+        interpolatedX: prevState.interpolatedX * 0.9 + prevState.clientX * 0.1,
+        interpolatedY: prevState.interpolatedY * 0.9 + prevState.clientY * 0.1,
+      }))
+    }
+
     // Initial call
     onScreenResize()
+
+    const interval = setInterval(interpolateFrames, 16)
     document.addEventListener('mousemove', onMouseMove)
     window.addEventListener('resize', onScreenResize)
     return () => {
       document.removeEventListener('mousemove', onMouseMove)
       window.removeEventListener('resize', onScreenResize)
+      clearInterval(interval)
     }
   }, [])
 
@@ -62,12 +77,12 @@ const Background: React.FC = (props) => {
   // 2. Calculate pointer coordinates relative to the square container;
   const pointerX =
     state.viewportX > state.viewportY
-      ? state.clientX
-      : state.clientX + (viewportSize - state.viewportX) / 2
+      ? state.interpolatedX
+      : state.interpolatedX + (viewportSize - state.viewportX) / 2
   const pointerY =
     state.viewportY > state.viewportX
-      ? state.clientY
-      : state.clientY + (viewportSize - state.viewportY) / 2
+      ? state.interpolatedY
+      : state.interpolatedY + (viewportSize - state.viewportY) / 2
 
   // 3. Set center to (0, 0) and square vertices to (+-1, +-1);
   const relativeX = Math.max(-1, Math.min(1, (pointerX / viewportSize) * 2 - 1))
