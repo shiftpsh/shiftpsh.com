@@ -1,5 +1,5 @@
-import { useLayoutEffect, useState } from 'react'
 import styled, { useTheme } from 'styled-components'
+import useShadowLightCoordinates from '../hooks/ShadowLightCoordinates'
 import { ShiftTheme } from '../styles/ShiftTheme'
 
 const BackgroundContainer = styled.div`
@@ -19,78 +19,9 @@ const BackgroundSvg = styled.svg`
   max-width: 100%;
 `
 
-interface State {
-  clientX: number
-  clientY: number
-  interpolatedX: number
-  interpolatedY: number
-  viewportX: number
-  viewportY: number
-}
-
 const Background: React.FC = (props) => {
   const theme = useTheme() as ShiftTheme
-  const [state, setState] = useState<State>({
-    clientX: 0,
-    clientY: 0,
-    interpolatedX: 0,
-    interpolatedY: 0,
-    viewportX: 1,
-    viewportY: 1,
-  })
-
-  useLayoutEffect(() => {
-    const onMouseMove = (e: MouseEvent) => {
-      const { clientX, clientY } = e
-      setState((prevState) => ({ ...prevState, clientX, clientY }))
-    }
-    const onScreenResize = () => {
-      const { innerHeight: viewportX, innerWidth: viewportY } = window
-      setState((prevState) => ({ ...prevState, viewportX, viewportY }))
-    }
-    const interpolateFrames = () => {
-      setState((prevState) => ({
-        ...prevState,
-        interpolatedX: prevState.interpolatedX * 0.9 + prevState.clientX * 0.1,
-        interpolatedY: prevState.interpolatedY * 0.9 + prevState.clientY * 0.1,
-      }))
-    }
-
-    // Initial call
-    onScreenResize()
-
-    const interval = setInterval(interpolateFrames, 16)
-    document.addEventListener('mousemove', onMouseMove)
-    window.addEventListener('resize', onScreenResize)
-    return () => {
-      document.removeEventListener('mousemove', onMouseMove)
-      window.removeEventListener('resize', onScreenResize)
-      clearInterval(interval)
-    }
-  }, [])
-
-  // Relative coordinates are calculated as follows:
-
-  // 1. Put viewport in a square container;
-  const viewportSize = Math.max(state.viewportX, state.viewportY)
-
-  // 2. Calculate pointer coordinates relative to the square container;
-  const pointerX =
-    state.viewportX > state.viewportY
-      ? state.interpolatedX
-      : state.interpolatedX + (viewportSize - state.viewportX) / 2
-  const pointerY =
-    state.viewportY > state.viewportX
-      ? state.interpolatedY
-      : state.interpolatedY + (viewportSize - state.viewportY) / 2
-
-  // 3. Set center to (0, 0) and square vertices to (+-1, +-1);
-  const relativeX = Math.max(-1, Math.min(1, (pointerX / viewportSize) * 2 - 1))
-  const relativeY = Math.max(-1, Math.min(1, (pointerY / viewportSize) * 2 - 1))
-
-  const interpolate = (v: number) => {
-    return Math.pow(Math.abs(v), 0.5) * Math.sign(v)
-  }
+  const [shadowX, shadowY] = useShadowLightCoordinates()
 
   return (
     <BackgroundContainer>
@@ -98,8 +29,8 @@ const Background: React.FC = (props) => {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1000 640"
         style={{
-          transform: `translate(calc(${interpolate(relativeX) * 2}em + 30%), ${
-            interpolate(relativeY) * 2 + 0.1
+          transform: `translate(calc(${shadowX * 2}em + 30%), ${
+            shadowY * 2
           }em)`,
           filter: 'blur(1vmax)',
         }}
@@ -119,9 +50,7 @@ const Background: React.FC = (props) => {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1000 640"
         style={{
-          transform: `translate(calc(${interpolate(
-            relativeX
-          )}em + 30%), ${interpolate(relativeY)}em)`,
+          transform: `translate(calc(${shadowX}em + 30%), ${shadowY}em)`,
         }}
       >
         <g id="svg-bg-paths">

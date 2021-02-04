@@ -5,6 +5,7 @@ import Background from '../components/Background'
 import ShiftAsADesigner from '../components/content/ShiftAsADesigner'
 import ShiftAsADeveloper from '../components/content/ShiftAsADeveloper'
 import ShiftTitle from '../components/content/ShiftTitle'
+import SocialLinks from '../components/content/SocialLinks'
 import Space from '../components/Space'
 import TopNavigation from '../components/TopNavigation'
 import UnsupportedBrowserSnackbar from '../components/UnsupportedBrowserSnackbar'
@@ -20,6 +21,7 @@ const Home: NextPage = () => {
         <Space h="8em" />
         <ShiftAsADesigner />
         <Space h="8em" />
+        <SocialLinks />
       </div>
       {isIE ? <UnsupportedBrowserSnackbar /> : null}
     </>
