@@ -2,6 +2,7 @@ import { NextPage } from 'next'
 import React from 'react'
 import { isIE } from 'react-device-detect'
 import Background from '../components/Background'
+import Footer from '../components/content/Footer'
 import ShiftAsADesigner from '../components/content/ShiftAsADesigner'
 import ShiftAsADeveloper from '../components/content/ShiftAsADeveloper'
 import ShiftTitle from '../components/content/ShiftTitle'
@@ -22,6 +23,9 @@ const Home: NextPage = () => {
         <ShiftAsADesigner />
         <Space h="8em" />
         <SocialLinks />
+        <Space h="8em" />
+        <Footer />
+        <Space h="4em" />
       </div>
       {isIE ? <UnsupportedBrowserSnackbar /> : null}
     </>
