@@ -59,7 +59,7 @@ const Background: React.FC = (props) => {
             transform: `translate(calc(${shadowX}em), ${shadowY}em)`,
           }}
         >
-          <g id="svg-bg-paths" style={{ transform: 'translateX(9.5%)' }}>
+          <g id="svg-bg-paths" style={{ transform: 'translateX(10.5%)' }}>
             <path
               x="420"
               y="270"

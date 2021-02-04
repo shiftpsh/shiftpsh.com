@@ -52,7 +52,7 @@ const LinkComponent: React.FC<{ link: LinkItem }> = (props) => {
           style={{
             background: color.alpha(0.15).toString(),
             boxShadow: castShadow(color, 0, 0, 1, 1),
-            transform: `translate(${shadowX}em, ${shadowY}em)`,
+            transform: `translate(${shadowX * 0.7}em, ${shadowY * 0.7}em)`,
           }}
         />
         <LinkIconContainer
