@@ -81,7 +81,7 @@ const LinkComponent: React.FC<{ link: LinkItem }> = (props) => {
     setState((prevState) => ({
       ...prevState,
       obfuscation: address.split('').flatMap((glyph) =>
-        new Array(Math.floor(Math.random() * 4) + 1)
+        new Array(Math.floor(Math.random() * 4) + 2)
           .fill(undefined)
           .map((_, i) =>
             i === 0
