@@ -6,7 +6,6 @@ const TopNavigationContainer = styled(ContentPadding)`
   position: fixed;
   display: flex;
   align-items: center;
-  gap: 32px;
   top: 48px;
   right: 0;
   height: 48px;
@@ -23,6 +22,7 @@ const TopLinkItem = styled.div`
   text-transform: uppercase;
   letter-spacing: 0.2ch;
   font-weight: 600;
+  margin-right: 2em;
   & a,
   & a:link,
   & a:visited {
