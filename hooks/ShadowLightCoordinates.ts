@@ -1,4 +1,9 @@
 import { useLayoutEffect, useState } from 'react'
+import {
+  isChrome,
+  isChromium,
+  isEdgeChromium
+} from 'react-device-detect'
 
 interface State {
   clientX: number
@@ -10,6 +15,10 @@ interface State {
 }
 
 const useShadowLightCoordinates = () => {
+  // box-shadow animations are HEAVY in non-chromium browsers;
+  // will try to find workarounds but resort to this by now
+  const broswerFlag = isChromium || isChrome || isEdgeChromium
+
   const [state, setState] = useState<State>({
     clientX: 0,
     clientY: 0,
@@ -20,6 +29,8 @@ const useShadowLightCoordinates = () => {
   })
 
   useLayoutEffect(() => {
+    if (!broswerFlag) return
+
     const onMouseMove = (e: MouseEvent) => {
       const { clientX, clientY } = e
       setState((prevState) => ({ ...prevState, clientX, clientY }))
@@ -48,6 +59,8 @@ const useShadowLightCoordinates = () => {
       clearInterval(interval)
     }
   }, [])
+
+  if (!broswerFlag) return [0, 0.3]
 
   // Relative coordinates are calculated as follows:
 
