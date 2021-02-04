@@ -17,7 +17,7 @@ const Snackbar = styled.div`
   padding: 16px 32px;
   margin-bottom: 16px;
   background: ${({ theme }) => theme.backgroundColor};
-  box-shadow: ${({ theme }) => castShadow(theme, 8)};
+  box-shadow: ${({ theme }) => castShadow(theme.textColor, 0, 2, 4)};
   border-radius: 64px;
   text-align: left;
   pointer-events: all;
