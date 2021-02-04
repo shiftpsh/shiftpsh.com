@@ -23,9 +23,15 @@ const TopLinkItem = styled.div`
   text-transform: uppercase;
   letter-spacing: 0.2ch;
   font-weight: 600;
-  & a, & a:link, & a:visited {
+  & a,
+  & a:link,
+  & a:visited {
     color: inherit;
     text-decoration: none;
+    &:hover {
+      color: inherit;
+      background: none;
+    }
   }
   ${sizeUnder.sm`
     display: none;
@@ -50,7 +56,7 @@ const TopNavigation: React.FC = (props) => {
           Github
         </a>
       </TopLinkItem>
-      <a href="#">
+      <a href="#" style={{ background: 'none' }}>
         <Logo src="/res/shiftpsh-logo-2019.svg" alt="shiftpsh Logo" />
       </a>
     </TopNavigationContainer>
