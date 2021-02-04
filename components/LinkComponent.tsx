@@ -8,6 +8,14 @@ const LinkIcon = styled.img`
   transform: scale(1);
   transition: transform 0.3s ease;
 `
+const LinkIconShadow = styled.div`
+  position: absolute;
+  width: 4.8em;
+  height: 4.8em;
+  left: 0.6em;
+  top: 0.6em;
+  border-radius: 1em;
+`
 const LinkIconContainer = styled.div`
   width: 6em;
   height: 6em;
@@ -39,16 +47,24 @@ const LinkComponent: React.FC<{ link: LinkItem }> = (props) => {
       href={href}
       style={{ background: 'inherit', textDecoration: 'none' }}
     >
-      <LinkIconContainer
-        style={{
-          boxShadow: castShadow(color, shadowX, shadowY, 2),
-          background: color.toString(),
-        }}
-      >
-        <LinkIcon src={`/res/icons/${id}.${iconFormat ?? 'svg'}`} />
-      </LinkIconContainer>
-      <IconCaption>{caption}</IconCaption>
-      <IconDescription>{description}</IconDescription>
+      <div style={{ position: 'relative' }}>
+        <LinkIconShadow
+          style={{
+            background: color.alpha(0.15).toString(),
+            boxShadow: castShadow(color, 0, 0, 1, 1),
+            transform: `translate(${shadowX}em, ${shadowY}em)`,
+          }}
+        />
+        <LinkIconContainer
+          style={{
+            background: color.toString(),
+          }}
+        >
+          <LinkIcon src={`/res/icons/${id}.${iconFormat ?? 'svg'}`} />
+        </LinkIconContainer>
+        <IconCaption>{caption}</IconCaption>
+        <IconDescription>{description}</IconDescription>
+      </div>
     </OuterLink>
   )
 }

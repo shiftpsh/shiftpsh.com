@@ -75,8 +75,16 @@ const Dark: ShiftTheme = {
   backgroundColor: ShiftBlack,
 }
 
-const castShadow = (color: Color, x: number, y: number, r: number) => {
-  return `${x}em ${y}em ${r}em ${color.alpha(0.15).toString()}`
+const castShadow = (
+  color: Color,
+  x: number,
+  y: number,
+  r: number,
+  s?: number
+) => {
+  return `${x}em ${y}em ${r}em ${s !== undefined ? `${s}em ` : ``}${color
+    .alpha(0.15)
+    .toString()}`
 }
 
 export type { ShiftTheme }
