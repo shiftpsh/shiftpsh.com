@@ -30,9 +30,9 @@ const social: LinkItem[] = [
   {
     id: 'mail',
     caption: '이메일',
-    description: 'me@shiftpsh.com',
     color: new Color('#fe0c50'),
-    href: 'mailto:me@shiftpsh.com',
+    address: 'me|shiftpsh.com',
+    type: 'mail',
   },
   {
     id: 'blog',

@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import useShadowLightCoordinates from '../hooks/ShadowLightCoordinates'
 import { castShadow } from '../styles/ShiftTheme'
@@ -39,9 +40,99 @@ const IconCaption = styled.div`
 
 const IconDescription = styled.div``
 
+const GlyphShown = styled.span`
+  display: inline-block;
+`
+
+const GlyphHidden = styled.span`
+  display: inline-block;
+  color: transparent;
+  width: 0;
+  user-select: none;
+`
+
+interface ObfuscateGlyph {
+  glyph: string
+  include: boolean
+}
+
+interface State {
+  obfuscation: ObfuscateGlyph[]
+}
+
 const LinkComponent: React.FC<{ link: LinkItem }> = (props) => {
   const [shadowX, shadowY] = useShadowLightCoordinates()
-  const { id, caption, description, href, iconFormat, color } = props.link
+  const {
+    id,
+    caption,
+    description,
+    href,
+    address,
+    iconFormat,
+    color,
+    type,
+  } = props.link
+
+  const [state, setState] = useState<State>({ obfuscation: [] })
+
+  useEffect(() => {
+    if (address === undefined) return
+    const glyphs = 'abcdefghijklmnopqrstuvwxyz.@-_'
+    setState((prevState) => ({
+      ...prevState,
+      obfuscation: address.split('').flatMap((glyph) =>
+        new Array(Math.floor(Math.random() * 4) + 1)
+          .fill(undefined)
+          .map((_, i) =>
+            i === 0
+              ? { glyph: glyph.replace('|', '@'), include: true }
+              : {
+                  glyph: glyphs.charAt(
+                    Math.floor(Math.random() * glyphs.length)
+                  ),
+                  include: false,
+                }
+          )
+      ),
+    }))
+  }, [])
+
+  if (type === 'mail') {
+    return (
+      <div
+        style={{ position: 'relative', cursor: 'pointer' }}
+        onClick={() => {
+          if (window !== undefined) window.open('mailto:me@shiftpsh.com')
+        }}
+      >
+        <LinkIconShadow
+          style={{
+            background: color.alpha(0.15).toString(),
+            boxShadow: castShadow(color, 0, 0, 1, 1),
+            transform: `translate(${shadowX * 0.7}em, ${shadowY * 0.7}em)`,
+          }}
+        />
+        <LinkIconContainer
+          style={{
+            background: color.toString(),
+          }}
+        >
+          <LinkIcon src={`/res/icons/${id}.${iconFormat ?? 'svg'}`} />
+        </LinkIconContainer>
+        <IconCaption>{caption}</IconCaption>
+        <IconDescription>
+          {state.obfuscation.map((g, i) =>
+            g.include ? (
+              <GlyphShown key={i}>{g.glyph}</GlyphShown>
+            ) : (
+              <GlyphHidden key={i}>{g.glyph}</GlyphHidden>
+            )
+          )}
+        </IconDescription>
+      </div>
+    )
+  }
+
   return (
     <OuterLink
       href={href}
