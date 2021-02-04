@@ -3,6 +3,7 @@ import React from 'react'
 import styled from 'styled-components'
 import ContentPadding from '../../layouts/ContentPadding'
 import LinkItem from '../../types/LinkItem'
+import Article from '../Article'
 import Caption from '../Caption'
 import LinkComponent from '../LinkComponent'
 import Space from '../Space'
@@ -116,18 +117,22 @@ const SocialLinks: React.FC = () => {
         <Space h={64} />
         <Space h="2em" />
         <Subsubcaption>Services</Subsubcaption>
-        <LinksContainer>
-          {services.map((l, i) => (
-            <LinkComponent key={i} link={l} />
-          ))}
-        </LinksContainer>
+        <Article>
+          <LinksContainer>
+            {services.map((l, i) => (
+              <LinkComponent key={i} link={l} />
+            ))}
+          </LinksContainer>
+        </Article>
         <Space h="2em" />
         <Subsubcaption>Social</Subsubcaption>
-        <LinksContainer>
-          {social.map((l, i) => (
-            <LinkComponent key={i} link={l} />
-          ))}
-        </LinksContainer>
+        <Article>
+          <LinksContainer>
+            {social.map((l, i) => (
+              <LinkComponent key={i} link={l} />
+            ))}
+          </LinksContainer>
+        </Article>
       </ContentPadding>
     </>
   )
