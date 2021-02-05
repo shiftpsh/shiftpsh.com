@@ -113,7 +113,7 @@ const SocialLinks: React.FC = () => {
     <>
       <ContentPadding>
         <Subcaption>Links</Subcaption>
-        <Caption content={'이제 인터넷으로도\n만나실 수 있습니다'} />
+        <Caption content={'이제 인터넷에서도\n만나실 수 있습니다'} />
         <Space h={64} />
         <Space h="2em" />
         <Subsubcaption>Services</Subsubcaption>

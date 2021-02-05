@@ -112,7 +112,7 @@ const useShadowLightCoordinates = () => {
   const relativeX = Math.max(-1, Math.min(1, (pointerX / viewportSize) * 2 - 1))
   const relativeY = Math.max(-1, Math.min(1, (pointerY / viewportSize) * 2 - 1))
 
-  const interpolate = (v: number) => Math.asin(v)
+  const interpolate = (v: number) => Math.asin(-v)
 
   return [interpolate(relativeX), interpolate(relativeY) + 0.3]
 }
