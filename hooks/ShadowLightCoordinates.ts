@@ -57,15 +57,24 @@ const useShadowLightCoordinates = () => {
     const onMotion = (ev: DeviceMotionEvent) => {
       if (ev.rotationRate === null) return
       const { alpha, beta, gamma } = ev.rotationRate
-      if (alpha === null) return
-      if (beta === null) return
-      if (gamma === null) return
-      console.log(alpha, beta, gamma)
+      if (alpha === null || beta === null || gamma === null) return
       setState((prevState) => ({
         ...prevState,
         motionEnabled: true,
-        clientX: -(beta / 60) * prevState.viewportX + prevState.viewportX / 2,
-        clientY: -(alpha / 60) * prevState.viewportY + prevState.viewportY / 2,
+        clientX: Math.max(
+          0,
+          Math.min(
+            prevState.viewportX,
+            -(beta / 60) * prevState.viewportX + prevState.viewportX / 2
+          )
+        ),
+        clientY: Math.max(
+          0,
+          Math.min(
+            prevState.viewportY,
+            -(alpha / 60) * prevState.viewportY + prevState.viewportY / 2
+          )
+        ),
       }))
     }
 
