@@ -46,8 +46,12 @@ const useShadowLightCoordinates = () => {
     const interpolateFrames = () => {
       setState((prevState) => ({
         ...prevState,
-        interpolatedX: prevState.interpolatedX * 0.9 + prevState.clientX * 0.1,
-        interpolatedY: prevState.interpolatedY * 0.9 + prevState.clientY * 0.1,
+        interpolatedX:
+          prevState.interpolatedX * (prevState.motionEnabled ? 0.95 : 0.9) +
+          prevState.clientX * (prevState.motionEnabled ? 0.05 : 0.1),
+        interpolatedY:
+          prevState.interpolatedY * (prevState.motionEnabled ? 0.95 : 0.9) +
+          prevState.clientY * (prevState.motionEnabled ? 0.05 : 0.1),
       }))
     }
     const onMotion = (ev: DeviceMotionEvent) => {
