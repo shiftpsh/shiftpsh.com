@@ -14,6 +14,7 @@ const GetAll = async (req: NextApiRequest, res: NextApiResponse) => {
     await db.authenticate()
   } catch (error) {
     res.status(500).send('Internal server error.')
+    return
   }
 
   const mapEntry = await MapEntry(db)

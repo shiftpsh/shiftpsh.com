@@ -4,9 +4,14 @@ import MapEntry from '../../../database/model/MapEntry'
 
 const SetSingle = async (req: NextApiRequest, res: NextApiResponse) => {
   const { method } = req
-  if (method !== 'POST') res.status(400).send('Unsupported operation.')
-  if (req.headers['shiftpsh-secret'] !== process.env.API_SECRET)
+  if (method !== 'POST') {
+    res.status(400).send('Unsupported operation.')
+    return
+  }
+  if (req.headers['shiftpsh-secret'] !== process.env.API_SECRET) {
     res.status(401).send('Unauthorized.')
+    return
+  }
 
   const db = await dbInstance()
   if (db === undefined) {
@@ -18,6 +23,7 @@ const SetSingle = async (req: NextApiRequest, res: NextApiResponse) => {
     await db.authenticate()
   } catch (error) {
     res.status(500).send('Internal server error.')
+    return
   }
   const {
     body: { key, value },
