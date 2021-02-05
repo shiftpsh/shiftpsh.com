@@ -7,6 +7,7 @@ interface State {
   interpolatedY: number
   viewportX: number
   viewportY: number
+  motionEnabled: boolean
 }
 
 const useShadowLightCoordinates = () => {
@@ -17,10 +18,24 @@ const useShadowLightCoordinates = () => {
     interpolatedY: 0,
     viewportX: 1,
     viewportY: 1,
+    motionEnabled: false,
   })
 
   useLayoutEffect(() => {
+    const initialize = () => {
+      const { innerHeight: viewportY, innerWidth: viewportX } = window
+      setState((prevState) => ({
+        ...prevState,
+        viewportX,
+        viewportY,
+        clientX: viewportX / 2,
+        clientY: viewportY / 2,
+        interpolatedX: viewportX / 2,
+        interpolatedY: viewportY / 2,
+      }))
+    }
     const onMouseMove = (e: MouseEvent) => {
+      if (state.motionEnabled) return
       const { clientX, clientY } = e
       setState((prevState) => ({ ...prevState, clientX, clientY }))
     }
@@ -35,16 +50,32 @@ const useShadowLightCoordinates = () => {
         interpolatedY: prevState.interpolatedY * 0.9 + prevState.clientY * 0.1,
       }))
     }
+    const onMotion = (ev: DeviceMotionEvent) => {
+      if (ev.rotationRate === null) return
+      const { alpha, beta, gamma } = ev.rotationRate
+      if (alpha === null) return
+      if (beta === null) return
+      if (gamma === null) return
+      console.log(alpha, beta, gamma)
+      setState((prevState) => ({
+        ...prevState,
+        motionEnabled: true,
+        clientX: -(beta / 60) * prevState.viewportX + prevState.viewportX / 2,
+        clientY: -(alpha / 60) * prevState.viewportY + prevState.viewportY / 2,
+      }))
+    }
 
     // Initial call
-    onScreenResize()
+    initialize()
 
     const interval = setInterval(interpolateFrames, 16)
     document.addEventListener('mousemove', onMouseMove)
     window.addEventListener('resize', onScreenResize)
+    window.addEventListener('devicemotion', onMotion)
     return () => {
       document.removeEventListener('mousemove', onMouseMove)
       window.removeEventListener('resize', onScreenResize)
+      window.removeEventListener('devicemotion', onMotion)
       clearInterval(interval)
     }
   }, [])
