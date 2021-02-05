@@ -6,6 +6,8 @@ import LinkItem from '../types/LinkItem'
 import OuterLink from './OuterLink'
 
 const LinkIcon = styled.img`
+  width: 100%;
+  height: 100%;
   transform: scale(1);
   transition: transform 0.3s ease;
 `
