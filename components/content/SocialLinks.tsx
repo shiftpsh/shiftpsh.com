@@ -2,7 +2,9 @@ import Color from 'color'
 import React from 'react'
 import styled from 'styled-components'
 import ContentPadding from '../../layouts/ContentPadding'
+import ClientMapEntry from '../../types/ClientMapEntry'
 import LinkItem from '../../types/LinkItem'
+import { atcoderTitle, codeforcesTitle } from '../../utils/Formatting'
 import Article from '../Article'
 import Caption from '../Caption'
 import Descrption from '../Descrption'
@@ -94,131 +96,174 @@ const social: LinkItem[] = [
   },
 ]
 
-const competitiveProgramming: LinkItem[] = [
-  {
-    id: 'codeforces',
-    caption: 'Codeforces',
-    description: (
-      <>
-        shiftpsh
-        <br />
-        <Descrption>2117 / Master</Descrption>
-      </>
-    ),
-    color: new Color('#0084cb'),
-    href: 'https://codeforces.com/profile/shiftpsh',
-  },
-  {
-    id: 'atcoder',
-    caption: 'AtCoder',
-    description: (
-      <>
-        shiftpsh
-        <br />
-        <Descrption>1874 / 1級</Descrption>
-      </>
-    ),
-    color: new Color('#2d2d2d'),
-    href: 'https://atcoder.jp/users/shiftpshh',
-  },
-  {
-    id: 'topcoder',
-    caption: 'TopCoder',
-    description: (
-      <>
-        shiftpsh
-        <br />
-        <Descrption>1821</Descrption>
-      </>
-    ),
-    color: new Color('#27aae1'),
-    href:
-      'https://www.topcoder.com/members/shiftpsh/details/?track=DATA_SCIENCE&subTrack=SRM',
-  },
-  {
-    id: 'icpc',
-    caption: 'ICPCID',
-    description: <>Suhyun Park</>,
-    color: new Color('#2f83c9'),
-    href: 'https://icpc.global/ICPCID/2ALMJW44APYS',
-  },
-]
+const competitiveProgramming = (map: Map<string, string>) =>
+  [
+    {
+      id: 'codeforces',
+      caption: 'Codeforces',
+      description: (
+        <>
+          shiftpsh
+          {map.has('cf_rating_highest') && map.has('cf_rating') ? (
+            <>
+              <br />
+              <Descrption>
+                {codeforcesTitle(+map.get('cf_rating')!)},{' '}
+                {map.get('cf_rating')!} (max.{' '}
+                {codeforcesTitle(+map.get('cf_rating_highest')!)},{' '}
+                {map.get('cf_rating_highest')!})
+              </Descrption>
+            </>
+          ) : null}
+        </>
+      ),
+      color: new Color('#0084cb'),
+      href: 'https://codeforces.com/profile/shiftpsh',
+    },
+    {
+      id: 'atcoder',
+      caption: 'AtCoder',
+      description: (
+        <>
+          shiftpsh
+          {map.has('ac_rating_highest') && map.has('ac_rating') ? (
+            <>
+              <br />
+              <Descrption>
+                {map.get('ac_rating')!} (max.{' '}
+                {atcoderTitle(+map.get('ac_rating_highest')!)},{' '}
+                {map.get('ac_rating_highest')!})
+              </Descrption>
+            </>
+          ) : null}
+        </>
+      ),
+      color: new Color('#2d2d2d'),
+      href: 'https://atcoder.jp/users/shiftpshh',
+    },
+    {
+      id: 'topcoder',
+      caption: 'TopCoder',
+      description: (
+        <>
+          shiftpsh
+          {map.has('tc_rating') ? (
+            <>
+              <br />
+              <Descrption>{map.get('tc_rating')!}</Descrption>
+            </>
+          ) : null}
+        </>
+      ),
+      color: new Color('#27aae1'),
+      href:
+        'https://www.topcoder.com/members/shiftpsh/details/?track=DATA_SCIENCE&subTrack=SRM',
+    },
+    {
+      id: 'icpc',
+      caption: 'ICPCID',
+      description: <>Suhyun Park</>,
+      color: new Color('#2f83c9'),
+      href: 'https://icpc.global/ICPCID/2ALMJW44APYS',
+    },
+  ] as LinkItem[]
 
-const games: LinkItem[] = [
-  {
-    id: 'steam',
-    caption: 'Steam',
-    description: 'shiftpsh',
-    color: new Color('#00adee'),
-    href: 'https://steamcommunity.com/id/shiftpsh/',
-  },
-  {
-    id: 'games/dmrv',
-    iconFormat: 'png',
-    caption: 'DJMAX RESPECT V',
-    description: (
-      <>
-        shiftpsh
-        <br />
-        <Descrption>DIAMOND IV @ PRE-SEASON</Descrption>
-      </>
-    ),
-    color: new Color('#b64768'),
-  },
-  {
-    id: 'games/maple',
-    iconFormat: 'png',
-    caption: '메이플스토리',
-    description: (
-      <>
-        싶프트<Descrption>@오로라</Descrption>
-        <br />
-        <Descrption>Lv 233 / 아크</Descrption>
-      </>
-    ),
-    href: 'https://maple.gg/u/%EC%8B%B6%ED%94%84%ED%8A%B8',
-    color: new Color('#ff9d00'),
-  },
-  {
-    id: 'games/maimai',
-    iconFormat: 'png',
-    caption: 'maimai DX+',
-    description: (
-      <>
-        shift* <Descrption>&mdash; 7061399728945</Descrption>
-        <br />
-        <Descrption>8743 / 九段</Descrption>
-      </>
-    ),
-    color: new Color('#42bbcc'),
-  },
-  {
-    id: 'games/sdvx',
-    iconFormat: 'png',
-    caption: 'SOUND VOLTEX',
-    description: (
-      <>
-        SHIFT* <Descrption>&mdash; SV-7651-0707</Descrption>
-        <br />
-        <Descrption>19.03 / LV.∞ 蘭華</Descrption>
-      </>
-    ),
-    href:
-      'https://p.eagate.573.jp/game/sdvx/v/p/playdata/rival/profile.html?rival_id=SV-7651-0707',
-    color: new Color('#f72675'),
-  },
-  {
-    id: 'games/puroseka',
-    iconFormat: 'png',
-    caption: 'COLORFUL STAGE',
-    description: (
-      <>
-        shift* <Descrption>&mdash; 5530735142670336</Descrption>
-      </>
-    ),
-    color: new Color('#85d5e8'),
-  },
-]
+const games = (map: Map<string, string>) =>
+  [
+    {
+      id: 'steam',
+      caption: 'Steam',
+      description: 'shiftpsh',
+      color: new Color('#00adee'),
+      href: 'https://steamcommunity.com/id/shiftpsh/',
+    },
+    {
+      id: 'games/dmrv',
+      iconFormat: 'png',
+      caption: 'DJMAX RESPECT V',
+      description: (
+        <>
+          shiftpsh
+          {map.has('djmax_description') ? (
+            <>
+              <br />
+              <Descrption>{map.get('djmax_description')!}</Descrption>
+            </>
+          ) : null}
+        </>
+      ),
+      color: new Color('#b64768'),
+    },
+    {
+      id: 'games/maple',
+      iconFormat: 'png',
+      caption: '메이플스토리',
+      description: (
+        <>
+          싶프트<Descrption>@오로라</Descrption>
+          <br />
+          <Descrption>
+            {map.has('maple_level')
+              ? `Lv ${map.get('maple_level')!} / 아크`
+              : `아크`}
+          </Descrption>
+        </>
+      ),
+      href: 'https://maple.gg/u/%EC%8B%B6%ED%94%84%ED%8A%B8',
+      color: new Color('#ff9d00'),
+    },
+    {
+      id: 'games/maimai',
+      iconFormat: 'png',
+      caption: 'maimai DX+',
+      description: (
+        <>
+          shift* <Descrption>&mdash; 7061399728945</Descrption>
+          {map.has('maimai_class') && map.has('maimai_rating') ? (
+            <>
+              <br />
+              <Descrption>
+                {map.get('maimai_class')!}, {map.get('maimai_rating')!}
+              </Descrption>
+            </>
+          ) : null}
+        </>
+      ),
+      color: new Color('#42bbcc'),
+    },
+    {
+      id: 'games/sdvx',
+      iconFormat: 'png',
+      caption: 'SOUND VOLTEX',
+      description: (
+        <>
+          SHIFT* <Descrption>&mdash; SV-7651-0707</Descrption>
+          {map.has('sdvx_class') && map.has('sdvx_rating') ? (
+            <>
+              <br />
+              <Descrption>
+                {map.get('sdvx_class')!}, {map.get('sdvx_rating')!}
+              </Descrption>
+            </>
+          ) : null}
+        </>
+      ),
+      href:
+        'https://p.eagate.573.jp/game/sdvx/v/p/playdata/rival/profile.html?rival_id=SV-7651-0707',
+      color: new Color('#f72675'),
+    },
+    {
+      id: 'games/puroseka',
+      iconFormat: 'png',
+      caption: 'COLORFUL STAGE',
+      description: (
+        <>
+          shift* <Descrption>&mdash; 5530735142670336</Descrption>
+        </>
+      ),
+      color: new Color('#85d5e8'),
+    },
+  ] as LinkItem[]
 
 const LinksContainer = styled.div`
   display: grid;
@@ -232,7 +277,14 @@ const LinksContainer = styled.div`
 const GamesContainer = styled.div`
   overflow-x: auto;
 `
-const SocialLinks: React.FC = () => {
+
+interface Props {
+  map: ClientMapEntry[]
+}
+
+const SocialLinks: React.FC<Props> = (props) => {
+  const map = new Map(props.map.map(({ key, value }) => [key, value]))
+
   return (
     <>
       <ContentPadding>
@@ -265,7 +317,7 @@ const SocialLinks: React.FC = () => {
       <Article>
         <GamesContainer>
           <div>
-            {competitiveProgramming.map((l, i) => (
+            {competitiveProgramming(map).map((l, i) => (
               <GameIcon key={i} link={l} />
             ))}
           </div>
@@ -278,7 +330,7 @@ const SocialLinks: React.FC = () => {
       <Article>
         <GamesContainer>
           <div>
-            {games.map((l, i) => (
+            {games(map).map((l, i) => (
               <GameIcon key={i} link={l} />
             ))}
           </div>

@@ -1,6 +1,11 @@
 import React, { useState } from 'react'
 import ContentPadding from '../../layouts/ContentPadding'
-import { numberFormat } from '../../utils/Formatting'
+import ClientMapEntry from '../../types/ClientMapEntry'
+import {
+  atcoderTitle,
+  codeforcesTitle,
+  numberFormat
+} from '../../utils/Formatting'
 import Article from '../Article'
 import Button from '../Button'
 import Caption from '../Caption'
@@ -11,13 +16,18 @@ import ProfileList from '../ProfileList'
 import Space from '../Space'
 import Subcaption, { Subsubcaption } from '../Subcaption'
 
+interface Props {
+  map: ClientMapEntry[]
+}
+
 interface State {
   detailsShown: boolean
 }
 
 // TODO move contents to markdown etc
 
-const ShiftAsADeveloper: React.FC = () => {
+const ShiftAsADeveloper: React.FC<Props> = (props) => {
+  const map = new Map(props.map.map(({ key, value }) => [key, value]))
   const [state, setState] = useState<State>({
     detailsShown: false,
   })
@@ -368,34 +378,61 @@ const ShiftAsADeveloper: React.FC = () => {
                 <Space h="2em" />
               </Collapse>
             </li>
-            <li>
-              <OuterLink href="https://codeforces.com/profile/shiftpsh">
-                Codeforces
-              </OuterLink>{' '}
-              최고 레이팅 2,117 (Master)
-              <Collapse shown={state.detailsShown}>
+            {map.has('cf_rating_highest') ? (
+              <li>
+                <OuterLink href="https://codeforces.com/profile/shiftpsh">
+                  Codeforces
+                </OuterLink>{' '}
+                최고 레이팅 {numberFormat(+map.get('cf_rating_highest')!, 0)} (
+                {codeforcesTitle(+map.get('cf_rating_highest')!)})
+                <Collapse shown={state.detailsShown}>
+                  <p>
+                    러시아 기반의 프로그래밍 대회 플랫폼입니다.
+                    {map.has('cf_rank') && map.has('cf_total_user_count') ? (
+                      <>
+                        레이팅 {numberFormat(+map.get('cf_rating_highest')!, 0)}
+                        은 활동하는 유저 중 상위{' '}
+                        {numberFormat(
+                          (+map.get('cf_rank')! /
+                            +map.get('cf_total_user_count')!) *
+                            100,
+                          2
+                        )}
+                        %에 해당됩니다.
+                      </>
+                    ) : null}
+                  </p>
+                  <Space h="2em" />
+                </Collapse>
+              </li>
+            ) : null}
+            {map.has('ac_rating_highest') ? (
+              <Collapse shown={state.detailsShown} as="li">
+                <OuterLink href="https://atcoder.jp/users/shiftpsh">
+                  AtCoder
+                </OuterLink>{' '}
+                최고 레이팅 {numberFormat(+map.get('ac_rating_highest')!, 0)} (
+                {atcoderTitle(+map.get('ac_rating_highest')!)})
                 {/* TODO load information automatically */}
                 <p>
-                  러시아 기반의 프로그래밍 대회 플랫폼입니다. 레이팅 2,117은
-                  활동하는 유저 중 상위 {numberFormat((2664 / 99392) * 100, 2)}
-                  %에 해당됩니다.
+                  일본 기반의 프로그래밍 대회 플랫폼입니다.
+                  {map.has('ac_rank') && map.has('ac_total_user_count') ? (
+                    <>
+                      레이팅 {numberFormat(+map.get('ac_rating_highest')!, 0)}은
+                      활동하는 유저 중 상위{' '}
+                      {numberFormat(
+                        (+map.get('ac_rank')! /
+                          +map.get('ac_total_user_count')!) *
+                          100,
+                        2
+                      )}
+                      %에 해당됩니다.
+                    </>
+                  ) : null}
                 </p>
                 <Space h="2em" />
               </Collapse>
-            </li>
-            <Collapse shown={state.detailsShown} as="li">
-              <OuterLink href="https://atcoder.jp/users/shiftpsh">
-                AtCoder
-              </OuterLink>{' '}
-              최고 레이팅 1,874 (1級)
-              {/* TODO load information automatically */}
-              <p>
-                일본 기반의 프로그래밍 대회 플랫폼입니다. 레이팅 1,874는
-                활동하는 유저 중 상위 {numberFormat((1605 / 71529) * 100, 2)}
-                %에 해당됩니다.
-              </p>
-              <Space h="2em" />
-            </Collapse>
+            ) : null}
             <li>
               여러 프로그래밍 대회 운영, 출제 및 검수
               <Collapse shown={state.detailsShown}>

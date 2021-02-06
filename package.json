@@ -13,6 +13,7 @@
     "mariadb": "^2.5.2",
     "mysql2": "^2.2.5",
     "next": "10.0.6",
+    "node-mocks-http": "^1.10.1",
     "react": "17.0.1",
     "react-device-detect": "^1.15.0",
     "react-dom": "17.0.1",
