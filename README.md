@@ -4,15 +4,23 @@
 
 ## Build & Run
 
-1. `nano .env`
+1. Set API secret: `nano .env`
 
 ```
-DB_ENDPOINT=<database endpoint>
-DB_USERNAME=<database username>
-DB_PASSWORD=<database password>
-DB_DIALECT=<mysql|postgres|sqlite|mariadb|mssql>
-DB_NAME=<database name>
 API_SECRET=<api secret>
 ```
 
-2. `npm i && npm run build && npm run start`
+1. Configuring database: `cp db_config.sample.ts db_config.ts && nano db_config.ts`
+
+```
+import { SequelizeOptions } from 'sequelize-typescript'
+
+export default {
+  dialect: 'mysql',
+  database: '<database name>>',
+  username: '<database username>',
+  password: '<database password>',
+} as SequelizeOptions
+```
+
+1. `npm i && npm run build && npm run start`
