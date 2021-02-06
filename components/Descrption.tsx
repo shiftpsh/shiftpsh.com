@@ -6,6 +6,9 @@ const Descrption = styled.span`
     (theme as ShiftTheme).backgroundColor
       .mix((theme as ShiftTheme).textColor, 0.4)
       .toString()};
+  & > * {
+    vertical-align: middle;
+  }
 `
 
 export default Descrption

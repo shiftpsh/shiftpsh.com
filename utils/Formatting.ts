@@ -59,4 +59,12 @@ const atcoderTitle = (highest: number) => {
   return '20 級'
 }
 
-export { numberFormat, codeforcesTitle, atcoderTitle }
+const topcoderTitle = (rating: number) => {
+  if (rating >= 2200) return 'Red'
+  if (rating >= 1500) return 'Yellow'
+  if (rating >= 1200) return 'Blue'
+  if (rating >= 900) return 'Green'
+  return 'Gray'
+}
+
+export { numberFormat, codeforcesTitle, atcoderTitle, topcoderTitle }

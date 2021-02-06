@@ -4,11 +4,23 @@ import styled from 'styled-components'
 import ContentPadding from '../../layouts/ContentPadding'
 import ClientMapEntry from '../../types/ClientMapEntry'
 import LinkItem from '../../types/LinkItem'
-import { atcoderTitle, codeforcesTitle } from '../../utils/Formatting'
+import {
+  atcoderColor,
+  codeforcesColor,
+  maimaiTitleColor,
+  sdvxColor,
+  topcoderColor
+} from '../../utils/Color'
+import {
+  atcoderTitle,
+  codeforcesTitle,
+  topcoderTitle
+} from '../../utils/Formatting'
 import Article from '../Article'
 import Caption from '../Caption'
 import Descrption from '../Descrption'
 import GameIcon from '../GameIcon'
+import Label from '../Label'
 import LinkComponent from '../LinkComponent'
 import Space from '../Space'
 import Subcaption, { Subsubcaption } from '../Subcaption'
@@ -103,15 +115,38 @@ const competitiveProgramming = (map: Map<string, string>) =>
       caption: 'Codeforces',
       description: (
         <>
+          {map.has('cf_rating') ? (
+            <>
+              <Label color={codeforcesColor(+map.get('cf_rating')!)}>
+                {codeforcesTitle(+map.get('cf_rating')!)}
+              </Label>{' '}
+            </>
+          ) : null}
           shiftpsh
           {map.has('cf_rating_highest') && map.has('cf_rating') ? (
             <>
               <br />
               <Descrption>
-                {codeforcesTitle(+map.get('cf_rating')!)},{' '}
-                {map.get('cf_rating')!} (max.{' '}
-                {codeforcesTitle(+map.get('cf_rating_highest')!)},{' '}
-                {map.get('cf_rating_highest')!})
+                <span
+                  style={{
+                    color: codeforcesColor(+map.get('cf_rating')!).toString(),
+                  }}
+                >
+                  {map.get('cf_rating')!}
+                </span>{' '}
+                / max.{' '}
+                <Label color={codeforcesColor(+map.get('cf_rating_highest')!)}>
+                  {codeforcesTitle(+map.get('cf_rating_highest')!)}
+                </Label>{' '}
+                <span
+                  style={{
+                    color: codeforcesColor(
+                      +map.get('cf_rating_highest')!
+                    ).toString(),
+                  }}
+                >
+                  {map.get('cf_rating_highest')!}
+                </span>
               </Descrption>
             </>
           ) : null}
@@ -125,14 +160,35 @@ const competitiveProgramming = (map: Map<string, string>) =>
       caption: 'AtCoder',
       description: (
         <>
+          {map.has('ac_rating_highest') ? (
+            <>
+              <Label color={atcoderColor(+map.get('ac_rating_highest')!)}>
+                {atcoderTitle(+map.get('ac_rating_highest')!)}
+              </Label>{' '}
+            </>
+          ) : null}
           shiftpsh
           {map.has('ac_rating_highest') && map.has('ac_rating') ? (
             <>
               <br />
               <Descrption>
-                {map.get('ac_rating')!} (max.{' '}
-                {atcoderTitle(+map.get('ac_rating_highest')!)},{' '}
-                {map.get('ac_rating_highest')!})
+                <span
+                  style={{
+                    color: atcoderColor(+map.get('ac_rating')!).toString(),
+                  }}
+                >
+                  {map.get('ac_rating')!}
+                </span>{' '}
+                / max.{' '}
+                <span
+                  style={{
+                    color: atcoderColor(
+                      +map.get('ac_rating_highest')!
+                    ).toString(),
+                  }}
+                >
+                  {map.get('ac_rating_highest')!}
+                </span>
               </Descrption>
             </>
           ) : null}
@@ -146,11 +202,26 @@ const competitiveProgramming = (map: Map<string, string>) =>
       caption: 'TopCoder',
       description: (
         <>
+          {map.has('tc_rating') ? (
+            <>
+              <Label color={topcoderColor(+map.get('tc_rating')!)}>
+                {topcoderTitle(+map.get('tc_rating')!)}
+              </Label>{' '}
+            </>
+          ) : null}
           shiftpsh
           {map.has('tc_rating') ? (
             <>
               <br />
-              <Descrption>{map.get('tc_rating')!}</Descrption>
+              <Descrption>
+                <span
+                  style={{
+                    color: topcoderColor(+map.get('tc_rating')!).toString(),
+                  }}
+                >
+                  {map.get('tc_rating')!}
+                </span>
+              </Descrption>
             </>
           ) : null}
         </>
@@ -218,13 +289,18 @@ const games = (map: Map<string, string>) =>
       caption: 'maimai DX+',
       description: (
         <>
+          {map.has('maimai_class') ? (
+            <>
+              <Label color={maimaiTitleColor(map.get('maimai_class')!)}>
+                {map.get('maimai_class')!}
+              </Label>{' '}
+            </>
+          ) : null}
           shift* <Descrption>&mdash; 7061399728945</Descrption>
-          {map.has('maimai_class') && map.has('maimai_rating') ? (
+          {map.has('maimai_rating') ? (
             <>
               <br />
-              <Descrption>
-                {map.get('maimai_class')!}, {map.get('maimai_rating')!}
-              </Descrption>
+              <Descrption>DX RATING {map.get('maimai_rating')!}</Descrption>
             </>
           ) : null}
         </>
@@ -237,13 +313,18 @@ const games = (map: Map<string, string>) =>
       caption: 'SOUND VOLTEX',
       description: (
         <>
+          {map.has('sdvx_class') ? (
+            <>
+              <Label color={sdvxColor(map.get('sdvx_class')!)}>
+                {map.get('sdvx_class')!}
+              </Label>{' '}
+            </>
+          ) : null}
           SHIFT* <Descrption>&mdash; SV-7651-0707</Descrption>
-          {map.has('sdvx_class') && map.has('sdvx_rating') ? (
+          {map.has('sdvx_rating') ? (
             <>
               <br />
-              <Descrption>
-                {map.get('sdvx_class')!}, {map.get('sdvx_rating')!}
-              </Descrption>
+              <Descrption>VOLFORCE {map.get('sdvx_rating')!}</Descrption>
             </>
           ) : null}
         </>
