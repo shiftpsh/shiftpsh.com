@@ -1,35 +1,13 @@
-import { Sequelize } from 'sequelize'
+import { Sequelize } from 'sequelize-typescript'
+import db_config from '../db_config'
+import MapEntry from './model/MapEntry'
 
-const dbInstance = async () => {
-  if (process.env.DB_NAME === undefined) return
-  if (process.env.DB_ENDPOINT === undefined) return
-  if (process.env.DB_USERNAME === undefined) return
-  if (process.env.DB_PASSWORD === undefined) return
-  if (process.env.DB_DIALECT === undefined) return
+const initDatabase = async () => {
+  const sequelize = new Sequelize(db_config)
 
-  const sequelize =
-    process.env.DB_DIALECT === 'sqlite'
-      ? new Sequelize({
-          dialect: 'sqlite',
-          storage: 'db.sqlite',
-        })
-      : new Sequelize(
-          process.env.DB_NAME,
-          process.env.DB_USERNAME,
-          process.env.DB_PASSWORD,
-          {
-            host: process.env.DB_ENDPOINT,
-            dialect: process.env.DB_DIALECT as
-              | 'mysql'
-              | 'postgres'
-              | 'sqlite'
-              | 'mariadb'
-              | 'mssql',
-          }
-        )
-  await sequelize.authenticate()
+  sequelize.addModels([MapEntry])
 
-  return sequelize
+  return await sequelize.sync()
 }
 
-export { dbInstance }
+export { initDatabase }

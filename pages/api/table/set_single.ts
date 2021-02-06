@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { dbInstance } from '../../../database/Database'
+import { initDatabase } from '../../../database/Database'
 import MapEntry from '../../../database/model/MapEntry'
 
 const SetSingle = async (req: NextApiRequest, res: NextApiResponse) => {
@@ -12,31 +12,24 @@ const SetSingle = async (req: NextApiRequest, res: NextApiResponse) => {
     res.status(401).send('Unauthorized.')
     return
   }
-
-  const db = await dbInstance()
+  
+  const db = await initDatabase()
   if (db === undefined) {
     res.status(500).send('Internal server error.')
     return
   }
 
-  try {
-    await db.authenticate()
-  } catch (error) {
-    res.status(500).send('Internal server error.')
-    return
-  }
   const {
     body: { key, value },
   } = req
 
-  const mapEntry = await MapEntry(db)
-  if ((await mapEntry.findOne({ where: { key } })) === null) {
-    await mapEntry.create({ key, value })
+  if ((await MapEntry.findOne({ where: { key } })) === null) {
+    await MapEntry.create({ key, value })
   } else {
-    await mapEntry.update({ value }, { where: { key } })
+    await MapEntry.update({ value }, { where: { key } })
   }
 
-  const entry = await mapEntry.findOne({
+  const entry = await MapEntry.findOne({
     where: { key },
     attributes: ['key', 'value'],
   })

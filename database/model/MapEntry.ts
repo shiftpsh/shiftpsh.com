@@ -1,17 +1,28 @@
-import { DataTypes, Sequelize } from 'sequelize'
+import {
+  Column,
+  CreatedAt,
+  DataType,
+  Model,
+  PrimaryKey,
+  Table,
+  UpdatedAt
+} from 'sequelize-typescript'
 
-const MapEntry = async (sequelize: Sequelize) => {
-  const model = sequelize.define('MapEntry', {
-    key: {
-      type: DataTypes.STRING,
-      primaryKey: true,
-    },
-    value: {
-      type: DataTypes.STRING,
-    },
-  })
-  await model.sync()
-  return model
+@Table({
+  tableName: 'MapEntry',
+  charset: 'utf8mb4',
+})
+export default class MapEntry extends Model {
+  @PrimaryKey
+  @Column(DataType.STRING)
+  public key!: string
+
+  @Column(DataType.STRING)
+  public value!: string
+
+  @CreatedAt
+  public readonly createdAt!: Date
+
+  @UpdatedAt
+  public readonly updatedAt!: Date
 }
-
-export default MapEntry

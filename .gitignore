@@ -38,3 +38,6 @@ yarn-error.log*
 
 # database
 db.sqlite
+
+# database configuration
+db_config.ts
