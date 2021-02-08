@@ -35,7 +35,7 @@ const Home: NextPage<{ map: ClientMapEntry[] }> = (props) => {
   )
 }
 
-export const getStaticProps = async (context: NextPageContext) => {
+export const getServerSideProps = async (context: NextPageContext) => {
   const { req, res } = createMocks({ method: 'GET' })
   await GetAll(req, res)
 
