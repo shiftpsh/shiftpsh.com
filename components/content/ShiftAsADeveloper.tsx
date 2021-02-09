@@ -390,6 +390,7 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                     러시아 기반의 프로그래밍 대회 플랫폼입니다.
                     {map.has('cf_rank') && map.has('cf_total_user_count') ? (
                       <>
+                        {' '}
                         레이팅 {numberFormat(+map.get('cf_rating_highest')!, 0)}
                         은 활동하는 유저 중 상위{' '}
                         {numberFormat(
@@ -418,6 +419,7 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                   일본 기반의 프로그래밍 대회 플랫폼입니다.
                   {map.has('ac_rank') && map.has('ac_total_user_count') ? (
                     <>
+                      {' '}
                       레이팅 {numberFormat(+map.get('ac_rating_highest')!, 0)}은
                       활동하는 유저 중 상위{' '}
                       {numberFormat(
