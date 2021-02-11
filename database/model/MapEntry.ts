@@ -17,7 +17,7 @@ export default class MapEntry extends Model {
   @Column(DataType.STRING)
   public key!: string
 
-  @Column(DataType.STRING)
+  @Column(DataType.TEXT)
   public value!: string
 
   @CreatedAt
