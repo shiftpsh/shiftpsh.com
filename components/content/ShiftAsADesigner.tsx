@@ -4,7 +4,7 @@ import Article from '../Article'
 import Button from '../Button'
 import Caption from '../Caption'
 import Collapse from '../Collapse'
-import Descrption from '../Descrption'
+import Description from '../Descrption'
 import OuterLink from '../OuterLink'
 import ProfileList from '../ProfileList'
 import Space from '../Space'
@@ -54,7 +54,7 @@ const ShiftAsADesigner: React.FC = () => {
               <OuterLink href="https://e.kakao.com/t/cool-for-nothing">
                 <b>쓸데없이 멋진 답장</b>
               </OuterLink>{' '}
-              1, 2 작가<Descrption>, 2018</Descrption>
+              1, 2 작가<Description>, 2018</Description>
               <Collapse shown={state.detailsShown}>
                 <p>
                   일간 최고 판매량 6위(10-20대 일간 최고 판매량 2위)를
@@ -67,7 +67,7 @@ const ShiftAsADesigner: React.FC = () => {
               <OuterLink href="https://solved.ac">
                 <b>solved.ac</b>
               </OuterLink>{' '}
-              UI/UX 설계 및 디자인<Descrption>, 2019 &ndash;</Descrption>
+              UI/UX 설계 및 디자인<Description>, 2019 &ndash;</Description>
               <Collapse shown={state.detailsShown}>
                 <p>
                   개인 프로젝트{' '}
@@ -85,19 +85,19 @@ const ShiftAsADesigner: React.FC = () => {
               <OuterLink href="http://2020.ucpc.me">
                 <b>UCPC 2020</b>
               </OuterLink>{' '}
-              로고, 삽화 제작, 조판, 웹 디자인<Descrption>, 2020</Descrption>
+              로고, 삽화 제작, 조판, 웹 디자인<Description>, 2020</Description>
             </li>
             <li>
               <OuterLink href="https://acm.sogang.ac.kr">
                 <b>Sogang ICPC Team</b>
               </OuterLink>{' '}
-              로고, 웹 디자인<Descrption>, 2019</Descrption>
+              로고, 웹 디자인<Description>, 2019</Description>
             </li>
             <li>
               <OuterLink href="https://shiftpsh.com/ed/7/">
                 <b>THE SHIFTED PROJECT</b>
               </OuterLink>{' '}
-              게임 스킨 및 영상 디자인<Descrption>, 2016</Descrption>
+              게임 스킨 및 영상 디자인<Description>, 2016</Description>
             </li>
             <li>
               <Collapse shown={state.detailsShown}>

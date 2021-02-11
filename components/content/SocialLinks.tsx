@@ -18,12 +18,24 @@ import {
 } from '../../utils/Formatting'
 import Article from '../Article'
 import Caption from '../Caption'
-import Descrption from '../Descrption'
+import Description from '../Descrption'
 import GameIcon from '../GameIcon'
 import Label from '../Label'
 import LinkComponent from '../LinkComponent'
 import Space from '../Space'
 import Subcaption, { Subsubcaption } from '../Subcaption'
+
+const MapleCharacter = styled.img`
+  position: absolute;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  width: 12em;
+  height: 12em;
+  right: -3em;
+  top: calc(-50% - 0.3em);
+  pointer-events: none;
+`
 
 const services: LinkItem[] = [
   {
@@ -126,7 +138,7 @@ const competitiveProgramming = (map: Map<string, string>) =>
           {map.has('cf_rating_highest') && map.has('cf_rating') ? (
             <>
               <br />
-              <Descrption>
+              <Description>
                 <span
                   style={{
                     color: codeforcesColor(+map.get('cf_rating')!).toString(),
@@ -147,7 +159,7 @@ const competitiveProgramming = (map: Map<string, string>) =>
                 >
                   {map.get('cf_rating_highest')!}
                 </span>
-              </Descrption>
+              </Description>
             </>
           ) : null}
         </>
@@ -171,7 +183,7 @@ const competitiveProgramming = (map: Map<string, string>) =>
           {map.has('ac_rating_highest') && map.has('ac_rating') ? (
             <>
               <br />
-              <Descrption>
+              <Description>
                 <span
                   style={{
                     color: atcoderColor(+map.get('ac_rating')!).toString(),
@@ -189,7 +201,7 @@ const competitiveProgramming = (map: Map<string, string>) =>
                 >
                   {map.get('ac_rating_highest')!}
                 </span>
-              </Descrption>
+              </Description>
             </>
           ) : null}
         </>
@@ -213,7 +225,7 @@ const competitiveProgramming = (map: Map<string, string>) =>
           {map.has('tc_rating') ? (
             <>
               <br />
-              <Descrption>
+              <Description>
                 <span
                   style={{
                     color: topcoderColor(+map.get('tc_rating')!).toString(),
@@ -221,7 +233,7 @@ const competitiveProgramming = (map: Map<string, string>) =>
                 >
                   {map.get('tc_rating')!}
                 </span>
-              </Descrption>
+              </Description>
             </>
           ) : null}
         </>
@@ -258,7 +270,7 @@ const games = (map: Map<string, string>) =>
           {map.has('djmax_description') ? (
             <>
               <br />
-              <Descrption>{map.get('djmax_description')!}</Descrption>
+              <Description>{map.get('djmax_description')!}</Description>
             </>
           ) : null}
         </>
@@ -271,13 +283,19 @@ const games = (map: Map<string, string>) =>
       caption: '메이플스토리',
       description: (
         <>
-          싶프트<Descrption>@오로라</Descrption>
+          싶프트<Description>@오로라</Description>
           <br />
-          <Descrption>
+          <Description>
             {map.has('maple_level')
               ? `Lv ${map.get('maple_level')!} / 아크`
               : `아크`}
-          </Descrption>
+          </Description>
+          {map.has('maple_character_image') ? (
+            <MapleCharacter
+              src={map.get('maple_character_image')!}
+              alt="싶프트 메이플스토리 캐릭터 이미지"
+            />
+          ) : null}
         </>
       ),
       href: 'https://maple.gg/u/%EC%8B%B6%ED%94%84%ED%8A%B8',
@@ -296,11 +314,11 @@ const games = (map: Map<string, string>) =>
               </Label>{' '}
             </>
           ) : null}
-          shift* <Descrption>&mdash; 7061399728945</Descrption>
+          shift* <Description>&mdash; 7061399728945</Description>
           {map.has('maimai_rating') ? (
             <>
               <br />
-              <Descrption>DX RATING {map.get('maimai_rating')!}</Descrption>
+              <Description>DX RATING {map.get('maimai_rating')!}</Description>
             </>
           ) : null}
         </>
@@ -320,11 +338,11 @@ const games = (map: Map<string, string>) =>
               </Label>{' '}
             </>
           ) : null}
-          SHIFT* <Descrption>&mdash; SV-7651-0707</Descrption>
+          SHIFT* <Description>&mdash; SV-7651-0707</Description>
           {map.has('sdvx_rating') ? (
             <>
               <br />
-              <Descrption>VOLFORCE {map.get('sdvx_rating')!}</Descrption>
+              <Description>VOLFORCE {map.get('sdvx_rating')!}</Description>
             </>
           ) : null}
         </>
@@ -339,7 +357,7 @@ const games = (map: Map<string, string>) =>
       caption: 'COLORFUL STAGE',
       description: (
         <>
-          shift* <Descrption>&mdash; 5530735142670336</Descrption>
+          shift* <Description>&mdash; 5530735142670336</Description>
         </>
       ),
       color: new Color('#85d5e8'),

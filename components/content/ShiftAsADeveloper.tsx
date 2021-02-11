@@ -10,7 +10,7 @@ import Article from '../Article'
 import Button from '../Button'
 import Caption from '../Caption'
 import Collapse from '../Collapse'
-import Descrption from '../Descrption'
+import Description from '../Descrption'
 import OuterLink from '../OuterLink'
 import ProfileList from '../ProfileList'
 import Space from '../Space'
@@ -64,7 +64,7 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
               <OuterLink href="https://company.nexon.com">
                 <b>NGINE STUDIOS / NEXON COMPANY</b>
               </OuterLink>{' '}
-              소프트웨어 엔지니어<Descrption>, 2020. 6 &ndash;</Descrption>
+              소프트웨어 엔지니어<Description>, 2020. 6 &ndash;</Description>
               <Collapse shown={state.detailsShown}>
                 <p>
                   넥슨컴퍼니 산하 엔진스튜디오에서 산업기능요원으로 일하고
@@ -126,7 +126,7 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                 <b>HYPERCONNECT</b>
               </OuterLink>{' '}
               소프트웨어 엔지니어 (인턴)
-              <Descrption>, 2018. 6 &ndash; 2018. 8</Descrption>
+              <Description>, 2018. 6 &ndash; 2018. 8</Description>
               <Collapse shown={state.detailsShown}>
                 <p>
                   하이퍼커넥트의 신규 프로덕트 발굴 팀{' '}
@@ -164,7 +164,7 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                 <b>서강대학교 융합소프트웨어전공</b>
               </OuterLink>{' '}
               SCSC 방학 코딩 워크샵 강사
-              <Descrption>, 2019. 8 &ndash; 2020. 1</Descrption>
+              <Description>, 2019. 8 &ndash; 2020. 1</Description>
               <p>
                 융합소프트웨어전공 학생들을 대상으로 기업 코딩 테스트 대비
                 알고리즘 문제해결 전략에 대한 강의를 진행했습니다.
@@ -178,7 +178,7 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
               <OuterLink href="https://cs.sogang.ac.kr">
                 <b>서강대학교 컴퓨터공학과</b>
               </OuterLink>{' '}
-              학부 18학번<Descrption>, 2018. 3 &ndash; (휴학)</Descrption>
+              학부 18학번<Description>, 2018. 3 &ndash; (휴학)</Description>
               <Collapse shown={state.detailsShown}>
                 <p>4학기까지 GPA 3.50/4.30 (CSE 3.75/4.30)</p>
               </Collapse>
@@ -208,7 +208,7 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                     </OuterLink>{' '}
                     Contest
                   </b>{' '}
-                  8<sup>th</sup> place<Descrption>, 2019. 11. 9</Descrption>
+                  8<sup>th</sup> place<Description>, 2019. 11. 9</Description>
                   <Collapse shown={state.detailsShown}>
                     First solved problems C and J
                     <p>
@@ -220,7 +220,7 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                 <li>
                   <b>2019 Asia Bangkok Regional Contest</b> 31<sup>th</sup>{' '}
                   place
-                  <Descrption>, 2019. 11. 3</Descrption>
+                  <Description>, 2019. 11. 3</Description>
                   <Collapse shown={state.detailsShown}>
                     <p>팀 Redshift(박수현, 박건, 이준석)로 출전했습니다.</p>
                   </Collapse>
@@ -242,10 +242,10 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
               <Space h="0.5em" />
               <ProfileList>
                 <li>
-                  <b>2020</b> Finalist<Descrption>, 2020. 11. 7</Descrption>
+                  <b>2020</b> Finalist<Description>, 2020. 11. 7</Description>
                 </li>
                 <li>
-                  <b>2019</b> Finalist<Descrption>, 2020. 7. 30</Descrption>
+                  <b>2019</b> Finalist<Description>, 2020. 7. 30</Description>
                 </li>
               </ProfileList>
               <Collapse shown={state.detailsShown}>
@@ -259,7 +259,7 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
               <ProfileList>
                 <li>
                   <b>2018</b> Master Division 1<sup>st</sup> place
-                  <Descrption>, 2018. 11. 23</Descrption>
+                  <Description>, 2018. 11. 23</Description>
                 </li>
               </ProfileList>
               <Space h="2em" />
@@ -278,7 +278,7 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
               <OuterLink href="https://solved.ac">
                 <b>solved.ac</b>
               </OuterLink>{' '}
-              기획, 운영 및 개발<Descrption>, 2019. 6 &ndash;</Descrption>
+              기획, 운영 및 개발<Description>, 2019. 6 &ndash;</Description>
               <Collapse shown={state.detailsShown}>
                 <p>
                   <OuterLink href="https://www.acmicpc.net">
@@ -347,7 +347,7 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
               <OuterLink href="https://ucpc.me">
                 <b>전국 대학생 프로그래밍 대회 동아리 연합</b>
               </OuterLink>{' '}
-              前 회장<Descrption>, 2020. 4 &ndash; 2021. 1</Descrption>
+              前 회장<Description>, 2020. 4 &ndash; 2021. 1</Description>
               <Collapse shown={state.detailsShown}>
                 <p>
                   전국 24개교의 프로그래밍 대회 동아리 연합입니다. 동아리 연합
@@ -360,7 +360,7 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
               <OuterLink href="https://acm.sogang.ac.kr">
                 <b>Sogang ICPC Team</b>
               </OuterLink>{' '}
-              前 학회장<Descrption>, 2019. 1 &ndash; 2019. 12</Descrption>
+              前 학회장<Description>, 2019. 1 &ndash; 2019. 12</Description>
               <Collapse shown={state.detailsShown}>
                 <p>
                   서강대학교의 알고리즘 문제해결 동아리입니다. 알고리즘 스터디를
@@ -482,11 +482,11 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
               <OuterLink href="https://www.facebook.com/theSogangComputerClub/">
                 SGCC
               </OuterLink>{' '}
-              동아리원<Descrption>, 2018. 3 &ndash; (현재)</Descrption>
+              동아리원<Description>, 2018. 3 &ndash; (현재)</Description>
             </Collapse>
             <Collapse shown={state.detailsShown} as="li">
               서강대학교 컴퓨터공학과 학회 Release 학회원
-              <Descrption>, 2019. 9 &ndash; (현재)</Descrption>
+              <Description>, 2019. 9 &ndash; (현재)</Description>
             </Collapse>
           </ProfileList>
           <Space h="2em" />
@@ -498,9 +498,9 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                 <b>ask.shiftp.sh</b>
               </OuterLink>{' '}
               트위터 한정 익명 질문 플랫폼
-              <Descrption>
+              <Description>
                 , 2018. 4 &ndash;, 1인 개발 / EC2, RDS, PHP, Twitter API
-              </Descrption>
+              </Description>
               <Collapse shown={state.detailsShown}>
                 <p>
                   기존에 사용하던 익명 질문 플랫폼에서 스팸 질문들이 오던 것이
@@ -518,10 +518,10 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
             </li>
             <li>
               <b>Jubeatbook</b> 아케이드 게임 기록 관리 어플리케이션
-              <Descrption>
+              <Description>
                 , 2015. 1 &ndash; 2017. 12(개발 중단), 프로젝트 기획 및 총괄 /
                 Firebase, Java → EC2, RDS, PHP, Kotlin
-              </Descrption>
+              </Description>
               <Collapse shown={state.detailsShown}>
                 <p>
                   KONAMI의 아케이드 게임{' '}
