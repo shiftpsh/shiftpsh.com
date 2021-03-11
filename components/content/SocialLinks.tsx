@@ -302,9 +302,9 @@ const games = (map: Map<string, string>) =>
       color: new Color('#ff9d00'),
     },
     {
-      id: 'games/maimai',
+      id: 'games/maimai_splash',
       iconFormat: 'png',
-      caption: 'maimai DX+',
+      caption: 'maimai DX Splash',
       description: (
         <>
           {map.has('maimai_class') ? (
@@ -323,7 +323,7 @@ const games = (map: Map<string, string>) =>
           ) : null}
         </>
       ),
-      color: new Color('#42bbcc'),
+      color: new Color('#39dca6'),
     },
     {
       id: 'games/sdvx',
