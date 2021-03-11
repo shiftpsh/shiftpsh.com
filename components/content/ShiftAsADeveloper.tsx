@@ -245,7 +245,7 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                   <b>2020</b> Finalist<Description>, 2020. 11. 7</Description>
                 </li>
                 <li>
-                  <b>2019</b> Finalist<Description>, 2020. 7. 30</Description>
+                  <b>2019</b> Finalist<Description>, 2019. 7. 30</Description>
                 </li>
               </ProfileList>
               <Collapse shown={state.detailsShown}>
@@ -279,23 +279,23 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                 <b>solved.ac</b>
               </OuterLink>{' '}
               기획, 운영 및 개발<Description>, 2019. 6 &ndash;</Description>
+              <p>
+                <OuterLink href="https://www.acmicpc.net">
+                  백준 온라인 저지
+                </OuterLink>
+                에서 제공하는 프로그래밍 문제들에 집단지성을 이용해 난이도를
+                매기고, 사용자가 푼 문제들을 바탕으로 사용자의 실력을 가늠해
+                주어 알고리즘 문제해결 학습 동기를 증진시키기 위한 사이트입니다.
+              </p>
+              <p>
+                기획, 운영, 개발, 디자인 등 전부 혼자 담당하고 있으며,{' '}
+                <OuterLink href="https://startlink.io">
+                  주식회사 스타트링크
+                </OuterLink>
+                의 스폰서를 받고 있습니다.
+              </p>
               <Collapse shown={state.detailsShown}>
-                <p>
-                  <OuterLink href="https://www.acmicpc.net">
-                    백준 온라인 저지
-                  </OuterLink>
-                  에서 제공하는 프로그래밍 문제들에 집단지성을 이용해 난이도를
-                  매기고, 사용자가 푼 문제들을 바탕으로 사용자의 실력을 가늠해
-                  주어 알고리즘 문제해결 학습 동기를 증진시키기 위한
-                  사이트입니다.
-                </p>
-                <p>
-                  기획, 운영, 개발, 디자인 등 전부 혼자 담당하고 있으며,{' '}
-                  <OuterLink href="https://startlink.io">
-                    주식회사 스타트링크
-                  </OuterLink>
-                  의 스폰서를 받고 있습니다.
-                </p>
+                <Space h="0.5em" />
                 <ProfileList>
                   <li>
                     프론트엔드는{' '}
@@ -305,7 +305,7 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                     <OuterLink href="https://www.typescriptlang.org/">
                       Typescript
                     </OuterLink>
-                    를 사용해 제작하고 있습니다. 인터페이스는
+                    를 사용해 제작하고 있습니다. 인터페이스는{' '}
                     <OuterLink href="https://styled-components.com/">
                       styled-components
                     </OuterLink>
@@ -319,8 +319,9 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                     과 PHP 7,{' '}
                     <OuterLink href="https://mariadb.org/">MariaDB</OuterLink>를
                     사용해 제작하고 있으며, 점차{' '}
-                    <OuterLink href="https://nodejs.org/">Node.js</OuterLink>로
-                    마이그레이션하고 있습니다.{' '}
+                    <OuterLink href="https://expressjs.com/">Express</OuterLink>
+                    와 <OuterLink href="https://nodejs.org/">Node.js</OuterLink>
+                    로 마이그레이션하고 있습니다.{' '}
                     <OuterLink href="https://www.nginx.com/">NGINX</OuterLink>를
                     사용하고 있습니다.
                   </li>
@@ -340,8 +341,8 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                     에 소스가 공개되어 있습니다.
                   </li>
                 </ProfileList>
-                <Space h="2em" />
               </Collapse>
+              <Space h="2em" />
             </li>
             <li>
               <OuterLink href="https://ucpc.me">
@@ -438,22 +439,109 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
             <li>
               여러 프로그래밍 대회 운영, 출제 및 검수
               <Collapse shown={state.detailsShown}>
+                <Space h="0.5em" />
                 <ProfileList>
                   <li>
                     <b>UCPC 2020</b> 전국 대학생 프로그래밍 대회 동아리 연합
                     대회 &mdash; 운영 및 출제 총괄
+                    <ProfileList>
+                      <li>
+                        예선 #A:{' '}
+                        <OuterLink href="https://www.acmicpc.net/problem/19532">
+                          수학은 비대면강의입니다
+                        </OuterLink>{' '}
+                        출제
+                      </li>
+                    </ProfileList>
+                    <Space h="0.5em" />
                   </li>
                   <li>
                     <b>SPC 2019</b> 서강대학교 프로그래밍 대회 &mdash; 운영 및
                     출제 총괄
+                    <ProfileList>
+                      <li>
+                        Master #A:{' '}
+                        <OuterLink href="https://www.acmicpc.net/problem/18108">
+                          1998년생인 내가 태국에서는 2541년생?!
+                        </OuterLink>{' '}
+                        출제
+                      </li>
+                      <li>
+                        Master #F:{' '}
+                        <OuterLink href="https://www.acmicpc.net/problem/18118">
+                          7-세그먼트 디스플레이
+                        </OuterLink>{' '}
+                        출제
+                      </li>
+                      <li>
+                        Champion #A:{' '}
+                        <OuterLink href="https://www.acmicpc.net/problem/18110">
+                          solved.ac
+                        </OuterLink>{' '}
+                        출제
+                      </li>
+                      <li>
+                        Champion #H:{' '}
+                        <OuterLink href="https://www.acmicpc.net/problem/18123">
+                          평행우주
+                        </OuterLink>{' '}
+                        출제
+                      </li>
+                    </ProfileList>
+                    <Space h="0.5em" />
                   </li>
                   <li>
                     <b>SUAPC 2021w</b> 신촌지역 대학생 프로그래밍 대회 동아리
                     연합 대회 &mdash; 출제
+                    <ProfileList>
+                      <li>
+                        #C:{' '}
+                        <OuterLink href="https://www.acmicpc.net/problem/20938">
+                          반짝반짝
+                        </OuterLink>{' '}
+                        출제
+                      </li>
+                      <li>
+                        #F:{' '}
+                        <OuterLink href="https://www.acmicpc.net/problem/20941">
+                          성싶당
+                        </OuterLink>{' '}
+                        공동 출제 (w/{' '}
+                        <OuterLink href="https://cubelover.tistory.com/">
+                          윤지학
+                        </OuterLink>
+                        )
+                      </li>
+                    </ProfileList>
+                    <Space h="0.5em" />
                   </li>
                   <li>
                     <b>SUAPC 2020</b> 신촌지역 대학생 프로그래밍 대회 동아리
                     연합 대회 &mdash; 출제
+                    <ProfileList>
+                      <li>
+                        Division 1 #B:{' '}
+                        <OuterLink href="https://www.acmicpc.net/problem/19573">
+                          꿀벌
+                        </OuterLink>{' '}
+                        출제
+                      </li>
+                      <li>
+                        Division 1 #H:{' '}
+                        <OuterLink href="https://www.acmicpc.net/problem/19585">
+                          전설
+                        </OuterLink>{' '}
+                        출제
+                      </li>
+                      <li>
+                        Division 2 #H:{' '}
+                        <OuterLink href="https://www.acmicpc.net/problem/19584">
+                          난개발
+                        </OuterLink>{' '}
+                        출제
+                      </li>
+                    </ProfileList>
+                    <Space h="0.5em" />
                   </li>
                   <li>
                     <b>SNUPC 2020</b> 서울대학교 프로그래밍 경시대회 &mdash;
@@ -476,6 +564,10 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                 해결해 주는 등의 업무를 수행했습니다.
               </p>
               <Space h="2em" />
+            </Collapse>
+            <Collapse shown={state.detailsShown} as="li">
+              2020학년도 선린인터넷고등학교 알고리즘 토크쇼 강연
+              <Description>, 2020. 12</Description>
             </Collapse>
             <Collapse shown={state.detailsShown} as="li">
               서강대학교 중앙 컴퓨터 동아리{' '}
