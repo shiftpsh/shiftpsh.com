@@ -326,7 +326,7 @@ const games = (map: Map<string, string>) =>
       color: new Color('#39dca6'),
     },
     {
-      id: 'games/sdvx',
+      id: 'games/sdvx_6',
       iconFormat: 'png',
       caption: 'SOUND VOLTEX',
       description: (
