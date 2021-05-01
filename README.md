@@ -23,7 +23,7 @@ export default {
 } as SequelizeOptions
 ```
 
-3. `npm i && npm run build && npm run start` or `npm i && npm run pm2-start` PM2 is available
+3. `npm i && npm run build && npm run start` or `npm i && npm run pm2-start` if PM2 is available
 
 Optionally set up the [crawler](https://github.com/shiftpsh/shiftpsh.com-crawler) to update values if needed
 
