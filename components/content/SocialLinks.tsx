@@ -355,7 +355,7 @@ const games = (map: Map<string, string>) =>
         </>
       ),
       href:
-        'https://p.eagate.573.jp/game/sdvx/v/p/playdata/rival/profile.html?rival_id=SV-7651-0707',
+        'https://p.eagate.573.jp/game/sdvx/vi/playdata/rival/profile.html?rival_id=SV-7651-0707',
       color: new Color('#f72675'),
     },
     {
