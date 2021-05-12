@@ -1,4 +1,3 @@
-import Color from 'color'
 import React, { useMemo } from 'react'
 import ReactMarkdown from 'react-markdown'
 import Article from '../Article'
@@ -21,7 +20,7 @@ const MarkdownRenderer: React.FC<Props> = (props) => {
       ul: ProfileList,
       a: OuterLink,
       shiftLabel: ({ value }: { value: string }) => {
-        return <Label color={new Color('black')}>{value}</Label>
+        return <Label>{value}</Label>
       },
     }),
     []

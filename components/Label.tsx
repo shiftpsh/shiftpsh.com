@@ -1,5 +1,6 @@
 import Color from 'color'
-import styled from 'styled-components'
+import styled, { useTheme } from 'styled-components'
+import { ShiftTheme } from '../styles/ShiftTheme'
 
 const LabelContainer = styled.div`
   display: inline-block;
@@ -12,16 +13,28 @@ const LabelContainer = styled.div`
   vertical-align: middle;
 `
 
+type LabelColorType = Color | 'pink' | 'yellow' | string | undefined
+
 interface Props {
-  color: Color
+  color?: LabelColorType
+}
+
+const getLabelColor = (color: LabelColorType) => {
+  const theme = useTheme() as ShiftTheme
+  if (color === 'pink') return theme.shiftPink
+  if (color === 'yellow') return theme.shiftYellow
+  if (typeof color === 'string') return new Color(color)
+  if (color === undefined) return theme.textColor
+  return color
 }
 
 const Label: React.FC<Props> = (props) => {
+  const color = getLabelColor(props.color)
   return (
     <LabelContainer
       style={{
-        color: props.color.toString(),
-        border: `1px solid ${props.color.toString()}`,
+        color: color.toString(),
+        border: `1px solid ${color.toString()}`,
       }}
     >
       {props.children}
