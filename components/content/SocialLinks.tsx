@@ -91,6 +91,13 @@ const social: LinkItem[] = [
     href: 'https://facebook.com/shiftpsh',
   },
   {
+    id: 'instagram',
+    caption: 'Instagram',
+    description: '@shiftpsh',
+    color: new Color('#dd2a7b'),
+    href: 'https://instagram.com/shiftpsh',
+  },
+  {
     id: 'github',
     caption: 'GitHub',
     description: 'shiftpsh',
