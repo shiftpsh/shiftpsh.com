@@ -1,3 +1,5 @@
+// Based on: https://github.com/remarkjs/react-markdown/issues/218#issuecomment-673582308
+
 import { Node } from 'unist-builder'
 import { visit } from 'unist-util-visit'
 
