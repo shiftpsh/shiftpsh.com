@@ -82,9 +82,9 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                     <b>
                       <OuterLink href="https://www.nypc.co.kr/main/main.do">
                         NYPC 넥슨 청소년 프로그래밍 챌린지
-                      </OuterLink>{' '}
-                      2020
-                    </b>
+                      </OuterLink>
+                    </b>{' '}
+                    (2020)
                     <ProfileList>
                       <li>
                         대회 시스템 설계와{' '}
@@ -272,13 +272,51 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
             </Collapse>
           </ProfileList>
           <Space h="2em" />
-          <Subsubcaption>Other Experiences</Subsubcaption>
+          <Subsubcaption>Projects</Subsubcaption>
           <ProfileList>
+            <li>
+              <OuterLink href="https://koi.or.kr">
+                <b>한국정보올림피아드</b>
+              </OuterLink>{' '}
+              경시부문 (2021) 대회 시스템
+              <Description>, 2021. 5</Description>
+              <p>&mdash; 아웃소싱 / 프론트엔드 설계, 개발 및 디자인</p>
+              <Space h="0.5em" />
+              <p>
+                <OuterLink href="https://www.kiise.or.kr/">
+                  한국정보과학회
+                </OuterLink>
+                에서 주최하는 한국정보올림피아드의 대회 시스템 프론트엔드 전반을
+                설계하고 개발했습니다.
+              </p>
+              <Collapse shown={state.detailsShown}>
+                <Space h="0.5em" />
+                <ProfileList>
+                  <li>
+                    선다형, 단답형,{' '}
+                    <OuterLink href="https://www.bebras.kr/">
+                      비버챌린지
+                    </OuterLink>
+                    형, 프로그래밍형 등 다양한 유형의 문제를 해결할 수 있는
+                    클라이언트를 제작했습니다.
+                  </li>
+                  <li>
+                    WebSocket을 활용한 실시간 채점 결과 확인, 부정행위 방지를
+                    위한 화면 녹화 등 여러 챌린징한 기능들을 구현했으며 모든
+                    디자인과 컴포넌트를 직접 제작했습니다.
+                  </li>
+                </ProfileList>
+              </Collapse>
+              <Space h="2em" />
+            </li>
             <li>
               <OuterLink href="https://solved.ac">
                 <b>solved.ac</b>
               </OuterLink>{' '}
-              기획, 운영 및 개발<Description>, 2019. 6 &ndash;</Description>
+              알고리즘 문제해결 학습의 이정표
+              <Description>, 2019. 6 &ndash;</Description>
+              <p>&mdash; 개인 프로젝트 / 기획, 운영, 개발 및 디자인</p>
+              <Space h="0.5em" />
               <p>
                 <OuterLink href="https://www.acmicpc.net">
                   백준 온라인 저지
@@ -344,6 +382,60 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
               </Collapse>
               <Space h="2em" />
             </li>
+            <li>
+              <OuterLink href="https://ask.shiftp.sh">
+                <b>ask.shiftp.sh</b>
+              </OuterLink>{' '}
+              트위터 한정 익명 질문 플랫폼
+              <Description>, 2018. 4 &ndash;</Description>
+              <p>&mdash; 개인 프로젝트 / 개발 및 디자인</p>
+              <Space h="0.5em" />
+              <Collapse shown={state.detailsShown}>
+                <p>
+                  기존에 사용하던 익명 질문 플랫폼에서 스팸 질문들이 오던 것이
+                  불편해 새로 제작했습니다. 인증된 트위터 유저들끼리만 질문과
+                  답변을 주고받는 것이 가능합니다.
+                </p>
+                <ProfileList>
+                  <li>
+                    Progressive Web App이며, 질문에 대한 답변이 달리면 데스크톱
+                    알림을 통해 답변이 달렸다는 사실을 알 수 있습니다.
+                  </li>
+                </ProfileList>
+                <Space h="2em" />
+              </Collapse>
+            </li>
+            <li>
+              <b>Jubeatbook</b> 아케이드 게임 기록 관리 어플리케이션
+              <Description>, 2015. 1 &ndash; 2017. 12(개발 중단)</Description>
+              <p>&mdash; 팀 프로젝트 / 총괄 기획, 개발 및 디자인</p>
+              <Collapse shown={state.detailsShown}>
+                <p>
+                  KONAMI의 아케이드 게임{' '}
+                  <OuterLink href="https://p.eagate.573.jp/game/jubeat/">
+                    Jubeat
+                  </OuterLink>
+                  에서 기록한 점수 등을 관리해 주는 Android/iOS
+                  어플리케이션입니다. 프로젝트를 총괄하면서 백엔드와 Android
+                  프론트엔드 개발을 주로 했고, 디자인도 했습니다.
+                </p>
+                <ProfileList>
+                  <li>
+                    유저 개개인의 기록 페이지를 파싱하고 유저의 점수들을 분석해,
+                    같은 난이도의 패턴이더라도 어떤 곡이 상대적으로 더 쉽고
+                    어려운지 정리해 주는 시스템을 개발했습니다.
+                  </li>
+                  <li>
+                    Play 스토어에서 배포했으며, 프로젝트 중단 직전 누적 설치
+                    수는 10,000+회였습니다.
+                  </li>
+                </ProfileList>
+              </Collapse>
+            </li>
+          </ProfileList>
+          <Space h="2em" />
+          <Subsubcaption>Other Experiences</Subsubcaption>
+          <ProfileList>
             <li>
               <OuterLink href="https://ucpc.me">
                 <b>전국 대학생 프로그래밍 대회 동아리 연합</b>
@@ -581,64 +673,6 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
               <Description>, 2019. 9 &ndash; (현재)</Description>
             </Collapse>
           </ProfileList>
-          <Space h="2em" />
-          <Subsubcaption>Side Projects</Subsubcaption>
-
-          <ProfileList>
-            <li>
-              <OuterLink href="https://ask.shiftp.sh">
-                <b>ask.shiftp.sh</b>
-              </OuterLink>{' '}
-              트위터 한정 익명 질문 플랫폼
-              <Description>
-                , 2018. 4 &ndash;, 1인 개발 / EC2, RDS, PHP, Twitter API
-              </Description>
-              <Collapse shown={state.detailsShown}>
-                <p>
-                  기존에 사용하던 익명 질문 플랫폼에서 스팸 질문들이 오던 것이
-                  불편해 새로 제작했습니다. 인증된 트위터 유저들끼리만 질문과
-                  답변을 주고받는 것이 가능합니다.
-                </p>
-                <ProfileList>
-                  <li>
-                    Progressive Web App이며, 질문에 대한 답변이 달리면 데스크톱
-                    알림을 통해 답변이 달렸다는 사실을 알 수 있습니다.
-                  </li>
-                </ProfileList>
-                <Space h="2em" />
-              </Collapse>
-            </li>
-            <li>
-              <b>Jubeatbook</b> 아케이드 게임 기록 관리 어플리케이션
-              <Description>
-                , 2015. 1 &ndash; 2017. 12(개발 중단), 프로젝트 기획 및 총괄 /
-                Firebase, Java → EC2, RDS, PHP, Kotlin
-              </Description>
-              <Collapse shown={state.detailsShown}>
-                <p>
-                  KONAMI의 아케이드 게임{' '}
-                  <OuterLink href="https://p.eagate.573.jp/game/jubeat/">
-                    Jubeat
-                  </OuterLink>
-                  에서 기록한 점수 등을 관리해 주는 Android/iOS
-                  어플리케이션입니다. 프로젝트를 총괄하면서 백엔드와 Android
-                  프론트엔드 개발을 주로 했고, 디자인도 했습니다.
-                </p>
-                <ProfileList>
-                  <li>
-                    유저 개개인의 기록 페이지를 파싱하고 유저의 점수들을 분석해,
-                    같은 난이도의 패턴이더라도 어떤 곡이 상대적으로 더 쉽고
-                    어려운지 정리해 주는 시스템을 개발했습니다.
-                  </li>
-                  <li>
-                    Play 스토어에서 배포했으며, 프로젝트 중단 직전 누적 설치
-                    수는 10,000+회였습니다.
-                  </li>
-                </ProfileList>
-              </Collapse>
-            </li>
-          </ProfileList>
-          <Space h="2em" />
         </Article>
       </ContentPadding>
     </>

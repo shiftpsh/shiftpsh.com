@@ -54,7 +54,7 @@ const ShiftAsADesigner: React.FC = () => {
               <OuterLink href="https://e.kakao.com/t/cool-for-nothing">
                 <b>쓸데없이 멋진 답장</b>
               </OuterLink>{' '}
-              1, 2 작가<Description>, 2018</Description>
+              1, 2 작가<Description>, 개인작 / 2018</Description>
               <Collapse shown={state.detailsShown}>
                 <p>
                   일간 최고 판매량 6위(10-20대 일간 최고 판매량 2위)를
@@ -64,10 +64,28 @@ const ShiftAsADesigner: React.FC = () => {
               </Collapse>
             </li>
             <li>
+              <OuterLink href="https://koi.or.kr">
+                <b>한국정보올림피아드</b>
+              </OuterLink>{' '}
+              경시부문 (2021) 대회 시스템 UI/UX 설계 및 디자인
+              <Description>, 아웃소싱 / 2021</Description>
+              <Collapse shown={state.detailsShown}>
+                <p>
+                  <OuterLink href="https://www.kiise.or.kr/">
+                    한국정보과학회
+                  </OuterLink>
+                  에서 주최하는 한국정보올림피아드의 대회 시스템을 디자인하고,
+                  UI/UX를 설계했습니다.
+                </p>
+                <Space h="2em" />
+              </Collapse>
+            </li>
+            <li>
               <OuterLink href="https://solved.ac">
                 <b>solved.ac</b>
               </OuterLink>{' '}
-              UI/UX 설계 및 디자인<Description>, 2019 &ndash;</Description>
+              UI/UX 설계 및 디자인
+              <Description>, 개인작 / 2019 &ndash;</Description>
               <Collapse shown={state.detailsShown}>
                 <p>
                   개인 프로젝트{' '}
@@ -85,19 +103,20 @@ const ShiftAsADesigner: React.FC = () => {
               <OuterLink href="http://2020.ucpc.me">
                 <b>UCPC 2020</b>
               </OuterLink>{' '}
-              로고, 삽화 제작, 조판, 웹 디자인<Description>, 2020</Description>
+              로고, 삽화 제작, 조판, 웹 디자인
+              <Description>, 개인작 / 2020</Description>
             </li>
             <li>
               <OuterLink href="https://acm.sogang.ac.kr">
                 <b>Sogang ICPC Team</b>
               </OuterLink>{' '}
-              로고, 웹 디자인<Description>, 2019</Description>
+              로고, 웹 디자인<Description>, 개인작 / 2019</Description>
             </li>
             <li>
               <OuterLink href="https://shiftpsh.com/ed/7/">
                 <b>THE SHIFTED PROJECT</b>
               </OuterLink>{' '}
-              게임 스킨 및 영상 디자인<Description>, 2016</Description>
+              게임 스킨 및 영상 디자인<Description>, 팀 프로젝트 / 2016</Description>
             </li>
             <li>
               <Collapse shown={state.detailsShown}>
