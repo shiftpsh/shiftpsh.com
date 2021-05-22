@@ -214,7 +214,7 @@ const competitiveProgramming = (map: Map<string, string>) =>
         </>
       ),
       color: new Color('#2d2d2d'),
-      href: 'https://atcoder.jp/users/shiftpshh',
+      href: 'https://atcoder.jp/users/shiftpsh',
     },
     {
       id: 'topcoder',
