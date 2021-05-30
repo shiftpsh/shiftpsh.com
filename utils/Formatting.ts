@@ -20,12 +20,12 @@ const codeforcesTitle = (rating: number) => {
 
 const sinoNumerals = [
   '〇',
-  '一',
+  '初',
   '二',
   '三',
   '四',
   '五',
-  '	六',
+  '六',
   '七',
   '八',
   '九',
