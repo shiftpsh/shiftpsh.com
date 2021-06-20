@@ -69,6 +69,10 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                 <p>
                   넥슨컴퍼니 산하 엔진스튜디오에서 산업기능요원으로 일하고
                   있습니다.{' '}
+                  <OuterLink href="http://it.chosun.com/site/data/html_dir/2020/11/14/2020111401042.html">
+                    인텔리전스랩스
+                  </OuterLink>
+                  와 긴밀하게 협업하고 있으며,{' '}
                   <OuterLink href="https://www.typescriptlang.org/">
                     Typescript
                   </OuterLink>
@@ -326,7 +330,7 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                 주어 알고리즘 문제해결 학습 동기를 증진시키기 위한 사이트입니다.
               </p>
               <p>
-                기획, 운영, 개발, 디자인 등 전부 혼자 담당하고 있으며,{' '}
+                기획, 운영, 개발, 디자인 등을 전부 혼자 담당하고 있으며,{' '}
                 <OuterLink href="https://startlink.io">
                   주식회사 스타트링크
                 </OuterLink>
@@ -347,27 +351,30 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                     <OuterLink href="https://styled-components.com/">
                       styled-components
                     </OuterLink>
-                    로 구성하고 있으며,{' '}
-                    <OuterLink href="https://www.docker.com/">Docker</OuterLink>
-                    를 사용해 배포하고 있습니다.
+                    로 구성하고 있습니다.
                   </li>
                   <li>
                     백엔드는{' '}
-                    <OuterLink href="https://kotlinlang.org/">Kotlin</OuterLink>
-                    과 PHP 7,{' '}
-                    <OuterLink href="https://mariadb.org/">MariaDB</OuterLink>를
-                    사용해 제작하고 있으며, 점차{' '}
+                    <OuterLink href="https://nodejs.org/">Node.js</OuterLink>와{' '}
                     <OuterLink href="https://expressjs.com/">Express</OuterLink>
-                    와 <OuterLink href="https://nodejs.org/">Node.js</OuterLink>
-                    로 마이그레이션하고 있습니다.{' '}
-                    <OuterLink href="https://www.nginx.com/">NGINX</OuterLink>를
-                    사용하고 있습니다.
+                    ,{' '}
+                    <OuterLink href="http://sequelize.org/">
+                      Sequelize ORM
+                    </OuterLink>
+                    , 그리고{' '}
+                    <OuterLink href="https://www.typescriptlang.org/">
+                      Typescript
+                    </OuterLink>
+                    를 사용해 제작하고 있습니다. 일부 요소들은{' '}
+                    <OuterLink href="https://aws.amazon.com/ko/lambda/">
+                      AWS Lambda
+                    </OuterLink>
+                    를 사용하고 있습니다.
                   </li>
                   <li>
-                    서버는{' '}
-                    <OuterLink href="https://aws.amazon.com/ko/">AWS</OuterLink>
-                    를 사용하고 있으며, AWS 서비스 중에서도 EC2, RDS, S3, SQS,
-                    Lambda를 주로 사용하고 있습니다.
+                    프론트엔드와 백엔드는 모두 Docker 이미지로 빌드하고 AWS
+                    ECS에 배포됩니다. 빌드부터 배포까지의 전 과정은 Github
+                    Actions로 자동화되어 있습니다.
                   </li>
                   <li>
                     백준 온라인 저지의 공식 기능으로 통합되기 전까지는
@@ -398,8 +405,8 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                 </p>
                 <ProfileList>
                   <li>
-                    Progressive Web App이며, 질문에 대한 답변이 달리면 데스크톱
-                    알림을 통해 답변이 달렸다는 사실을 알 수 있습니다.
+                    질문에 대한 답변이 달리면 데스크톱 알림을 통해 답변이
+                    달렸다는 사실을 알 수 있습니다.
                   </li>
                 </ProfileList>
                 <Space h="2em" />

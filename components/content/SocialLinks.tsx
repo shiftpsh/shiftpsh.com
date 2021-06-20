@@ -125,6 +125,13 @@ const social: LinkItem[] = [
     color: new Color('#0377c6'),
     href: 'https://www.acmicpc.net/user/shiftpsh',
   },
+  {
+    id: 'solvedac',
+    caption: 'solved.ac',
+    description: 'shiftpsh',
+    color: new Color('#17ce3a'),
+    href: 'https://solved.ac/profile/shiftpsh',
+  },
 ]
 
 const competitiveProgramming = (map: Map<string, string>) =>
