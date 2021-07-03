@@ -1,7 +1,6 @@
 import { NextPage, NextPageContext } from 'next'
 import { createMocks } from 'node-mocks-http'
 import React from 'react'
-import { isIE } from 'react-device-detect'
 import Background from '../components/Background'
 import Footer from '../components/content/Footer'
 import ShiftAsADesigner from '../components/content/ShiftAsADesigner'
@@ -10,7 +9,6 @@ import ShiftTitle from '../components/content/ShiftTitle'
 import SocialLinks from '../components/content/SocialLinks'
 import Space from '../components/Space'
 import TopNavigation from '../components/TopNavigation'
-import UnsupportedBrowserSnackbar from '../components/UnsupportedBrowserSnackbar'
 import ClientMapEntry from '../types/ClientMapEntry'
 import GetAll from './api/table/get_all'
 
@@ -30,7 +28,6 @@ const Home: NextPage<{ map: ClientMapEntry[] }> = (props) => {
         <Footer />
         <Space h="4em" />
       </div>
-      {isIE ? <UnsupportedBrowserSnackbar /> : null}
     </>
   )
 }

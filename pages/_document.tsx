@@ -64,13 +64,15 @@ export default class MyDocument extends Document {
           />
           <meta name="twitter:image" content="/res/card.png" />
 
+          <link rel="preconnect" href="//fonts.googleapis.com" />
+          <link rel="preconnect" href="//fonts.gstatic.com" crossOrigin="crossorigin" />
           <link
             rel="stylesheet"
             href="//cloud.typography.com/6794156/6837792/css/fonts.css"
           />
           <link
             rel="stylesheet"
-            href="//fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&amp;display=swap"
+            href="//fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&amp;display=swap"
           />
 
           <script
