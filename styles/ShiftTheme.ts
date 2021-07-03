@@ -14,16 +14,19 @@ interface ShiftTheme {
 
 const GothamNotoFontFamily = [
   'Gotham', // TODO erase this
-  'Gotham SSm A',
-  'Gotham SSm B',
   'Noto Sans KR',
   '-apple-system',
   'BlinkMacSystemFont',
   'Segoe UI',
   'Roboto',
-  'Helvetica',
+  'Helvetica Neue',
   'Arial',
+  'Noto Sans',
   'sans-serif',
+  'Apple Color Emoji',
+  'Segoe UI Emoji',
+  'Segoe UI Symbol',
+  'Noto Color Emoji',
 ]
   .map((f) => (f.includes(' ') ? `"${f}"` : f))
   .join(',')

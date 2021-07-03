@@ -27,7 +27,10 @@ const Footer: React.FC = () => {
               href="https://www.unicode.org/consortium/adopted-characters.html#b2303"
               style={{ background: 'inherit' }}
             >
-              <Sponsor src="/res/bronze-2303.png" />
+              <Sponsor
+                src="/res/bronze-2303.png"
+                alt="Unicode Bronze Sponsor"
+              />
             </OuterLink>
             <Space h="2em" />
             <Copyright>

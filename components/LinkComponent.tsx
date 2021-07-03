@@ -64,16 +64,8 @@ interface State {
 
 const LinkComponent: React.FC<{ link: LinkItem }> = (props) => {
   const [shadowX, shadowY] = useShadowLightCoordinates()
-  const {
-    id,
-    caption,
-    description,
-    href,
-    address,
-    iconFormat,
-    color,
-    type,
-  } = props.link
+  const { id, caption, description, href, address, iconFormat, color, type } =
+    props.link
 
   const [state, setState] = useState<State>({ obfuscation: [] })
 
@@ -119,7 +111,10 @@ const LinkComponent: React.FC<{ link: LinkItem }> = (props) => {
             background: color.toString(),
           }}
         >
-          <LinkIcon src={`/res/icons/${id}.${iconFormat ?? 'svg'}`} />
+          <LinkIcon
+            src={`/res/icons/${id}.${iconFormat ?? 'svg'}`}
+            alt={`${caption} icon`}
+          />
         </LinkIconContainer>
         <IconCaption>{caption}</IconCaption>
         <IconDescription>
@@ -153,7 +148,10 @@ const LinkComponent: React.FC<{ link: LinkItem }> = (props) => {
             background: color.toString(),
           }}
         >
-          <LinkIcon src={`/res/icons/${id}.${iconFormat ?? 'svg'}`} />
+          <LinkIcon
+            src={`/res/icons/${id}.${iconFormat ?? 'svg'}`}
+            alt={`${caption} icon`}
+          />
         </LinkIconContainer>
         <IconCaption>{caption}</IconCaption>
         <IconDescription>{description}</IconDescription>

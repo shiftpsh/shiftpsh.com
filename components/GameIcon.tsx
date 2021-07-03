@@ -102,7 +102,10 @@ const GameIcon: React.FC<{ link: LinkItem }> = (props) => {
             background: color.toString(),
           }}
         >
-          <LinkIcon src={`/res/icons/${id}.${iconFormat ?? 'svg'}`} />
+          <LinkIcon
+            src={`/res/icons/${id}.${iconFormat ?? 'svg'}`}
+            alt={`${caption} icon`}
+          />
         </LinkIconContainer>
       </LinkIconSizer>
       <IconCaption>{caption}</IconCaption>

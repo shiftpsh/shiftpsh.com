@@ -47,8 +47,11 @@ const Background: React.FC = (props) => {
         <BackgroundShadowImg
           src="/res/shiftpsh-logo-2019-shadow.png"
           style={{
-            transform: `translate(calc(${shadowX * 2}em), ${(shadowY - 0.3) * 2}em)`,
+            transform: `translate(calc(${shadowX * 2}em), ${
+              (shadowY - 0.3) * 2
+            }em)`,
           }}
+          alt=""
         />
       </BackgroundSizer>
       <BackgroundSizer>

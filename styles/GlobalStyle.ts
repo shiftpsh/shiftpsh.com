@@ -24,12 +24,15 @@ const GlobalStyle = createGlobalStyle<{ theme: ShiftTheme }>`
     overflow-x: hidden;
     font-size: calc(10px + 0.7vmin);
     letter-spacing: -0.05ch;
+    font-display: swap;
   }
   
   /* TODO move to ShiftTheme */
   .tabular {
-    font-family: 'Gotham SSm Tabular A', 'Gotham SSm Tabular B', 'Noto Sans KR',
-      'NanumGothic', '나눔고딕', 'Malgun Gothic', '맑은 고딕', sans-serif;
+    font-family: "Gotham SSm Tabular A", "Gotham SSm Tabular B", "Noto Sans KR",
+      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+      Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol", "Noto Color Emoji";
   }
   
   body {
