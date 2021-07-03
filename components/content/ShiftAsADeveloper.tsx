@@ -120,6 +120,11 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                         정적 사이트를 생성하도록 구성했습니다.
                       </li>
                     </ProfileList>
+                    <Space h="0.5em" />
+                  </li>
+                  <li>
+                    넥슨컴퍼니 사내 분석 플랫폼의 프론트엔드를 제작하고
+                    있습니다.
                   </li>
                 </ProfileList>
                 <Space h="2em" />
@@ -189,7 +194,7 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
             </li>
           </ProfileList>
           <Space h="2em" />
-          <Subsubcaption>Honors and Awards</Subsubcaption>
+          <Subsubcaption>Achievements</Subsubcaption>
           <ProfileList>
             <li>
               <OuterLink href="https://icpc.baylor.edu">
@@ -269,7 +274,7 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
               <Space h="2em" />
             </Collapse>
             <Collapse shown={state.detailsShown} as="li">
-              <b>서강대학교 공학부 Dean's List</b>
+              서강대학교 공학부 Dean's List
               <ProfileList>
                 <li>2018-1학기</li>
               </ProfileList>
@@ -282,7 +287,7 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
               <OuterLink href="https://koi.or.kr">
                 <b>한국정보올림피아드</b>
               </OuterLink>{' '}
-              경시부문 (2021) 대회 시스템
+              (2021) 대회 시스템
               <Description>, 2021. 5</Description>
               <p>&mdash; 아웃소싱 / 프론트엔드 설계, 개발 및 디자인</p>
               <Space h="0.5em" />
@@ -441,7 +446,7 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
             </li>
           </ProfileList>
           <Space h="2em" />
-          <Subsubcaption>Other Experiences</Subsubcaption>
+          <Subsubcaption>Extracurricular Activities</Subsubcaption>
           <ProfileList>
             <li>
               <OuterLink href="https://ucpc.me">
@@ -478,6 +483,36 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                 <Space h="2em" />
               </Collapse>
             </li>
+            <Collapse shown={state.detailsShown} as="li">
+              <OuterLink href="https://www.facebook.com/koreahacks/">
+                고려대학교 해커톤 2021 KOREA HACKS '온라인 고카톤'
+              </OuterLink>{' '}
+              멘토
+              <p>
+                Android와 웹 프론트엔드 분야에서 해커톤 참여 팀들의 질문들을
+                해결해 주는 등의 업무를 수행했습니다.
+              </p>
+              <Space h="2em" />
+            </Collapse>
+            <Collapse shown={state.detailsShown} as="li">
+              2020학년도 선린인터넷고등학교 알고리즘 토크쇼 강연
+              <Description>, 2020. 12</Description>
+            </Collapse>
+            <Collapse shown={state.detailsShown} as="li">
+              서강대학교 중앙 컴퓨터 동아리{' '}
+              <OuterLink href="https://www.facebook.com/theSogangComputerClub/">
+                SGCC
+              </OuterLink>{' '}
+              동아리원<Description>, 2018. 3 &ndash; (현재)</Description>
+            </Collapse>
+            <Collapse shown={state.detailsShown} as="li">
+              서강대학교 컴퓨터공학과 학회 Release 학회원
+              <Description>, 2019. 9 &ndash; (현재)</Description>
+            </Collapse>
+          </ProfileList>
+          <Space h="2em" />
+          <Subsubcaption>Other Experiences</Subsubcaption>
+          <ProfileList>
             {map.has('cf_rating_highest') ? (
               <li>
                 <OuterLink href="https://codeforces.com/profile/shiftpsh">
@@ -541,144 +576,151 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                 <Space h="0.5em" />
                 <ProfileList>
                   <li>
-                    <b>UCPC 2020</b> 전국 대학생 프로그래밍 대회 동아리 연합
-                    대회 &mdash; 운영 및 출제 총괄
+                    <OuterLink href="https://ucpc.me">
+                      <b>UCPC</b> 전국 대학생 프로그래밍 대회 동아리 연합 대회
+                    </OuterLink>
+                    <Description>
+                      , 전국 대학생 프로그래밍 대회 동아리 연합(전대프연) 주최
+                    </Description>
                     <ProfileList>
                       <li>
-                        예선 #A:{' '}
-                        <OuterLink href="https://www.acmicpc.net/problem/19532">
-                          수학은 비대면강의입니다
+                        <OuterLink href="https://2020.ucpc.me">
+                          <b>2020</b>
                         </OuterLink>{' '}
-                        출제
+                        &mdash; 운영 및 출제 총괄
+                        <Description>, 2020. 8. 1</Description>
+                        <ProfileList>
+                          <li>
+                            <OuterLink href="https://www.acmicpc.net/problem/19532">
+                              수학은 비대면강의입니다
+                            </OuterLink>{' '}
+                            &mdash; 예선 A
+                          </li>
+                        </ProfileList>
                       </li>
                     </ProfileList>
                     <Space h="0.5em" />
                   </li>
                   <li>
-                    <b>SPC 2019</b> 서강대학교 프로그래밍 대회 &mdash; 운영 및
-                    출제 총괄
+                    <OuterLink href="https://acm.sogang.ac.kr/spc">
+                      <b>SPC</b> 서강대학교 프로그래밍 대회
+                    </OuterLink>
+                    <Description>, 서강대학교 컴퓨터공학부 주최</Description>
                     <ProfileList>
                       <li>
-                        Master #A:{' '}
-                        <OuterLink href="https://www.acmicpc.net/problem/18108">
-                          1998년생인 내가 태국에서는 2541년생?!
-                        </OuterLink>{' '}
-                        출제
+                        <b>2020</b> &mdash; 검수
+                        <Description>, 2020. 11. 28</Description>
                       </li>
                       <li>
-                        Master #F:{' '}
-                        <OuterLink href="https://www.acmicpc.net/problem/18118">
-                          7-세그먼트 디스플레이
-                        </OuterLink>{' '}
-                        출제
-                      </li>
-                      <li>
-                        Champion #A:{' '}
-                        <OuterLink href="https://www.acmicpc.net/problem/18110">
-                          solved.ac
-                        </OuterLink>{' '}
-                        출제
-                      </li>
-                      <li>
-                        Champion #H:{' '}
-                        <OuterLink href="https://www.acmicpc.net/problem/18123">
-                          평행우주
-                        </OuterLink>{' '}
-                        출제
+                        <b>2019</b> &mdash; 운영 및 출제 총괄
+                        <Description>, 2019. 11. 22</Description>
+                        <ProfileList>
+                          <li>
+                            <OuterLink href="https://www.acmicpc.net/problem/18108">
+                              1998년생인 내가 태국에서는 2541년생?!
+                            </OuterLink>{' '}
+                            &mdash; Master A
+                          </li>
+                          <li>
+                            <OuterLink href="https://www.acmicpc.net/problem/18118">
+                              7-세그먼트 디스플레이
+                            </OuterLink>{' '}
+                            &mdash; Master F
+                          </li>
+                          <li>
+                            <OuterLink href="https://www.acmicpc.net/problem/18110">
+                              solved.ac
+                            </OuterLink>{' '}
+                            &mdash; Champion A
+                          </li>
+                          <li>
+                            <OuterLink href="https://www.acmicpc.net/problem/18123">
+                              평행우주
+                            </OuterLink>{' '}
+                            &mdash; Champion H
+                          </li>
+                        </ProfileList>
                       </li>
                     </ProfileList>
                     <Space h="0.5em" />
                   </li>
                   <li>
-                    <b>SUAPC 2021w</b> 신촌지역 대학생 프로그래밍 대회 동아리
-                    연합 대회 &mdash; 출제
+                    <OuterLink href="https://icpc-sinchon.io/suapc">
+                      <b>SUAPC</b> 신촌지역 대학교 프로그래밍 동아리 연합 여름
+                      대회
+                    </OuterLink>
+                    <Description>
+                      , 신촌지역 대학교 프로그래밍 동아리 연합 주최
+                    </Description>
                     <ProfileList>
                       <li>
-                        #C:{' '}
-                        <OuterLink href="https://www.acmicpc.net/problem/20938">
-                          반짝반짝
-                        </OuterLink>{' '}
-                        출제
-                      </li>
+                        <b>2021 Winter</b> &mdash; 출제
+                        <Description>, 2021. 2. 28</Description>
+                        <ProfileList>
+                          <li>
+                            <OuterLink href="https://www.acmicpc.net/problem/20938">
+                              반짝반짝
+                            </OuterLink>{' '}
+                            &mdash; C
+                          </li>
+                          <li>
+                            <OuterLink href="https://www.acmicpc.net/problem/20941">
+                              성싶당
+                            </OuterLink>{' '}
+                            &mdash; F, 공동 출제 (w/{' '}
+                            <OuterLink href="https://cubelover.tistory.com/">
+                              윤지학
+                            </OuterLink>
+                            )
+                          </li>
+                        </ProfileList>
+                      </li>{' '}
                       <li>
-                        #F:{' '}
-                        <OuterLink href="https://www.acmicpc.net/problem/20941">
-                          성싶당
-                        </OuterLink>{' '}
-                        공동 출제 (w/{' '}
-                        <OuterLink href="https://cubelover.tistory.com/">
-                          윤지학
-                        </OuterLink>
-                        )
+                        <b>2020</b> &mdash; 출제
+                        <Description>, 2020. 8. 15</Description>
+                        <ProfileList>
+                          <li>
+                            <OuterLink href="https://www.acmicpc.net/problem/19573">
+                              꿀벌
+                            </OuterLink>{' '}
+                            &mdash; Division 1 B
+                          </li>
+                          <li>
+                            <OuterLink href="https://www.acmicpc.net/problem/19585">
+                              전설
+                            </OuterLink>{' '}
+                            &mdash; Division 1 H
+                          </li>
+                          <li>
+                            <OuterLink href="https://www.acmicpc.net/problem/19584">
+                              난개발
+                            </OuterLink>{' '}
+                            &mdash; Division 2 H
+                          </li>
+                        </ProfileList>
                       </li>
                     </ProfileList>
+
                     <Space h="0.5em" />
                   </li>
                   <li>
-                    <b>SUAPC 2020</b> 신촌지역 대학생 프로그래밍 대회 동아리
-                    연합 대회 &mdash; 출제
-                    <ProfileList>
-                      <li>
-                        Division 1 #B:{' '}
-                        <OuterLink href="https://www.acmicpc.net/problem/19573">
-                          꿀벌
-                        </OuterLink>{' '}
-                        출제
-                      </li>
-                      <li>
-                        Division 1 #H:{' '}
-                        <OuterLink href="https://www.acmicpc.net/problem/19585">
-                          전설
-                        </OuterLink>{' '}
-                        출제
-                      </li>
-                      <li>
-                        Division 2 #H:{' '}
-                        <OuterLink href="https://www.acmicpc.net/problem/19584">
-                          난개발
-                        </OuterLink>{' '}
-                        출제
-                      </li>
-                    </ProfileList>
-                    <Space h="0.5em" />
+                    <OuterLink href="https://snups.snucse.org/snupc2020/">
+                      <b>SNUPC 2020</b> 서울대학교 프로그래밍 경시대회
+                    </OuterLink>{' '}
+                    &mdash; 검수
+                    <Description>, 2020. 9. 12</Description>
                   </li>
                   <li>
-                    <b>SNUPC 2020</b> 서울대학교 프로그래밍 경시대회 &mdash;
-                    검수
-                  </li>
-                  <li>
-                    <b>SPC 2020</b> 서강대학교 프로그래밍 대회 &mdash; 검수
-                  </li>
-                  <li>
-                    <b>2020 Uni-CODE</b> UNIST 프로그래밍 대회 &mdash; 검수
+                    <OuterLink href="https://www.facebook.com/unist.unicode/">
+                      <b>Uni-CODE 2020</b> UNIST 알고리즘 프로그래밍 경진대회
+                    </OuterLink>{' '}
+                    &mdash; 검수
+                    <Description>, 2020. 11. 28</Description>
                   </li>
                 </ProfileList>
                 <Space h="2em" />
               </Collapse>
             </li>
-            <Collapse shown={state.detailsShown} as="li">
-              고려대학교 해커톤 KOREA HACKS 2021 멘토
-              <p>
-                Android와 웹 프론트엔드 분야에서 해커톤 참여 팀들의 질문들을
-                해결해 주는 등의 업무를 수행했습니다.
-              </p>
-              <Space h="2em" />
-            </Collapse>
-            <Collapse shown={state.detailsShown} as="li">
-              2020학년도 선린인터넷고등학교 알고리즘 토크쇼 강연
-              <Description>, 2020. 12</Description>
-            </Collapse>
-            <Collapse shown={state.detailsShown} as="li">
-              서강대학교 중앙 컴퓨터 동아리{' '}
-              <OuterLink href="https://www.facebook.com/theSogangComputerClub/">
-                SGCC
-              </OuterLink>{' '}
-              동아리원<Description>, 2018. 3 &ndash; (현재)</Description>
-            </Collapse>
-            <Collapse shown={state.detailsShown} as="li">
-              서강대학교 컴퓨터공학과 학회 Release 학회원
-              <Description>, 2019. 9 &ndash; (현재)</Description>
-            </Collapse>
           </ProfileList>
         </Article>
       </ContentPadding>

@@ -67,7 +67,7 @@ const ShiftAsADesigner: React.FC = () => {
               <OuterLink href="https://koi.or.kr">
                 <b>한국정보올림피아드</b>
               </OuterLink>{' '}
-              경시부문 (2021) 대회 시스템 UI/UX 설계 및 디자인
+              (2021) 대회 시스템 UI/UX 설계 및 디자인
               <Description>, 아웃소싱 / 2021</Description>
               <Collapse shown={state.detailsShown}>
                 <p>
@@ -116,7 +116,8 @@ const ShiftAsADesigner: React.FC = () => {
               <OuterLink href="https://shiftpsh.com/ed/7/">
                 <b>THE SHIFTED PROJECT</b>
               </OuterLink>{' '}
-              게임 스킨 및 영상 디자인<Description>, 팀 프로젝트 / 2016</Description>
+              게임 스킨 및 영상 디자인
+              <Description>, 팀 프로젝트 / 2016</Description>
             </li>
             <li>
               <Collapse shown={state.detailsShown}>
