@@ -14,6 +14,8 @@ interface ShiftTheme {
 
 const GothamNotoFontFamily = [
   'Gotham', // TODO erase this
+  'Gotham SSm A',
+  'Gotham SSm B',
   'Noto Sans KR',
   '-apple-system',
   'BlinkMacSystemFont',
