@@ -72,7 +72,8 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                   <OuterLink href="http://it.chosun.com/site/data/html_dir/2020/11/14/2020111401042.html">
                     인텔리전스랩스
                   </OuterLink>
-                  와 긴밀하게 협업하고 있으며,{' '}
+                  와 긴밀하게 협업하고 있으며, 여러 분야의 엔지니어링 업무를
+                  수행 중입니다.{' '}
                   <OuterLink href="https://www.typescriptlang.org/">
                     Typescript
                   </OuterLink>
@@ -123,7 +124,7 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                     <Space h="0.5em" />
                   </li>
                   <li>
-                    넥슨컴퍼니 사내 분석 플랫폼의 프론트엔드를 제작하고
+                    넥슨컴퍼니 사내 분석 플랫폼의 프론트엔드와 백엔드를 제작하고
                     있습니다.
                   </li>
                 </ProfileList>
