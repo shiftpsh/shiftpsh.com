@@ -289,7 +289,7 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                 <b>한국정보올림피아드</b>
               </OuterLink>{' '}
               (2021) 대회 시스템
-              <Description>, 2021. 5</Description>
+              <Description>, 2021. 5 &ndash; 2021. 7</Description>
               <p>&mdash; 아웃소싱 / 프론트엔드 설계, 개발 및 디자인</p>
               <Space h="0.5em" />
               <p>
