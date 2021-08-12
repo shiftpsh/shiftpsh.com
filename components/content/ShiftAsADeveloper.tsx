@@ -219,6 +219,8 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                     Contest
                   </b>{' '}
                   8<sup>th</sup> place<Description>, 2019. 11. 9</Description>
+                  <br />
+                  Advanced to 2020 ICPC World Finals
                   <Collapse shown={state.detailsShown}>
                     First solved problems C and J
                     <p>
@@ -226,6 +228,7 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                       박건, 이준석)로 출전했습니다.
                     </p>
                   </Collapse>
+                  <Space h="0.5em" />
                 </li>
                 <li>
                   <b>2019 Asia Bangkok Regional Contest</b> 31<sup>th</sup>{' '}
