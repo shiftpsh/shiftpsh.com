@@ -255,10 +255,30 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
               <Space h="0.5em" />
               <ProfileList>
                 <li>
+                  <b>2021</b> Finalist<Description>, 2021. 9. 4</Description>
+                </li>
+                <li>
                   <b>2020</b> Finalist<Description>, 2020. 11. 7</Description>
                 </li>
                 <li>
                   <b>2019</b> Finalist<Description>, 2019. 7. 30</Description>
+                </li>
+              </ProfileList>
+              <Space h="2em" />
+            </li>
+            <li>
+              <OuterLink href="https://ucpc.me">
+                <b>UCPC</b> 전국 대학생 프로그래밍 대회 동아리 연합 여름 대회
+              </OuterLink>
+              <Space h="0.5em" />
+              <ProfileList>
+                <li>
+                  <b>2021</b> 5등상 / 팀 12위
+                  <Description>, 2021. 8. 4</Description>
+                  <Collapse shown={state.detailsShown}>
+                    <p>팀 Redshift(박수현, 이준석, 전해성)로 출전했습니다.</p>
+                  </Collapse>
+                  <Space h="2em" />
                 </li>
               </ProfileList>
               <Collapse shown={state.detailsShown}>
