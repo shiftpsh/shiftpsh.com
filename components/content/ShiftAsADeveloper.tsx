@@ -220,9 +220,10 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                   </b>{' '}
                   8<sup>th</sup> place<Description>, 2019. 11. 9</Description>
                   <br />
-                  Advanced to 2020 ICPC World Finals
+                  Advanced to 44<sup>th</sup> World Finals / ICPC 2020 Moscow
+                  <br />
+                  First solved problems C and J
                   <Collapse shown={state.detailsShown}>
-                    First solved problems C and J
                     <p>
                       ICPC 한국 본선에 서강대학교 대표로, 팀 Redshift(박수현,
                       박건, 이준석)로 출전했습니다.
