@@ -89,7 +89,7 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                         NYPC 넥슨 청소년 프로그래밍 챌린지
                       </OuterLink>
                     </b>{' '}
-                    (2020)
+                    2020 &ndash; 2021
                     <ProfileList>
                       <li>
                         대회 시스템 설계와{' '}
@@ -281,9 +281,6 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                   <Space h="2em" />
                 </li>
               </ProfileList>
-              <Collapse shown={state.detailsShown}>
-                <Space h="2em" />
-              </Collapse>
             </li>
             <Collapse shown={state.detailsShown} as="li">
               <OuterLink href="https://acm.sogang.ac.kr/spc">
@@ -308,10 +305,11 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
           <Subsubcaption>Projects</Subsubcaption>
           <ProfileList>
             <li>
+              2021{' '}
               <OuterLink href="https://koi.or.kr">
                 <b>한국정보올림피아드</b>
               </OuterLink>{' '}
-              (2021) 대회 시스템
+              대회 시스템
               <Description>, 2021. 5 &ndash; 2021. 7</Description>
               <p>&mdash; 아웃소싱 / 프론트엔드 설계, 개발 및 디자인</p>
               <Space h="0.5em" />
@@ -678,6 +676,24 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                     </Description>
                     <ProfileList>
                       <li>
+                        <b>2021 Summer</b> &mdash; 출제
+                        <Description>, 2021. 8. 28</Description>
+                        <ProfileList>
+                          <li>
+                            <OuterLink href="https://www.acmicpc.net/problem/22983">
+                              조각 체스판
+                            </OuterLink>{' '}
+                            &mdash; C
+                          </li>
+                          <li>
+                            <OuterLink href="https://www.acmicpc.net/problem/22992">
+                              다꾸
+                            </OuterLink>{' '}
+                            &mdash; L
+                          </li>
+                        </ProfileList>
+                      </li>
+                      <li>
                         <b>2021 Winter</b> &mdash; 출제
                         <Description>, 2021. 2. 28</Description>
                         <ProfileList>
@@ -698,7 +714,7 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                             )
                           </li>
                         </ProfileList>
-                      </li>{' '}
+                      </li>
                       <li>
                         <b>2020</b> &mdash; 출제
                         <Description>, 2020. 8. 15</Description>

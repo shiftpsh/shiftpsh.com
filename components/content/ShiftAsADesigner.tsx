@@ -64,10 +64,11 @@ const ShiftAsADesigner: React.FC = () => {
               </Collapse>
             </li>
             <li>
+              2021{' '}
               <OuterLink href="https://koi.or.kr">
                 <b>한국정보올림피아드</b>
               </OuterLink>{' '}
-              (2021) 대회 시스템 UI/UX 설계 및 디자인
+              대회 시스템 UI/UX 설계 및 디자인
               <Description>, 아웃소싱 / 2021</Description>
               <Collapse shown={state.detailsShown}>
                 <p>
@@ -127,8 +128,8 @@ const ShiftAsADesigner: React.FC = () => {
               <Collapse shown={state.detailsShown}>
                 <ProfileList>
                   <li>
-                    <b>SUAPC 2021w</b> 신촌지역 대학생 프로그래밍 대회 동아리
-                    연합 대회
+                    <b>SUAPC 2021 Winter/Summer</b> 신촌지역 대학생 프로그래밍
+                    대회 동아리 연합 대회
                   </li>
                   <li>
                     <b>SPC 2020</b> 서강대학교 프로그래밍 대회
