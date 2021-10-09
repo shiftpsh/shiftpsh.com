@@ -211,6 +211,23 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
               <Space h="0.5em" />
               <ProfileList>
                 <li>
+                  <OuterLink href="https://icpc.global/">
+                    <b>
+                      44<sup>th</sup> Annual World Finals Moscow
+                    </b>{' '}
+                  </OuterLink>{' '}
+                  Honorable Mention<Description>, 2021. 10. 6</Description>
+                  <br />
+                  Representing the Republic of Korea - Sogang University
+                  <Collapse shown={state.detailsShown}>
+                    <p>
+                      ICPC 세계 결승전에 대한민국 서강대학교 대표로, 팀
+                      Redshift(박수현, 이준석, 이상원)로 출전했습니다.
+                    </p>
+                  </Collapse>
+                  <Space h="0.5em" />
+                </li>
+                <li>
                   <b>
                     2019{' '}
                     <OuterLink href="http://icpckorea.org">
@@ -220,7 +237,7 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                   </b>{' '}
                   8<sup>th</sup> place<Description>, 2019. 11. 9</Description>
                   <br />
-                  Advanced to 44<sup>th</sup> World Finals / ICPC 2020 Moscow
+                  Advanced to the World Finals
                   <br />
                   First solved problems C and J
                   <Collapse shown={state.detailsShown}>
