@@ -317,9 +317,9 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
               <ProfileList>
                 <li>2018-1학기</li>
               </ProfileList>
+              <Space h="2em" />
             </Collapse>
           </ProfileList>
-          <Space h="2em" />
           <Subsubcaption>Projects</Subsubcaption>
           <ProfileList>
             <li>
