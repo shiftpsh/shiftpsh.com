@@ -249,7 +249,7 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                   <Space h="0.5em" />
                 </li>
                 <li>
-                  <b>2019 Asia Bangkok Regional Contest</b> 31<sup>th</sup>{' '}
+                  <b>2019 Asia Bangkok Regional Contest</b> 31<sup>st</sup>{' '}
                   place
                   <Description>, 2019. 11. 3</Description>
                   <Collapse shown={state.detailsShown}>
