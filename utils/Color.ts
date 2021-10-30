@@ -33,9 +33,8 @@ const topcoderColor = (rating: number) => {
 }
 
 const maimaiTitleColor = (title: string) => {
-  if (title.endsWith('皆伝')) return new Color('#673ab7')
+  if (title.startsWith('真')) return new Color('#673ab7')
   if (title === '十段' || title === '九段') return new Color('#ffc107')
-  if (title === '八段' || title === '七段') return new Color('#607d8b')
   if (title === '八段' || title === '七段') return new Color('#607d8b')
   if (title === '六段' || title === '五段') return new Color('#ff5722')
   return new Color('#78909c')
@@ -54,10 +53,10 @@ const sdvxColor = (title: string) => {
 }
 
 export {
-    codeforcesColor,
-    atcoderColor,
-    topcoderColor,
-    maimaiTitleColor,
-    sdvxColor,
+  codeforcesColor,
+  atcoderColor,
+  topcoderColor,
+  maimaiTitleColor,
+  sdvxColor,
 }
 
