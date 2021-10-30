@@ -318,7 +318,7 @@ const games = (map: Map<string, string>) =>
     {
       id: 'games/maimai_splash',
       iconFormat: 'png',
-      caption: 'maimai DX Splash',
+      caption: 'maimai DX Splash+',
       description: (
         <>
           {map.has('maimai_class') ? (
