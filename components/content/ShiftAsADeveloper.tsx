@@ -88,44 +88,59 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                       <OuterLink href="https://www.nypc.co.kr/main/main.do">
                         NYPC 넥슨 청소년 프로그래밍 챌린지
                       </OuterLink>
-                    </b>{' '}
-                    2020 &ndash; 2021
+                    </b>
                     <ProfileList>
                       <li>
-                        대회 시스템 설계와{' '}
-                        <OuterLink href="https://contest.nypc.co.kr">
-                          참가자용 프론트엔드
-                        </OuterLink>{' '}
-                        개발에 참여했습니다.
+                        <b>출제</b>, 2021
+                        <ProfileList>
+                          <li>
+                            NYPC 출제사무국에서 프로그래밍 문제 선제 및 출제를
+                            담당했습니다.
+                          </li>
+                        </ProfileList>
                       </li>
                       <li>
-                        관리자용 클라이언트와 내부 공개용 대회 순위 페이지,
-                        그리고{' '}
-                        <OuterLink href="https://nypc.github.io/2020/">
-                          외부 공개용 문제 업로드 페이지
-                        </OuterLink>
-                        를 개발했습니다.
-                      </li>
-                      <li>
-                        참가자용 프론트엔드는{' '}
-                        <OuterLink href="https://reactjs.org/">React</OuterLink>
-                        로 인터페이스를 구성하고, WebSocket을 이용해 대회 서버와
-                        통신하도록 구현했습니다.
-                      </li>
-                      <li>
-                        외부 공개용 문제 업로드 페이지는{' '}
-                        <OuterLink href="https://jekyllrb.com/">
-                          Jekyll
-                        </OuterLink>
-                        을 이용해 문제를 Markdown으로 작성하면 이를 기반으로
-                        정적 사이트를 생성하도록 구성했습니다.
+                        <b>대회 시스템 엔지니어링</b>, 2020 &ndash; 2021
+                        <ProfileList>
+                          <li>
+                            대회 시스템 설계와{' '}
+                            <OuterLink href="https://contest.nypc.co.kr">
+                              참가자용 프론트엔드
+                            </OuterLink>{' '}
+                            개발에 참여했습니다.
+                          </li>
+                          <li>
+                            관리자용 클라이언트와 내부 공개용 대회 순위 페이지,
+                            그리고{' '}
+                            <OuterLink href="https://nypc.github.io/2020/">
+                              외부 공개용 문제 업로드 페이지
+                            </OuterLink>
+                            를 개발했습니다.
+                          </li>
+                          <li>
+                            참가자용 프론트엔드는{' '}
+                            <OuterLink href="https://reactjs.org/">
+                              React
+                            </OuterLink>
+                            로 인터페이스를 구성하고, WebSocket을 이용해 대회
+                            서버와 통신하도록 구현했습니다.
+                          </li>
+                          <li>
+                            외부 공개용 문제 업로드 페이지는{' '}
+                            <OuterLink href="https://jekyllrb.com/">
+                              Jekyll
+                            </OuterLink>
+                            을 이용해 문제를 Markdown으로 작성하면 이를 기반으로
+                            정적 사이트를 생성하도록 구성했습니다.
+                          </li>
+                        </ProfileList>
                       </li>
                     </ProfileList>
                     <Space h="0.5em" />
                   </li>
                   <li>
-                    넥슨컴퍼니 사내 분석 플랫폼의 프론트엔드와 백엔드를 제작하고
-                    있습니다.
+                    넥슨컴퍼니 사내 여러 분석 플랫폼의 프론트엔드와 백엔드를
+                    제작하고 있습니다.
                   </li>
                 </ProfileList>
                 <Space h="2em" />
@@ -616,6 +631,23 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                 <Space h="0.5em" />
                 <ProfileList>
                   <li>
+                    <OuterLink href="https://www.nypc.co.kr">
+                      <b>NYPC</b> 넥슨 청소년 프로그래밍 챌린지
+                    </OuterLink>
+                    <Description>, 넥슨·넥슨재단 주최</Description>
+                    <ProfileList>
+                      <li>
+                        <b>2021</b> 제6회 &mdash; 출제
+                        <Description>, 2021. 10. 30</Description>
+                        <ProfileList>
+                          <li>계단 &mdash; 예선 1일차 1</li>
+                          <li>루트가 많은 트리? &mdash; 예선 2일차 7</li>
+                        </ProfileList>
+                      </li>
+                    </ProfileList>
+                    <Space h="0.5em" />
+                  </li>
+                  <li>
                     <OuterLink href="https://ucpc.me">
                       <b>UCPC</b> 전국 대학생 프로그래밍 대회 동아리 연합 대회
                     </OuterLink>
@@ -648,11 +680,11 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                     <Description>, 서강대학교 컴퓨터공학부 주최</Description>
                     <ProfileList>
                       <li>
-                        <b>2020</b> &mdash; 검수
+                        <b>2020</b> 제16회 &mdash; 검수
                         <Description>, 2020. 11. 28</Description>
                       </li>
                       <li>
-                        <b>2019</b> &mdash; 운영 및 출제 총괄
+                        <b>2019</b> 제15회 &mdash; 운영 및 출제 총괄
                         <Description>, 2019. 11. 22</Description>
                         <ProfileList>
                           <li>
