@@ -640,8 +640,18 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                         <b>2021</b> 제6회 &mdash; 출제
                         <Description>, 2021. 10. 30</Description>
                         <ProfileList>
-                          <li>계단 &mdash; 예선 1일차 1</li>
-                          <li>루트가 많은 트리? &mdash; 예선 2일차 7</li>
+                          <li>
+                            <OuterLink href="https://nypc.github.io/2021/2021_online_1.html">
+                              계단
+                            </OuterLink>{' '}
+                            &mdash; 예선 1일차 1
+                          </li>
+                          <li>
+                            <OuterLink href="https://nypc.github.io/2021/2021_online_7.html">
+                              루트가 많은 트리?
+                            </OuterLink>{' '}
+                            &mdash; 예선 2일차 7
+                          </li>
                         </ProfileList>
                       </li>
                     </ProfileList>
