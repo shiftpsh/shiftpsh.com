@@ -690,6 +690,34 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                     <Description>, 서강대학교 컴퓨터공학부 주최</Description>
                     <ProfileList>
                       <li>
+                        <b>2021</b> 제17회 &mdash; 출제 및 검수
+                        <Description>, 2021. 11. 27</Description>
+                        <ProfileList>
+                          <li>
+                            <OuterLink href="https://www.acmicpc.net/problem/23738">
+                              Ресторан
+                            </OuterLink>{' '}
+                            &mdash; Master A
+                          </li>
+                          <li>
+                            <OuterLink href="https://www.acmicpc.net/problem/23747">
+                              와드
+                            </OuterLink>{' '}
+                            &mdash; Champion B
+                          </li>
+                          <li>
+                            <OuterLink href="https://www.acmicpc.net/problem/23753">
+                              연결 요소와 쿼리
+                            </OuterLink>{' '}
+                            &mdash; Champion H, 공동 출제 (w/{' '}
+                            <OuterLink href="https://kyouko.moe/">
+                              이혜아
+                            </OuterLink>
+                            )
+                          </li>
+                        </ProfileList>
+                      </li>
+                      <li>
                         <b>2020</b> 제16회 &mdash; 검수
                         <Description>, 2020. 11. 28</Description>
                       </li>
