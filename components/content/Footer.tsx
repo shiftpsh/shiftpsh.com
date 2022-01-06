@@ -23,6 +23,16 @@ const Footer: React.FC = () => {
       <footer>
         <ContentPadding>
           <Article>
+            GitHub{' '}
+            <OuterLink href="https://github.com/shiftpsh/shiftpsh.com">
+              shiftpsh/shiftpsh.com
+            </OuterLink>
+            과{' '}
+            <OuterLink href="https://github.com/shiftpsh/shiftpsh.com-crawler">
+              shiftpsh/shiftpsh.com-crawler
+            </OuterLink>
+            에서 이 사이트의 소스를 확인할 수 있습니다.
+            <Space h="2em" />
             <OuterLink
               href="https://www.unicode.org/consortium/adopted-characters.html#b2303"
               style={{ background: 'inherit' }}

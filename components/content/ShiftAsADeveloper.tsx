@@ -840,6 +840,25 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                     <Space h="0.5em" />
                   </li>
                   <li>
+                    <b>Good Bye / Hello BOJ!</b>
+                    <ProfileList>
+                      <li>
+                        <b>Good Bye, BOJ 2021!</b> &mdash; 출제
+                        <Description>, 2021. 12. 31</Description>
+                        <ProfileList>
+                          <li>
+                            <OuterLink href="https://www.acmicpc.net/problem/24041">
+                              성싶당 밀키트
+                            </OuterLink>{' '}
+                            &mdash; C
+                          </li>
+                        </ProfileList>
+                      </li>
+                    </ProfileList>
+
+                    <Space h="0.5em" />
+                  </li>
+                  <li>
                     <OuterLink href="https://cse.postech.ac.kr/2021-%ed%8f%ac%ec%8a%a4%ed%85%8d-%ed%94%84%eb%a1%9c%ea%b7%b8%eb%9e%98%eb%b0%8d-%ea%b2%bd%ec%a7%84%eb%8c%80%ed%9a%8cppc-%ea%b0%9c%ec%b5%9c-%ec%95%88%eb%82%b4/">
                       <b>2021 PPC</b> 포스텍 프로그래밍 경진대회
                     </OuterLink>{' '}
