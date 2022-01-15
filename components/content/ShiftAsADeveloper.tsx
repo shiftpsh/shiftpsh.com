@@ -854,6 +854,24 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                           </li>
                         </ProfileList>
                       </li>
+                      <li>
+                        <b>Hello, BOJ 2022!</b> &mdash; 출제
+                        <Description>, 2022. 1. 15</Description>
+                        <ProfileList>
+                          <li>
+                            <OuterLink href="https://www.acmicpc.net/problem/24271">
+                              xor²
+                            </OuterLink>{' '}
+                            &mdash; D
+                          </li>
+                          <li>
+                            <OuterLink href="https://www.acmicpc.net/problem/24272">
+                              루트 노드가 많은 트리일수록 좋은 트리이다
+                            </OuterLink>{' '}
+                            &mdash; E
+                          </li>
+                        </ProfileList>
+                      </li>
                     </ProfileList>
 
                     <Space h="0.5em" />
