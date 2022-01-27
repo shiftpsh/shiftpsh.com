@@ -14,6 +14,7 @@ import {
 import {
   atcoderTitle,
   codeforcesTitle,
+  numberFormat,
   topcoderTitle
 } from '../../utils/Formatting'
 import Article from '../Article'
@@ -137,6 +138,20 @@ const social: LinkItem[] = [
 const competitiveProgramming = (map: Map<string, string>) =>
   [
     {
+      id: 'icpc',
+      caption: 'ICPCID',
+      description: <>Suhyun Park</>,
+      color: new Color('#2f83c9'),
+      href: 'https://icpc.global/ICPCID/2ALMJW44APYS',
+    },
+    {
+      id: 'cphof',
+      caption: 'CP Hall of Fame',
+      description: <>Suhyun Park</>,
+      color: new Color('#083358'),
+      href: 'https://cphof.org/profile/codeforces:shiftpsh',
+    },
+    {
       id: 'codeforces',
       caption: 'Codeforces',
       description: (
@@ -160,6 +175,17 @@ const competitiveProgramming = (map: Map<string, string>) =>
                 >
                   {map.get('cf_rating')!}
                 </span>{' '}
+                {map.has('cf_rank') && map.has('cf_total_user_count') ? (
+                  <>
+                    {numberFormat(
+                      (+map.get('cf_rank')! /
+                        +map.get('cf_total_user_count')!) *
+                        100,
+                      2
+                    )}
+                    %{' '}
+                  </>
+                ) : null}
                 / max.{' '}
                 <Label color={codeforcesColor(+map.get('cf_rating_highest')!)}>
                   {codeforcesTitle(+map.get('cf_rating_highest')!)}
@@ -205,6 +231,17 @@ const competitiveProgramming = (map: Map<string, string>) =>
                 >
                   {map.get('ac_rating')!}
                 </span>{' '}
+                {map.has('ac_rank') && map.has('ac_total_user_count') ? (
+                  <>
+                    {numberFormat(
+                      (+map.get('ac_rank')! /
+                        +map.get('ac_total_user_count')!) *
+                        100,
+                      2
+                    )}
+                    %{' '}
+                  </>
+                ) : null}
                 / max.{' '}
                 <span
                   style={{
@@ -253,15 +290,7 @@ const competitiveProgramming = (map: Map<string, string>) =>
         </>
       ),
       color: new Color('#27aae1'),
-      href:
-        'https://www.topcoder.com/members/shiftpsh/details/?track=DATA_SCIENCE&subTrack=SRM',
-    },
-    {
-      id: 'icpc',
-      caption: 'ICPCID',
-      description: <>Suhyun Park</>,
-      color: new Color('#2f83c9'),
-      href: 'https://icpc.global/ICPCID/2ALMJW44APYS',
+      href: 'https://www.topcoder.com/members/shiftpsh/details/?track=DATA_SCIENCE&subTrack=SRM',
     },
   ] as LinkItem[]
 
@@ -361,8 +390,7 @@ const games = (map: Map<string, string>) =>
           ) : null}
         </>
       ),
-      href:
-        'https://p.eagate.573.jp/game/sdvx/vi/playdata/rival/profile.html?rival_id=SV-7651-0707',
+      href: 'https://p.eagate.573.jp/game/sdvx/vi/playdata/rival/profile.html?rival_id=SV-7651-0707',
       color: new Color('#f72675'),
     },
     {

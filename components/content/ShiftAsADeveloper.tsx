@@ -148,8 +148,8 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                   </ProfileList>
                 </li>
                 <Collapse shown={state.detailsShown} as="li">
-                  넥슨컴퍼니 사내 여러 분석 플랫폼의 프론트엔드와 백엔드를
-                  제작하고 있습니다.
+                  넥슨컴퍼니 사내 여러 분석 및 개인화 플랫폼의 프론트엔드와
+                  백엔드를 제작하고 있습니다.
                 </Collapse>
               </ProfileList>
               <Space h="2em" />
@@ -239,7 +239,7 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                       44<sup>th</sup> Annual World Finals Moscow
                     </b>{' '}
                   </OuterLink>{' '}
-                  Honorable Mention<Description>, 2021. 10. 6</Description>
+                  87<sup>th</sup> palce<Description>, 2021. 10. 6</Description>
                   <br />
                   Representing the Republic of Korea - Sogang University
                   <Collapse shown={state.detailsShown}>
@@ -589,8 +589,8 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                     {map.has('cf_rank') && map.has('cf_total_user_count') ? (
                       <>
                         {' '}
-                        레이팅 {numberFormat(+map.get('cf_rating_highest')!, 0)}
-                        은 활동하는 유저 중 상위{' '}
+                        현재 레이팅 {numberFormat(+map.get('cf_rating')!, 0)}은
+                        활동하는 유저 중 상위{' '}
                         {numberFormat(
                           (+map.get('cf_rank')! /
                             +map.get('cf_total_user_count')!) *
@@ -618,7 +618,7 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                   {map.has('ac_rank') && map.has('ac_total_user_count') ? (
                     <>
                       {' '}
-                      레이팅 {numberFormat(+map.get('ac_rating_highest')!, 0)}은
+                      현재 레이팅 {numberFormat(+map.get('ac_rating')!, 0)}은
                       활동하는 유저 중 상위{' '}
                       {numberFormat(
                         (+map.get('ac_rank')! /

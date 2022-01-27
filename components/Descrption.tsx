@@ -7,7 +7,7 @@ const Description = styled.span`
       .mix((theme as ShiftTheme).textColor, 0.6)
       .toString()};
   & > * {
-    vertical-align: middle;
+    vertical-align: baseline;
   }
 `
 
