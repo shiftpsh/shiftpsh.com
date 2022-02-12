@@ -239,7 +239,7 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                       44<sup>th</sup> Annual World Finals Moscow
                     </b>{' '}
                   </OuterLink>{' '}
-                  87<sup>th</sup> palce<Description>, 2021. 10. 6</Description>
+                  87<sup>th</sup> place<Description>, 2021. 10. 6</Description>
                   <br />
                   Representing the Republic of Korea - Sogang University
                   <Collapse shown={state.detailsShown}>
@@ -258,7 +258,8 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                     </OuterLink>{' '}
                     Contest
                   </b>{' '}
-                  8<sup>th</sup> place<Description>, 2019. 11. 9</Description>
+                  8<sup>th</sup> place / team 15<sup>th</sup>
+                  <Description>, 2019. 11. 9</Description>
                   <br />
                   Advanced to the World Finals
                   <br />
