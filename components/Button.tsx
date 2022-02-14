@@ -1,3 +1,4 @@
+import { HTMLAttributes } from 'react'
 import styled from 'styled-components'
 
 const ButtonContainer = styled.button`
@@ -8,6 +9,7 @@ const ButtonContainer = styled.button`
   min-height: 48px;
   transition: background 0.3s ease, color 0.3s ease;
   color: inherit;
+  cursor: pointer;
   &:hover {
     background: ${({ theme }) => theme.textColor};
     color: ${({ theme }) => theme.textColorInverted};
@@ -18,20 +20,10 @@ const ButtonContainer = styled.button`
     }
   }
 `
-interface Props {
-  onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
-}
-
-const Button: React.FC<Props> = (props) => {
-  return (
-    <ButtonContainer
-      onClick={(e) => {
-        if (props.onClick !== undefined) props.onClick(e)
-      }}
-    >
-      {props.children}
-    </ButtonContainer>
-  )
+const Button: React.FC<
+  HTMLAttributes<HTMLButtonElement> & { type?: 'button' | 'submit' | 'reset' }
+> = (props) => {
+  return <ButtonContainer {...props} />
 }
 
 export default Button
