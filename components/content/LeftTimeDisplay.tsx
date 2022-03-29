@@ -48,6 +48,39 @@ const LeftTimeDisplay: React.FC<Props> = ({ startAt, endAt }) => {
 
   const interpolate = useCallback((v: number) => 1 - (1 - v) * (1 - v), [])
 
+  const digits = useCallback(
+    (min: number, max: number) =>
+      state.timeHover
+        ? min + (max - min) * interpolate(digitAnimationProgress)
+        : max - (max - min) * interpolate(digitAnimationProgress),
+    [state.timeHover, digitAnimationProgress]
+  )
+
+  const leftTimeBaseDigits = (n: number) => {
+    if (n <= 0) return 0
+    if (n >= 200) return 0
+    if (n >= 20) return 1
+    if (n >= 2) return 2
+    if (n >= 0.2) return 3
+    return 4
+  }
+
+  const percentBaseDigits = (n: number) => {
+    if (n >= 100) return 0
+    if (n < 80) return 2
+    if (n < 98) return 3
+    if (n < 99.8) return 4
+    if (n < 99.98) return 5
+    if (n < 99.998) return 6
+    return 7
+  }
+
+  const leftDate = Math.min(0, -leftTime) / 1000 / 60 / 60 / 24
+  const leftPercent = Math.max(
+    0,
+    Math.min(100, (1 - leftTime / totalTime) * 100)
+  )
+
   return (
     <span
       onPointerEnter={() =>
@@ -67,19 +100,21 @@ const LeftTimeDisplay: React.FC<Props> = ({ startAt, endAt }) => {
     >
       <LeftTime>
         {numberFormat(
-          Math.max(0, Math.min(100, (1 - leftTime / totalTime) * 100)),
-          state.timeHover
-            ? 2 + 6 * interpolate(digitAnimationProgress)
-            : 8 - 6 * interpolate(digitAnimationProgress)
+          leftPercent,
+          digits(
+            0 + percentBaseDigits(leftPercent),
+            6 + percentBaseDigits(leftPercent)
+          )
         )}
       </LeftTime>
       %,{' '}
       <LeftTime>
         {numberFormat(
-          Math.min(0, -leftTime) / 1000 / 60 / 60 / 24,
-          state.timeHover
-            ? 4 * interpolate(digitAnimationProgress)
-            : 4 - 4 * interpolate(digitAnimationProgress)
+          leftDate,
+          digits(
+            0 + leftTimeBaseDigits(-leftDate),
+            4 + leftTimeBaseDigits(-leftDate)
+          )
         )}
       </LeftTime>
       일
