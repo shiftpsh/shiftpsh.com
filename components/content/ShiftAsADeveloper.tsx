@@ -347,42 +347,6 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
           <Subsubcaption>Projects</Subsubcaption>
           <ProfileList>
             <li>
-              2021{' '}
-              <OuterLink href="https://koi.or.kr">
-                <b>한국정보올림피아드</b>
-              </OuterLink>{' '}
-              대회 시스템
-              <Description>, 2021. 5 &ndash; 2021. 7</Description>
-              <p>&mdash; 아웃소싱 / 프론트엔드 설계, 개발 및 디자인</p>
-              <Space h="0.5em" />
-              <p>
-                <OuterLink href="https://www.kiise.or.kr/">
-                  한국정보과학회
-                </OuterLink>
-                에서 주최하는 한국정보올림피아드의 대회 시스템 프론트엔드 전반을
-                설계하고 개발했습니다.
-              </p>
-              <Collapse shown={state.detailsShown}>
-                <Space h="0.5em" />
-                <ProfileList>
-                  <li>
-                    선다형, 단답형,{' '}
-                    <OuterLink href="https://www.bebras.kr/">
-                      비버챌린지
-                    </OuterLink>
-                    형, 프로그래밍형 등 다양한 유형의 문제를 해결할 수 있는
-                    클라이언트를 제작했습니다.
-                  </li>
-                  <li>
-                    WebSocket을 활용한 실시간 채점 결과 확인, 부정행위 방지를
-                    위한 화면 녹화 등 여러 챌린징한 기능들을 구현했으며 모든
-                    디자인과 컴포넌트를 직접 제작했습니다.
-                  </li>
-                </ProfileList>
-              </Collapse>
-              <Space h="2em" />
-            </li>
-            <li>
               <OuterLink href="https://solved.ac">
                 <b>solved.ac</b>
               </OuterLink>{' '}
@@ -438,6 +402,7 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                     <OuterLink href="https://aws.amazon.com/ko/lambda/">
                       AWS Lambda
                     </OuterLink>
+                    , <OuterLink href="https://pptr.dev/">Puppeteer</OuterLink>
                     를 사용하고 있습니다.
                   </li>
                   <li>
@@ -453,6 +418,64 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                       shiftpsh/solvedac-plugin
                     </OuterLink>
                     에 소스가 공개되어 있습니다.
+                  </li>
+                  <li>
+                    여러 도서에 소개되었습니다.
+                    <ProfileList>
+                      <li>
+                        권국원, 『
+                        <OuterLink href="https://books.google.co.kr/books?id=-NPvzgEACAAJ">
+                          <b>보통의 취준생을 위한 코딩 테스트 with 파이썬</b>
+                        </OuterLink>
+                        』, 로드북(2022)
+                      </li>
+                      <li>
+                        <OuterLink href="https://www.youtube.com/c/dongbinna">
+                          나동빈
+                        </OuterLink>
+                        , 『
+                        <OuterLink href="https://books.google.co.kr/books?id=vBz-DwAAQBAJ">
+                          <b>이것이 취업을 위한 코딩 테스트다 with 파이썬</b>
+                        </OuterLink>
+                        』, 한빛미디어(2020)
+                      </li>
+                    </ProfileList>
+                  </li>
+                </ProfileList>
+              </Collapse>
+              <Space h="2em" />
+            </li>
+            <li>
+              2021{' '}
+              <OuterLink href="https://koi.or.kr">
+                <b>한국정보올림피아드</b>
+              </OuterLink>{' '}
+              대회 시스템
+              <Description>, 2021. 5 &ndash; 2021. 7</Description>
+              <p>&mdash; 아웃소싱 / 프론트엔드 설계, 개발 및 디자인</p>
+              <Space h="0.5em" />
+              <p>
+                <OuterLink href="https://www.kiise.or.kr/">
+                  한국정보과학회
+                </OuterLink>
+                에서 주최하는 한국정보올림피아드의 대회 시스템 프론트엔드 전반을
+                설계하고 개발했습니다.
+              </p>
+              <Collapse shown={state.detailsShown}>
+                <Space h="0.5em" />
+                <ProfileList>
+                  <li>
+                    선다형, 단답형,{' '}
+                    <OuterLink href="https://www.bebras.kr/">
+                      비버챌린지
+                    </OuterLink>
+                    형, 프로그래밍형 등 다양한 유형의 문제를 해결할 수 있는
+                    클라이언트를 제작했습니다.
+                  </li>
+                  <li>
+                    WebSocket을 활용한 실시간 채점 결과 확인, 부정행위 방지를
+                    위한 화면 녹화 등 여러 챌린징한 기능들을 구현했으며 모든
+                    디자인과 컴포넌트를 직접 제작했습니다.
                   </li>
                 </ProfileList>
               </Collapse>
