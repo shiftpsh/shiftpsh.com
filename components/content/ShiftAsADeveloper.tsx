@@ -4,7 +4,7 @@ import ClientMapEntry from '../../types/ClientMapEntry'
 import {
   atcoderTitle,
   codeforcesTitle,
-  numberFormat
+  numberFormat,
 } from '../../utils/Formatting'
 import Article from '../Article'
 import Button from '../Button'
@@ -538,28 +538,42 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
             <li>
               <OuterLink href="https://ucpc.me">
                 <b>전국 대학생 프로그래밍 대회 동아리 연합</b>
-              </OuterLink>{' '}
-              前 회장<Description>, 2020. 4 &ndash; 2021. 1</Description>
-              <Collapse shown={state.detailsShown}>
-                <p>
-                  전국 24개교의 프로그래밍 대회 동아리 연합입니다. 동아리 연합
-                  대회 UCPC를 총괄했습니다.
-                </p>
-                <Space h="2em" />
-              </Collapse>
+              </OuterLink>
+              <ProfileList>
+                <li>
+                  前 회장<Description>, 2020. 4 &ndash; 2021. 1</Description>
+                  <Collapse shown={state.detailsShown}>
+                    <p>
+                      전국 24개교의 프로그래밍 대회 동아리 연합입니다. 동아리
+                      연합 대회 UCPC를 총괄했습니다.
+                    </p>
+                  </Collapse>
+                </li>
+                <li>
+                  부회장<Description>, 2022. 4 &ndash;</Description>
+                </li>
+              </ProfileList>
+              <Space h="2em" />
             </li>
             <li>
               <OuterLink href="https://acm.sogang.ac.kr">
                 <b>Sogang ICPC Team</b>
-              </OuterLink>{' '}
-              前 학회장<Description>, 2019. 1 &ndash; 2019. 12</Description>
-              <Collapse shown={state.detailsShown}>
-                <p>
-                  서강대학교의 알고리즘 문제해결 동아리입니다. 알고리즘 스터디를
-                  진행하고, 학회 전반을 운영했습니다.
-                </p>
-                <Space h="2em" />
-              </Collapse>
+              </OuterLink>
+              <ProfileList>
+                <li>
+                  前 학회장<Description>, 2019. 1 &ndash; 2019. 12</Description>
+                  <Collapse shown={state.detailsShown}>
+                    <p>
+                      서강대학교의 알고리즘 문제해결 동아리입니다. 알고리즘
+                      스터디를 진행하고, 학회 전반을 운영했습니다.
+                    </p>
+                  </Collapse>
+                </li>
+                <li>
+                  스탭<Description>, 2020. 1 &ndash; 2021. 12</Description>
+                </li>
+              </ProfileList>
+              <Space h="2em" />
             </li>
             <li>
               <OuterLink href="https://stackoverflow.com/users/2688304/shiftpsh">
