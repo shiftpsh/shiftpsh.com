@@ -482,6 +482,14 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
               <Space h="2em" />
             </li>
             <li>
+              <OuterLink href="http://hxn-001.ffffffrecords.com/">
+                <b>The Unattended</b>
+              </OuterLink>{' '}
+              앨범 스페셜 페이지<Description>, 2022. 4</Description>
+              <p>&mdash; 팀 프로젝트 / 개발 및 디자인</p>
+              <Space h="0.5em" />
+            </li>
+            <li>
               <OuterLink href="https://ask.shiftp.sh">
                 <b>ask.shiftp.sh</b>
               </OuterLink>{' '}
