@@ -4,7 +4,7 @@ import ClientMapEntry from '../../types/ClientMapEntry'
 import {
   atcoderTitle,
   codeforcesTitle,
-  numberFormat,
+  numberFormat
 } from '../../utils/Formatting'
 import Article from '../Article'
 import Button from '../Button'
@@ -423,6 +423,10 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                     여러 도서에 소개되었습니다.
                     <ProfileList>
                       <li>
+                        김종관, 『<b>Do it! 알고리즘 코딩 테스트 자바 편</b>
+                        』, 이지스퍼블리싱(2022)
+                      </li>
+                      <li>
                         권국원, 『
                         <OuterLink href="https://books.google.co.kr/books?id=-NPvzgEACAAJ">
                           <b>보통의 취준생을 위한 코딩 테스트 with 파이썬</b>
@@ -578,7 +582,7 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                   </Collapse>
                 </li>
                 <li>
-                  스탭<Description>, 2020. 1 &ndash; 2021. 12</Description>
+                  前 스탭<Description>, 2020. 1 &ndash; 2021. 12</Description>
                 </li>
               </ProfileList>
               <Space h="2em" />
@@ -593,10 +597,16 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
               </Collapse>
             </li>
             <Collapse shown={state.detailsShown} as="li">
+              고려대학교 중앙 컴퓨터 동아리 KUCC 강연 『코딩 테스트 및 알고리즘
+              문제해결 공부 방법』
+              <Description>, 2022. 4</Description>
+            </Collapse>
+            <Collapse shown={state.detailsShown} as="li">
               <OuterLink href="https://www.facebook.com/koreahacks/">
                 고려대학교 해커톤 2021 KOREA HACKS '온라인 고카톤'
               </OuterLink>{' '}
               멘토
+              <Description>, 2021. 1</Description>
               <p>
                 Android와 웹 프론트엔드 분야에서 해커톤 참여 팀들의 질문들을
                 해결해 주는 등의 업무를 수행했습니다.
