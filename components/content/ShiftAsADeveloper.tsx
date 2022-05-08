@@ -6,6 +6,7 @@ import {
   codeforcesTitle,
   numberFormat
 } from '../../utils/Formatting'
+import { kyobo } from '../../utils/Link'
 import Article from '../Article'
 import Button from '../Button'
 import Caption from '../Caption'
@@ -373,62 +374,124 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                 <Space h="0.5em" />
                 <ProfileList>
                   <li>
-                    프론트엔드는{' '}
-                    <OuterLink href="https://reactjs.org/">React</OuterLink>와{' '}
-                    <OuterLink href="https://nextjs.org/">Next.js</OuterLink>,
-                    그리고{' '}
-                    <OuterLink href="https://www.typescriptlang.org/">
-                      Typescript
-                    </OuterLink>
-                    를 사용해 제작하고 있습니다. 인터페이스는{' '}
-                    <OuterLink href="https://styled-components.com/">
-                      styled-components
-                    </OuterLink>
-                    로 구성하고 있습니다.
+                    <b>프론트엔드</b>:
+                    <ProfileList>
+                      <li>
+                        <OuterLink href="https://reactjs.org/">React</OuterLink>
+                        와{' '}
+                        <OuterLink href="https://nextjs.org/">
+                          Next.js
+                        </OuterLink>
+                        , 그리고{' '}
+                        <OuterLink href="https://www.typescriptlang.org/">
+                          Typescript
+                        </OuterLink>
+                        를 사용해 제작하고 있습니다.
+                      </li>
+                      <li>
+                        디자인 시스템과 UI 컴포넌트는 대부분 직접 제작했으며,{' '}
+                        <OuterLink href="https://styled-components.com/">
+                          styled-components
+                        </OuterLink>
+                        기반으로 구성하고 있습니다.
+                      </li>
+                      <li>
+                        UI 컴포넌트 소스는 현재{' '}
+                        <OuterLink href="https://github.com/solved-ac/ui-react">
+                          solved-ac/ui-react
+                        </OuterLink>
+                        에 코드 공개 및 라이브러리화를 진행 중입니다. npm{' '}
+                        <OuterLink href="https://www.npmjs.com/package/@solved-ac/ui-react">
+                          @solved-ac/ui-react
+                        </OuterLink>
+                        에도 게시되어 있습니다.
+                      </li>
+                      <li>
+                        백준 온라인 저지의 공식 기능으로 통합되기 전까지는
+                        WebExtensions 표준 기반의 브라우저 플러그인을 제작해
+                        배포했습니다.{' '}
+                        <OuterLink href="https://github.com/shiftpsh/solvedac-plugin">
+                          shiftpsh/solvedac-plugin
+                        </OuterLink>
+                        에 소스가 공개되어 있습니다.
+                      </li>
+                    </ProfileList>
                   </li>
                   <li>
-                    백엔드는{' '}
-                    <OuterLink href="https://nodejs.org/">Node.js</OuterLink>와{' '}
-                    <OuterLink href="https://expressjs.com/">Express</OuterLink>
-                    ,{' '}
-                    <OuterLink href="http://sequelize.org/">
-                      Sequelize ORM
-                    </OuterLink>
-                    , 그리고{' '}
-                    <OuterLink href="https://www.typescriptlang.org/">
-                      Typescript
-                    </OuterLink>
-                    를 사용해 제작하고 있습니다. 일부 요소들은{' '}
-                    <OuterLink href="https://aws.amazon.com/ko/lambda/">
-                      AWS Lambda
-                    </OuterLink>
-                    , <OuterLink href="https://pptr.dev/">Puppeteer</OuterLink>
-                    를 사용하고 있습니다.
+                    <b>백엔드</b>:
+                    <ProfileList>
+                      <li>
+                        웹 서버는{' '}
+                        <OuterLink href="https://nodejs.org/">
+                          Node.js
+                        </OuterLink>
+                        와{' '}
+                        <OuterLink href="https://expressjs.com/">
+                          Express
+                        </OuterLink>
+                        ,{' '}
+                        <OuterLink href="http://sequelize.org/">
+                          Sequelize ORM
+                        </OuterLink>
+                        , 그리고{' '}
+                        <OuterLink href="https://www.typescriptlang.org/">
+                          Typescript
+                        </OuterLink>
+                        를 사용해 제작하고 있습니다.
+                      </li>
+                      <li>
+                        BOJ로부터 채점 결과 등의 데이터를 갱신하는 작업을 위해{' '}
+                        <OuterLink href="https://aws.amazon.com/ko/lambda/">
+                          AWS Lambda
+                        </OuterLink>
+                        와{' '}
+                        <OuterLink href="https://aws.amazon.com/ko/sqs/">
+                          AWS SQS
+                        </OuterLink>
+                        를 사용하고 있으며, 썸네일 자동 생성 등의 로직도
+                        서버리스 함수로 구현되어 있습니다.
+                      </li>
+                      <li>
+                        <OuterLink href="https://twitter.com/search?q=%23solvedac">
+                          문제를 해결했을 때 Twitter에 자동 게시하는 기능
+                        </OuterLink>
+                        을 제공하고 있으며,{' '}
+                        <OuterLink href="https://github.com/puppeteer/puppeteer">
+                          Puppeteer
+                        </OuterLink>
+                        를 사용해 레이팅 변화 이미지를 자동 생성합니다.
+                      </li>
+                      <li>
+                        <OuterLink href="https://solved.ac/community">
+                          Slack 앱과 Discord 봇
+                        </OuterLink>
+                        을 제공하고 있으며, Discord 계정을 연동하면 공식 Discord
+                        서버에서 역할이 자동 부여되도록 구현되어 있습니다.
+                      </li>
+                    </ProfileList>
                   </li>
                   <li>
-                    프론트엔드와 백엔드는 모두 Docker 이미지로 빌드하고 AWS
-                    ECS에 배포됩니다. 빌드부터 배포까지의 전 과정은 Github
-                    Actions로 자동화되어 있습니다.
-                  </li>
-                  <li>
-                    백준 온라인 저지의 공식 기능으로 통합되기 전까지는
-                    WebExtensions 표준 기반의 브라우저 플러그인을 제작해
-                    배포했습니다.{' '}
-                    <OuterLink href="https://github.com/shiftpsh/solvedac-plugin">
-                      shiftpsh/solvedac-plugin
-                    </OuterLink>
-                    에 소스가 공개되어 있습니다.
+                    <b>DevOps</b>:
+                    <ProfileList>
+                      <li>
+                        프론트엔드와 백엔드는 모두 Docker 이미지로 빌드하고 AWS
+                        ECS에 배포됩니다. 빌드부터 배포까지의 전 과정은 Github
+                        Actions로 자동화되어 있습니다.
+                      </li>
+                    </ProfileList>
                   </li>
                   <li>
                     여러 도서에 소개되었습니다.
                     <ProfileList>
                       <li>
-                        김종관, 『<b>Do it! 알고리즘 코딩 테스트 자바 편</b>
-                        』, 이지스퍼블리싱(2022)
+                        <OuterLink href={kyobo('9791163033448')}>
+                          김종관, 『<b>Do it! 알고리즘 코딩 테스트 자바 편</b>
+                          』, 이지스퍼블리싱(2022)
+                        </OuterLink>
                       </li>
                       <li>
                         권국원, 『
-                        <OuterLink href="https://books.google.co.kr/books?id=-NPvzgEACAAJ">
+                        <OuterLink href={kyobo('9788997924950')}>
                           <b>보통의 취준생을 위한 코딩 테스트 with 파이썬</b>
                         </OuterLink>
                         』, 로드북(2022)
@@ -438,7 +501,7 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                           나동빈
                         </OuterLink>
                         , 『
-                        <OuterLink href="https://books.google.co.kr/books?id=vBz-DwAAQBAJ">
+                        <OuterLink href={kyobo('9791162243077')}>
                           <b>이것이 취업을 위한 코딩 테스트다 with 파이썬</b>
                         </OuterLink>
                         』, 한빛미디어(2020)
@@ -450,12 +513,12 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
               <Space h="2em" />
             </li>
             <li>
-              2021{' '}
+              2021 &ndash; 2022{' '}
               <OuterLink href="https://koi.or.kr">
                 <b>한국정보올림피아드</b>
               </OuterLink>{' '}
               대회 시스템
-              <Description>, 2021. 5 &ndash; 2021. 7</Description>
+              <Description>, 2021. 5 &ndash;</Description>
               <p>&mdash; 아웃소싱 / 프론트엔드 설계, 개발 및 디자인</p>
               <Space h="0.5em" />
               <p>
@@ -480,6 +543,11 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                     WebSocket을 활용한 실시간 채점 결과 확인, 부정행위 방지를
                     위한 화면 녹화 등 여러 챌린징한 기능들을 구현했으며 모든
                     디자인과 컴포넌트를 직접 제작했습니다.
+                  </li>
+                  <li>
+                    코로나19의 영향으로 온라인 개최된 2021년 대회에서 사용하기
+                    위해 개발되었으며, 2022년 대회에도 사용하게 되어 유지보수를
+                    진행했습니다.
                   </li>
                 </ProfileList>
               </Collapse>
