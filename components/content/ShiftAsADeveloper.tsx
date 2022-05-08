@@ -665,9 +665,12 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
               </Collapse>
             </li>
             <Collapse shown={state.detailsShown} as="li">
-              고려대학교 중앙 컴퓨터 동아리 KUCC 강연 『코딩 테스트 및 알고리즘
-              문제해결 공부 방법』
-              <Description>, 2022. 4</Description>
+              고려대학교 중앙 컴퓨터 동아리{' '}
+              <OuterLink href="https://kucc.co.kr/">KUCC</OuterLink> 강연 『
+              <OuterLink href="https://www.slideshare.net/SuhyunPark23/kucc-2022-4">
+                코딩 테스트 및 알고리즘 문제해결 공부 방법
+              </OuterLink>
+              』<Description>, 2022. 4</Description>
             </Collapse>
             <Collapse shown={state.detailsShown} as="li">
               <OuterLink href="https://www.facebook.com/koreahacks/">
