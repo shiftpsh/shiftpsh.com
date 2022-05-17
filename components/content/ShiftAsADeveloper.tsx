@@ -4,7 +4,7 @@ import ClientMapEntry from '../../types/ClientMapEntry'
 import {
   atcoderTitle,
   codeforcesTitle,
-  numberFormat
+  numberFormat,
 } from '../../utils/Formatting'
 import { kyobo } from '../../utils/Link'
 import Article from '../Article'
@@ -305,6 +305,28 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                 </li>
                 <li>
                   <b>2019</b> Finalist<Description>, 2019. 7. 30</Description>
+                </li>
+              </ProfileList>
+              <Space h="2em" />
+            </li>
+            <li>
+              <OuterLink href="https://codingcompetitions.withgoogle.com/codejam">
+                Google <b>Code Jam</b>
+              </OuterLink>
+              <Collapse shown={state.detailsShown}>
+                <p>
+                  Google에서 주최하는 프로그래밍 대회로 나이 제한 없이 전세계의
+                  모든 프로그래머가 참가할 수 있는, 프로그래밍 문제들을 시간
+                  안에 빠르게 해결하는 대회입니다. 라운드 2에는 4,500명이,
+                  라운드 3에는 1,000명이 출전합니다.
+                </p>
+              </Collapse>
+              <Space h="0.5em" />
+              <ProfileList>
+                <li>
+                  <b>2022</b> Competed in Round 2, 605<sup>th</sup> place
+                  <Description>, 2022. 5. 14</Description><br/>
+                  Advanced to Round 3 2022
                 </li>
               </ProfileList>
               <Space h="2em" />
