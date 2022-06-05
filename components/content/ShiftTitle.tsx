@@ -5,7 +5,6 @@ import Caption from '../Caption'
 import OuterLink from '../OuterLink'
 import Space from '../Space'
 import Subcaption from '../Subcaption'
-import LeftTimeDisplay from './LeftTimeDisplay'
 
 const ShiftTitle: React.FC = () => {
   return (
@@ -29,14 +28,6 @@ const ShiftTitle: React.FC = () => {
               서강대학교 컴퓨터공학과
             </OuterLink>{' '}
             학부과정
-          </p>
-          <Space h="1em" />
-          <p>
-            산업기능요원으로 복무 중 &mdash;{' '}
-            <LeftTimeDisplay
-              startAt={new Date('2020-06-22T10:00:00+09:00')}
-              endAt={new Date('2022-05-29T00:00:00+09:00')}
-            />
           </p>
         </ContentPadding>
       </FullHeightPage>

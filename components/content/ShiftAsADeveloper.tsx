@@ -4,7 +4,7 @@ import ClientMapEntry from '../../types/ClientMapEntry'
 import {
   atcoderTitle,
   codeforcesTitle,
-  numberFormat,
+  numberFormat
 } from '../../utils/Formatting'
 import { kyobo } from '../../utils/Link'
 import Article from '../Article'
@@ -88,6 +88,10 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                 <li>
                   기술연구팀 시스템개발파트 파트장
                   <Description>, 2021. 12 &ndash;</Description>
+                </li>
+                <li>
+                  산업기능요원 (복무만료)
+                  <Description>, 2020. 6 &ndash; 2021. 5</Description>
                 </li>
               </ProfileList>
               <ProfileList>
@@ -324,9 +328,8 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
               <Space h="0.5em" />
               <ProfileList>
                 <li>
-                  <b>2022</b> Competed in Round 2, 605<sup>th</sup> place
-                  <Description>, 2022. 5. 14</Description><br/>
-                  Advanced to Round 3 2022
+                  <b>2022</b> Competed in Round 3, 506<sup>th</sup> place
+                  <Description>, 2022. 6. 5</Description>
                 </li>
               </ProfileList>
               <Space h="2em" />
