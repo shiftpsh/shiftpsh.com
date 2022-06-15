@@ -113,6 +113,13 @@ const social: LinkItem[] = [
     href: 'https://stackoverflow.com/users/2688304/shiftpsh',
   },
   {
+    id: 'npm',
+    caption: 'npm',
+    description: '@shiftpsh',
+    color: new Color('#cb3837'),
+    href: 'https://www.npmjs.com/~shiftpsh',
+  },
+  {
     id: 'behance',
     caption: 'Behance',
     description: 'shiftpsh',
