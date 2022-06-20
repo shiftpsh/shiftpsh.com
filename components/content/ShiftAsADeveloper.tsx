@@ -415,9 +415,7 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                       </li>
                       <li>
                         디자인 시스템과 UI 컴포넌트는 대부분 직접 제작했으며,{' '}
-                        <OuterLink href="https://styled-components.com/">
-                          styled-components
-                        </OuterLink>
+                        <OuterLink href="https://emotion.sh">emotion</OuterLink>
                         기반으로 구성하고 있습니다.
                       </li>
                       <li>
@@ -425,7 +423,7 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                         <OuterLink href="https://github.com/solved-ac/ui-react">
                           solved-ac/ui-react
                         </OuterLink>
-                        에 코드 공개 및 라이브러리화를 진행 중입니다. npm{' '}
+                        에 공개 및 라이브러리화를 진행 중입니다. npm{' '}
                         <OuterLink href="https://www.npmjs.com/package/@solved-ac/ui-react">
                           @solved-ac/ui-react
                         </OuterLink>
