@@ -68,8 +68,7 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
               소프트웨어 엔지니어<Description>, 2020. 6 &ndash;</Description>
               <Collapse shown={state.detailsShown}>
                 <p>
-                  넥슨컴퍼니 산하 엔진스튜디오에서 산업기능요원으로 일하고
-                  있습니다.{' '}
+                  넥슨컴퍼니의 엔진스튜디오에서 일하고 있습니다.{' '}
                   <OuterLink href="http://it.chosun.com/site/data/html_dir/2020/11/14/2020111401042.html">
                     인텔리전스랩스
                   </OuterLink>
@@ -79,8 +78,8 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                     Typescript
                   </OuterLink>
                   , <OuterLink href="https://nodejs.org/">Node.js</OuterLink>와{' '}
-                  <OuterLink href="https://reactjs.org/">React</OuterLink>,
-                  CSS를 사용한 프론트엔드 엔지니어링이 주 업무입니다.
+                  <OuterLink href="https://reactjs.org/">React</OuterLink>를
+                  사용한 프론트엔드 엔지니어링이 주 업무입니다.
                 </p>
                 <Space h="0.5em" />
               </Collapse>
@@ -393,7 +392,8 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                 <OuterLink href="https://startlink.io">
                   주식회사 스타트링크
                 </OuterLink>
-                의 스폰서를 받고 있습니다.
+                의 스폰서를 받고 있습니다. 2022년 6월 현재 일간 약 5천 명의
+                사용자가 방문하고 있습니다.
               </p>
               <Collapse shown={state.detailsShown}>
                 <Space h="0.5em" />
@@ -500,6 +500,19 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                         프론트엔드와 백엔드는 모두 Docker 이미지로 빌드하고 AWS
                         ECS에 배포됩니다. 빌드부터 배포까지의 전 과정은 Github
                         Actions로 자동화되어 있습니다.
+                      </li>
+                    </ProfileList>
+                  </li>
+                  <li>
+                    기타:
+                    <ProfileList>
+                      <li>
+                        웹 서버, API 서버, 이미지 생성 서버 등은{' '}
+                        <OuterLink href="https://lerna.js.org/">
+                          lerna
+                        </OuterLink>{' '}
+                        + yarn 워크스페이스를 활용해 모노레포 구조로 관리하고
+                        있습니다.
                       </li>
                     </ProfileList>
                   </li>
