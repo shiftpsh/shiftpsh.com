@@ -90,7 +90,7 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                 </li>
                 <li>
                   산업기능요원 (복무만료)
-                  <Description>, 2020. 6 &ndash; 2021. 5</Description>
+                  <Description>, 2020. 6 &ndash; 2022. 5</Description>
                 </li>
               </ProfileList>
               <ProfileList>
