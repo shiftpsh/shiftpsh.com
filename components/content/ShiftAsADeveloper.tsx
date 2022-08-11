@@ -301,7 +301,7 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
               <Space h="0.5em" />
               <ProfileList>
                 <li>
-                  <b>2022</b> Finalist<Description>, 2021. 9. 3</Description>
+                  <b>2022</b> Finalist<Description>, 2022. 9. 3</Description>
                 </li>
                 <li>
                   <b>2021</b> Finalist<Description>, 2021. 9. 4</Description>
@@ -840,21 +840,6 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                     </Description>
                     <ProfileList>
                       <li>
-                        <OuterLink href="https://2020.ucpc.me">
-                          <b>2020</b>
-                        </OuterLink>{' '}
-                        &mdash; 운영 및 출제 총괄
-                        <Description>, 2020. 8. 1</Description>
-                        <ProfileList>
-                          <li>
-                            <OuterLink href="https://www.acmicpc.net/problem/19532">
-                              수학은 비대면강의입니다
-                            </OuterLink>{' '}
-                            &mdash; 예선 A
-                          </li>
-                        </ProfileList>
-                      </li>
-                      <li>
                         <OuterLink href="https://2022.ucpc.me">
                           <b>2022</b>
                         </OuterLink>{' '}
@@ -866,6 +851,21 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                               solved.ac 2022
                             </OuterLink>{' '}
                             &mdash; 예선 E
+                          </li>
+                        </ProfileList>
+                      </li>
+                      <li>
+                        <OuterLink href="https://2020.ucpc.me">
+                          <b>2020</b>
+                        </OuterLink>{' '}
+                        &mdash; 운영 및 출제 총괄
+                        <Description>, 2020. 8. 1</Description>
+                        <ProfileList>
+                          <li>
+                            <OuterLink href="https://www.acmicpc.net/problem/19532">
+                              수학은 비대면강의입니다
+                            </OuterLink>{' '}
+                            &mdash; 예선 A
                           </li>
                         </ProfileList>
                       </li>
