@@ -301,6 +301,9 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
               <Space h="0.5em" />
               <ProfileList>
                 <li>
+                  <b>2022</b> Finalist<Description>, 2021. 9. 3</Description>
+                </li>
+                <li>
                   <b>2021</b> Finalist<Description>, 2021. 9. 4</Description>
                 </li>
                 <li>
@@ -848,6 +851,21 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                               수학은 비대면강의입니다
                             </OuterLink>{' '}
                             &mdash; 예선 A
+                          </li>
+                        </ProfileList>
+                      </li>
+                      <li>
+                        <OuterLink href="https://2022.ucpc.me">
+                          <b>2022</b>
+                        </OuterLink>{' '}
+                        &mdash; 운영 및 출제
+                        <Description>, 2022. 7. 23</Description>
+                        <ProfileList>
+                          <li>
+                            <OuterLink href="https://www.acmicpc.net/problem/25318">
+                              solved.ac 2022
+                            </OuterLink>{' '}
+                            &mdash; 예선 E
                           </li>
                         </ProfileList>
                       </li>
