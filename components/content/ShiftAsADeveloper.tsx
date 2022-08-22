@@ -352,6 +352,31 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                 </li>
               </ProfileList>
             </li>
+            <li>
+              <OuterLink href="https://asia.hackjunction.com/">
+                <b>Junction Asia 2022</b>
+              </OuterLink>{' '}
+              Chainapsis Track Winner &mdash; 2<sup>nd</sup> place
+              <Description>, 2022. 8. 21</Description>
+              <Collapse shown={state.detailsShown}>
+                <Space h="0.5em" />
+                <ProfileList>
+                  <li>
+                    <p>
+                      팀 decoGit(박수현, 이수호, 정진주, 최희원)으로
+                      참가했습니다.
+                    </p>
+                    <p>
+                      아이디에이션을 도왔습니다. 웹 프론트엔드의 스티커 꾸미기
+                      컴포넌트를 제작했으며, 기타 프로젝트 내 여러 부분 구현에
+                      도움을 드렸습니다. 디자인 애셋 및 발표 자료를
+                      제작했습니다.
+                    </p>
+                    <Space h="2em" />
+                  </li>
+                </ProfileList>
+              </Collapse>
+            </li>
             <Collapse shown={state.detailsShown} as="li">
               <OuterLink href="https://acm.sogang.ac.kr/spc">
                 <b>SPC</b> Sogang Programming Contest
