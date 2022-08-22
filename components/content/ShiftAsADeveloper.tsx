@@ -372,10 +372,10 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                       도움을 드렸습니다. 디자인 애셋 및 발표 자료를
                       제작했습니다.
                     </p>
-                    <Space h="2em" />
                   </li>
                 </ProfileList>
               </Collapse>
+              <Space h="2em" />
             </li>
             <Collapse shown={state.detailsShown} as="li">
               <OuterLink href="https://acm.sogang.ac.kr/spc">
