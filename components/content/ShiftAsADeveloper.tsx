@@ -359,6 +359,13 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
               Chainapsis Track Winner &mdash; 2<sup>nd</sup> place
               <Description>, 2022. 8. 21</Description>
               <Collapse shown={state.detailsShown}>
+                <p>
+                  유럽 최대의 해커톤{' '}
+                  <OuterLink href="https://www.hackjunction.com/">
+                    Junction
+                  </OuterLink>
+                  의 아시아 버전으로, 300여명 70여개 팀이 참가했습니다.
+                </p>
                 <Space h="0.5em" />
                 <ProfileList>
                   <li>
