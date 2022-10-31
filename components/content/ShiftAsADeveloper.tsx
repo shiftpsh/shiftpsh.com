@@ -102,7 +102,7 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                   </b>
                   <ProfileList>
                     <li>
-                      <b>출제위원</b>, 2021
+                      <b>출제사무국 선제/출제위원</b>, 2021 &ndash; 2022
                       <Collapse shown={state.detailsShown}>
                         <ProfileList>
                           <li>
@@ -113,7 +113,7 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                       </Collapse>
                     </li>
                     <Collapse shown={state.detailsShown} as="li">
-                      <b>대회 시스템 엔지니어링</b>, 2020 &ndash; 2021
+                      <b>대회 시스템 엔지니어링</b>, 2020 &ndash; 2022
                       <ProfileList>
                         <li>
                           대회 시스템 설계와{' '}
@@ -125,7 +125,7 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                         <li>
                           관리자용 클라이언트와 내부 공개용 대회 순위 페이지,
                           그리고{' '}
-                          <OuterLink href="https://nypc.github.io/2020/">
+                          <OuterLink href="https://nypc.github.io/">
                             외부 공개용 문제 업로드 페이지
                           </OuterLink>
                           를 개발했습니다.
@@ -140,11 +140,17 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                         </li>
                         <li>
                           외부 공개용 문제 업로드 페이지는{' '}
-                          <OuterLink href="https://jekyllrb.com/">
-                            Jekyll
+                          <OuterLink href="https://nextjs.org/">
+                            Next.js
+                          </OuterLink>{' '}
+                          SSG와 GitHub Actions / Pages를 이용합니다. 문제를{' '}
+                          <OuterLink href="https://mdxjs.com/">MDX</OuterLink>로
+                          작성하면 이를 기반으로 정적 사이트를 생성하도록
+                          구성했습니다.{' '}
+                          <OuterLink href="https://github.com/nypc/nypc.github.io">
+                            오픈 소스
                           </OuterLink>
-                          을 이용해 문제를 Markdown으로 작성하면 이를 기반으로
-                          정적 사이트를 생성하도록 구성했습니다.
+                          입니다.
                         </li>
                       </ProfileList>
                       <Space h="0.5em" />
@@ -555,10 +561,11 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                     여러 도서에 소개되었습니다.
                     <ProfileList>
                       <li>
+                        김종관, 『
                         <OuterLink href={kyobo('9791163033448')}>
-                          김종관, 『<b>Do it! 알고리즘 코딩 테스트 자바 편</b>
-                          』, 이지스퍼블리싱(2022)
+                          <b>Do it! 알고리즘 코딩 테스트 자바 편</b>
                         </OuterLink>
+                        』, 이지스퍼블리싱(2022)
                       </li>
                       <li>
                         권국원, 『
@@ -858,6 +865,13 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                             </OuterLink>{' '}
                             &mdash; 예선 2일차 7
                           </li>
+                        </ProfileList>
+                      </li>
+                      <li>
+                        <b>2022</b> 제7회 &mdash; 출제
+                        <Description>, 2022. 10. 29</Description>
+                        <ProfileList>
+                          <li>지름길 &mdash; 본선 1519부문 5</li>
                         </ProfileList>
                       </li>
                     </ProfileList>
