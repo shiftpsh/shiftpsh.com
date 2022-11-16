@@ -9,13 +9,13 @@ import {
   codeforcesColor,
   maimaiTitleColor,
   sdvxColor,
-  topcoderColor
+  topcoderColor,
 } from '../../utils/Color'
 import {
   atcoderTitle,
   codeforcesTitle,
   numberFormat,
-  topcoderTitle
+  topcoderTitle,
 } from '../../utils/Formatting'
 import Article from '../Article'
 import Caption from '../Caption'
@@ -350,66 +350,6 @@ const games = (map: Map<string, string>) =>
       ),
       href: 'https://maple.gg/u/%EC%8B%B6%ED%94%84%ED%8A%B8',
       color: new Color('#ff9d00'),
-    },
-    {
-      id: 'games/maimai_splash',
-      iconFormat: 'png',
-      caption: 'maimai DX Splash+',
-      description: (
-        <>
-          {map.has('maimai_class') ? (
-            <>
-              <Label color={maimaiTitleColor(map.get('maimai_class')!)}>
-                {map.get('maimai_class')!}
-              </Label>{' '}
-            </>
-          ) : null}
-          shift* <Description>&mdash; 7061399728945</Description>
-          {map.has('maimai_rating') ? (
-            <>
-              <br />
-              <Description>DX RATING {map.get('maimai_rating')!}</Description>
-            </>
-          ) : null}
-        </>
-      ),
-      color: new Color('#39dca6'),
-    },
-    {
-      id: 'games/sdvx_6',
-      iconFormat: 'png',
-      caption: 'SOUND VOLTEX',
-      description: (
-        <>
-          {map.has('sdvx_class') ? (
-            <>
-              <Label color={sdvxColor(map.get('sdvx_class')!)}>
-                {map.get('sdvx_class')!}
-              </Label>{' '}
-            </>
-          ) : null}
-          SHIFT* <Description>&mdash; SV-7651-0707</Description>
-          {map.has('sdvx_rating') ? (
-            <>
-              <br />
-              <Description>VOLFORCE {map.get('sdvx_rating')!}</Description>
-            </>
-          ) : null}
-        </>
-      ),
-      href: 'https://p.eagate.573.jp/game/sdvx/vi/playdata/rival/profile.html?rival_id=SV-7651-0707',
-      color: new Color('#f72675'),
-    },
-    {
-      id: 'games/puroseka',
-      iconFormat: 'png',
-      caption: 'COLORFUL STAGE',
-      description: (
-        <>
-          shift* <Description>&mdash; 5530735142670336</Description>
-        </>
-      ),
-      color: new Color('#85d5e8'),
     },
   ] as LinkItem[]
 

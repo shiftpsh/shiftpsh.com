@@ -4,7 +4,7 @@ import ClientMapEntry from '../../types/ClientMapEntry'
 import {
   atcoderTitle,
   codeforcesTitle,
-  numberFormat
+  numberFormat,
 } from '../../utils/Formatting'
 import { kyobo } from '../../utils/Link'
 import Article from '../Article'
@@ -65,11 +65,12 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
               <OuterLink href="https://company.nexon.com">
                 <b>NGINE STUDIOS / NEXON COMPANY</b>
               </OuterLink>{' '}
-              소프트웨어 엔지니어<Description>, 2020. 6 &ndash;</Description>
+              소프트웨어 엔지니어
+              <Description>, 2020. 6 &ndash; 2022. 11</Description>
               <Collapse shown={state.detailsShown}>
                 <p>
                   넥슨컴퍼니의 엔진스튜디오에서 일하고 있습니다.{' '}
-                  <OuterLink href="http://it.chosun.com/site/data/html_dir/2020/11/14/2020111401042.html">
+                  <OuterLink href="https://www.intelligencelabs.tech/">
                     인텔리전스랩스
                   </OuterLink>
                   와 긴밀하게 협업하고 있으며, 여러 분야의 엔지니어링 업무를
@@ -86,7 +87,7 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
               <ProfileList>
                 <li>
                   기술연구팀 시스템개발파트 파트장
-                  <Description>, 2021. 12 &ndash;</Description>
+                  <Description>, 2021. 12 &ndash; 2022. 10</Description>
                 </li>
                 <li>
                   산업기능요원 (복무만료)
@@ -160,6 +161,20 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                 <Collapse shown={state.detailsShown} as="li">
                   넥슨컴퍼니 사내 여러 분석 및 개인화 플랫폼의 프론트엔드와
                   백엔드를 제작하고 있습니다.
+                  <ProfileList>
+                    <li>
+                      React + Typescript + MUI를 사용하여 프론트엔드 프로젝트를
+                      주도적으로 설계하고 개발했습니다.
+                    </li>
+                    <li>
+                      차트가 많은 대시보드에서 성능 개선을 위해 초기에 사용해
+                      오던 차트 라이브러리를 d3.js로 재구현했습니다.
+                    </li>
+                    <li>
+                      Jenkins와 CodeDeploy를 이용해 CI/CD 파이프라인을
+                      구축했습니다.
+                    </li>
+                  </ProfileList>
                 </Collapse>
               </ProfileList>
               <Space h="2em" />
