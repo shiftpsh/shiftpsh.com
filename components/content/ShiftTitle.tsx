@@ -17,7 +17,7 @@ const ShiftTitle: React.FC = () => {
           <p>
             <b>박수현</b>
             <br />
-            소프트웨어 엔지니어 @{' '}
+            소프트웨어 엔지니어 (전){' '}
             <OuterLink href="https://company.nexon.com">
               NGINE STUDIOS / NEXON COMPANY
             </OuterLink>
