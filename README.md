@@ -1,34 +1,36 @@
-# shiftpsh.com
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-[shiftpsh.com](https://shiftpsh.com) website (2021)
+## Getting Started
 
-## Build & Run
+First, run the development server:
 
-1. Set API secret: `nano .env`
-
-```
-API_SECRET=<api secret>
-```
-
-2. Configure database: `cp db_config.sample.ts db_config.ts && nano db_config.ts`
-
-```
-import { SequelizeOptions } from 'sequelize-typescript'
-
-export default {
-  dialect: 'mysql',
-  database: '<database name>>',
-  username: '<database username>',
-  password: '<database password>',
-} as SequelizeOptions
+```bash
+npm run dev
+# or
+yarn dev
 ```
 
-3. `npm i && npm run build && npm run start` or `npm i && npm run pm2-start` if PM2 is available
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Optionally set up the [crawler](https://github.com/shiftpsh/shiftpsh.com-crawler) to update values if needed
+You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-## TODO
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-* Use markdown or similar to write articles
-* Translate
-* Dark theme
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

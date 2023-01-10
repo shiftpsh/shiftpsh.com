@@ -1,9 +1,0 @@
-{
-  "plugins": [
-    ["babel-plugin-styled-components", { "ssr": true }],
-    "@babel/plugin-transform-modules-commonjs",
-    ["@babel/plugin-proposal-decorators", { "legacy": true }],
-    "babel-plugin-transform-typescript-metadata"
-  ],
-  "presets": ["next/babel"]
-}
