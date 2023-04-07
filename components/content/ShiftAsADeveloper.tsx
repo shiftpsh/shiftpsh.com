@@ -62,6 +62,19 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
           <Subsubcaption>Work Experiences</Subsubcaption>
           <ProfileList>
             <li>
+              <OuterLink href="https://solved.ac">
+                <b>솔브드</b>
+              </OuterLink>{' '}
+              대표
+              <Description>, 2022. 12 &ndash;</Description>
+              <p>
+                알고리즘 문제해결 학습의 이정표{' '}
+                <OuterLink href="https://solved.ac">solved.ac</OuterLink>를
+                만들어갑니다.
+              </p>
+              <Space h="0.5em" />
+            </li>
+            <li>
               <OuterLink href="https://company.nexon.com">
                 <b>NGINE STUDIOS / NEXON COMPANY</b>
               </OuterLink>{' '}
@@ -102,65 +115,16 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                     </OuterLink>
                   </b>
                   <ProfileList>
-                    <li>
-                      <b>출제사무국 선제/출제위원</b>, 2021 &ndash; 2022
-                      <Collapse shown={state.detailsShown}>
-                        <ProfileList>
-                          <li>
-                            NYPC 출제사무국에서 프로그래밍 문제 선제 및 출제를
-                            담당했습니다.
-                          </li>
-                        </ProfileList>
-                      </Collapse>
-                    </li>
+                    <li>출제사무국 선제/출제위원, 2021 &ndash;</li>
                     <Collapse shown={state.detailsShown} as="li">
-                      <b>대회 시스템 엔지니어링</b>, 2020 &ndash; 2022
-                      <ProfileList>
-                        <li>
-                          대회 시스템 설계와{' '}
-                          <OuterLink href="https://contest.nypc.co.kr">
-                            참가자용 프론트엔드
-                          </OuterLink>{' '}
-                          개발에 참여했습니다.
-                        </li>
-                        <li>
-                          관리자용 클라이언트와 내부 공개용 대회 순위 페이지,
-                          그리고{' '}
-                          <OuterLink href="https://nypc.github.io/">
-                            외부 공개용 문제 업로드 페이지
-                          </OuterLink>
-                          를 개발했습니다.
-                        </li>
-                        <li>
-                          참가자용 프론트엔드는{' '}
-                          <OuterLink href="https://reactjs.org/">
-                            React
-                          </OuterLink>
-                          로 인터페이스를 구성하고, WebSocket을 이용해 대회
-                          서버와 통신하도록 구현했습니다.
-                        </li>
-                        <li>
-                          외부 공개용 문제 업로드 페이지는{' '}
-                          <OuterLink href="https://nextjs.org/">
-                            Next.js
-                          </OuterLink>{' '}
-                          SSG와 GitHub Actions / Pages를 이용합니다. 문제를{' '}
-                          <OuterLink href="https://mdxjs.com/">MDX</OuterLink>로
-                          작성하면 이를 기반으로 정적 사이트를 생성하도록
-                          구성했습니다.{' '}
-                          <OuterLink href="https://github.com/nypc/nypc.github.io">
-                            오픈 소스
-                          </OuterLink>
-                          입니다.
-                        </li>
-                      </ProfileList>
+                      대회 시스템 엔지니어링, 2020 &ndash; 2022
                       <Space h="0.5em" />
                     </Collapse>
                   </ProfileList>
                 </li>
                 <Collapse shown={state.detailsShown} as="li">
                   넥슨컴퍼니 사내 여러 분석 및 개인화 플랫폼의 프론트엔드와
-                  백엔드를 제작하고 있습니다.
+                  백엔드 제작
                   <ProfileList>
                     <li>
                       React + Typescript + MUI를 사용하여 프론트엔드 프로젝트를
@@ -236,7 +200,8 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
               <OuterLink href="https://cs.sogang.ac.kr">
                 <b>서강대학교 컴퓨터공학과</b>
               </OuterLink>{' '}
-              학부 18학번<Description>, 2018. 3 &ndash; (휴학)</Description>
+              학부 18학번
+              <Description>, 2018. 3 &ndash; (현재 5학기)</Description>
               <Collapse shown={state.detailsShown}>
                 <p>4학기까지 GPA 3.50/4.30 (CSE 3.75/4.30)</p>
               </Collapse>
@@ -444,7 +409,7 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                 주어 알고리즘 문제해결 학습 동기를 증진시키기 위한 사이트입니다.
               </p>
               <p>
-                기획, 운영, 개발, 디자인 등을 전부 혼자 담당하고 있으며,{' '}
+                기획, 운영, 개발, 디자인 등을 담당하고 있으며,{' '}
                 <OuterLink href="https://startlink.io">
                   주식회사 스타트링크
                 </OuterLink>
@@ -509,8 +474,8 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                           Express
                         </OuterLink>
                         ,{' '}
-                        <OuterLink href="http://sequelize.org/">
-                          Sequelize ORM
+                        <OuterLink href="https://www.prisma.io/">
+                          Prisma
                         </OuterLink>
                         , 그리고{' '}
                         <OuterLink href="https://www.typescriptlang.org/">
@@ -573,18 +538,30 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                     </ProfileList>
                   </li>
                   <li>
-                    여러 도서에 소개되었습니다.
+                    여러 도서에서 solved.ac를 소개하거나, solved.ac 난이도를
+                    참조하고 있습니다.
                     <ProfileList>
                       <li>
                         김종관, 『
-                        <OuterLink href={kyobo('9791163033448')}>
-                          <b>Do it! 알고리즘 코딩 테스트 자바 편</b>
-                        </OuterLink>
+                        <b>
+                          Do it! 알고리즘 코딩 테스트:{' '}
+                          <OuterLink href={kyobo('S000001818060')}>
+                            자바 편
+                          </OuterLink>
+                          ,{' '}
+                          <OuterLink href={kyobo('S000061584928')}>
+                            파이썬 편
+                          </OuterLink>
+                          ,{' '}
+                          <OuterLink href={kyobo('S000200487334')}>
+                            C++ 편
+                          </OuterLink>
+                        </b>
                         』, 이지스퍼블리싱(2022)
                       </li>
                       <li>
                         권국원, 『
-                        <OuterLink href={kyobo('9788997924950')}>
+                        <OuterLink href={kyobo('S000001624719')}>
                           <b>보통의 취준생을 위한 코딩 테스트 with 파이썬</b>
                         </OuterLink>
                         』, 로드북(2022)
@@ -594,7 +571,7 @@ const ShiftAsADeveloper: React.FC<Props> = (props) => {
                           나동빈
                         </OuterLink>
                         , 『
-                        <OuterLink href={kyobo('9791162243077')}>
+                        <OuterLink href={kyobo('S000001810273')}>
                           <b>이것이 취업을 위한 코딩 테스트다 with 파이썬</b>
                         </OuterLink>
                         』, 한빛미디어(2020)
