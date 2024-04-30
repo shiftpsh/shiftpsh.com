@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+      - feature/2023
       - "releases/**"
 jobs:
   build-dev:
