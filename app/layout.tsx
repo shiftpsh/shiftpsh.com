@@ -20,22 +20,6 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css"
         />
-        {/* Importing CSS by source unmounts it for a short moment, triggering a reflow;
-            temporary solution is to make them static and include from /css */}
-        <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="language" content="Korean" />
-        <style>
-          {`
-              style {
-                display: none !important;
-              }
-              .grecaptcha-badge {
-                visibility: hidden;
-              }
-            `}
-        </style>
       </head>
       <body>
         <Providers>
@@ -77,7 +61,7 @@ export const metadata: Metadata = {
     siteName: "shiftpsh",
     description: "Suhyun Park - Software Engineer · Graphic Designer",
     url: "https://shiftpsh.com",
-    images: "https://www.biko.kr/og-2024.png",
+    images: "https://shiftpsh.com/og.png",
   },
 };
 
