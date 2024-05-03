@@ -3,6 +3,8 @@
 import {
   Cell,
   Divider,
+  Item,
+  Itemize,
   Paragraph,
   Row,
   Space,
@@ -21,6 +23,7 @@ import SectionCaption from "../../components/SectionCaption";
 import CopyButton from "../../components/CopyButton";
 import ColorTable from "./ColorTable";
 import InternalLink from "../../components/InternalLink";
+import ExternalLink from "../../components/ExternalLink";
 
 const Page = () => {
   return (
@@ -70,6 +73,40 @@ const Page = () => {
         박한별(한별이)은 인터넷 페르소나 캐릭터입니다. 2014년부터 shiftpsh의
         인터넷 활동과 함께하고 있습니다.
       </Paragraph>
+      <Divider />
+      <SectionCaption>아카이브</SectionCaption>
+      <Itemize>
+        <Item>
+          <ExternalLink href="https://shiftpsh.com/2021">
+            shiftpsh.com (2021)
+          </ExternalLink>
+        </Item>
+        <Item>
+          <ExternalLink href="https://shiftpsh.com/2019">
+            shiftpsh.com (2019)
+          </ExternalLink>
+        </Item>
+        <Item>
+          <ExternalLink href="https://shiftpsh.com/2017">
+            shiftpsh.com (2017)
+          </ExternalLink>
+        </Item>
+        <Item>
+          <ExternalLink href="https://shiftpsh.com/ed/7/">
+            osu! 스킨 &ndash; SHIFTED 7: VIOLET CLARITY (2016)
+          </ExternalLink>
+        </Item>
+        <Item>
+          <ExternalLink href="https://shiftpsh.com/ed/6/">
+            osu! 스킨 &ndash; SHIFTED 6: EXPRESSIVE HARMONY (2015)
+          </ExternalLink>
+        </Item>
+        <Item>
+          <ExternalLink href="https://shiftpsh.com/ed/5/">
+            osu! 스킨 &ndash; shifted 5: snow dream (2014)
+          </ExternalLink>
+        </Item>
+      </Itemize>
       <Space h={160} />
     </MainContainer>
   );
