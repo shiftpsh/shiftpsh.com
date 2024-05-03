@@ -15,12 +15,12 @@ const Layout = ({ children }: PropsWithChildren) => {
       <Typo h1>링크</Typo>
       <Tabs fullWidth>
         <Link href="/links" passHref legacyBehavior>
-          <Tab as="a" current={pathname === "/links"}>
+          <Tab as="a" current={pathname === "/links/"}>
             프로필
           </Tab>
         </Link>
         <Link href="/links/game" passHref legacyBehavior>
-          <Tab as="a" current={pathname === "/links/game"}>
+          <Tab as="a" current={pathname === "/links/game/"}>
             게임
           </Tab>
         </Link>
