@@ -59,7 +59,7 @@ const Page = () => {
       />
       <SectionCaption>박한별</SectionCaption>
       <LinksRow>
-        <DownloadLink href="/files/shiftpsh-logo-svg.zip">
+        <DownloadLink href="/files/hanbyeol-specs.pdf">
           설정 문서 (577KB)
         </DownloadLink>
         <InternalLink href="/hanbyeol/guidelines">
