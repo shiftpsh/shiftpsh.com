@@ -33,16 +33,16 @@ const Page = () => {
       />
       <SectionCaption>로고 및 색상</SectionCaption>
       <LinksRow>
-        <DownloadLink href="/files/shiftpsh-logo-svg.zip">
+        <DownloadLink href="/downloads/shiftpsh-logo-svg.zip">
           SVG (8.9KB)
         </DownloadLink>
-        <DownloadLink href="/files/shiftpsh-logo-png.zip">
+        <DownloadLink href="/downloads/shiftpsh-logo-png.zip">
           PNG (265KB)
         </DownloadLink>
-        <DownloadLink href="/files/shiftpsh-logo-ai-screen.zip">
+        <DownloadLink href="/downloads/shiftpsh-logo-ai-screen.zip">
           AI (스크린용, 512KB)
         </DownloadLink>
-        <DownloadLink href="/files/shiftpsh-logo-ai-print.zip">
+        <DownloadLink href="/downloads/shiftpsh-logo-ai-print.zip">
           AI (인쇄용, 2.2MB)
         </DownloadLink>
       </LinksRow>
@@ -59,7 +59,7 @@ const Page = () => {
       />
       <SectionCaption>박한별</SectionCaption>
       <LinksRow>
-        <DownloadLink href="/files/hanbyeol-specs.pdf">
+        <DownloadLink href="/downloads/hanbyeol-specs.pdf">
           설정 문서 (577KB)
         </DownloadLink>
         <InternalLink href="/hanbyeol/guidelines">
