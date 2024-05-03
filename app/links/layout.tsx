@@ -29,8 +29,9 @@ const Layout = ({ children }: PropsWithChildren) => {
       {children}
       <Space h={64} />
       <Typo description>
-        'shiftpsh' 아이디를 사용하더라도 이 목록에 없는 경우, 제 프로필 또는
-        계정이 아닐 가능성이 있습니다. 확실하지 않다면 문의해 주세요.
+        &lsquo;shiftpsh&rsquo; 아이디를 사용하더라도 이 목록에 없는 경우, 제
+        프로필 또는 계정이 아닐 가능성이 있습니다. 확실하지 않다면 문의해
+        주세요.
       </Typo>
       <Space h={160} />
     </MainContainer>

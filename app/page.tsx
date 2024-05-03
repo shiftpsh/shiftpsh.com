@@ -3,27 +3,18 @@
 import styled from "@emotion/styled";
 import { Space, Typo } from "@solved-ac/ui-react";
 import { IconAt, IconBriefcase, IconSchool } from "@tabler/icons-react";
+import { useEffect, useState } from "react";
 import ExternalLink from "../components/ExternalLink";
 import ExternalLinkInline from "../components/ExternalLinkInline";
+import FullwidthImage from "../components/FullwidthImage";
+import InternalLink from "../components/InternalLink";
 import LinksRow from "../components/LinksRow";
 import MainContainer from "../components/MainContainer";
-import { useEffect, useState } from "react";
+import SectionCaption from "../components/SectionCaption";
 
 const Logo = styled.img`
   width: 64px;
   height: 64px;
-`;
-
-const Intro = styled.p`
-  font-weight: 600;
-  font-size: 1.5em;
-  letter-spacing: -0.05ch;
-  margin-left: -0.05ch;
-  text-align: justify;
-
-  @media (max-width: 768px) {
-    font-size: 1.25em;
-  }
 `;
 
 const IntroBold = styled.span`
@@ -31,7 +22,7 @@ const IntroBold = styled.span`
   color: black;
 `;
 
-const BiggerIntro = styled(Intro)`
+const BiggerSectionCaption = styled(SectionCaption)`
   font-weight: 400;
   font-size: 1.8em;
   margin-left: -0.1ch;
@@ -68,11 +59,6 @@ const HistoryContent = styled.div`
   min-width: 0;
 `;
 
-const MainImage = styled.img`
-  width: 100%;
-  height: auto;
-`;
-
 const MainImageCaption = styled.figcaption`
   text-align: right;
 `;
@@ -93,13 +79,12 @@ const Page = () => {
     <MainContainer>
       <Space h={160} />
       <Logo src="/shiftpsh-logo-2019.svg" alt="shiftpsh" />
-      <Space h={32} />
-      <BiggerIntro>
+      <BiggerSectionCaption>
         <IntroBold>안녕하세요, 개발자 겸 디자이너 박수현입니다.</IntroBold>{" "}
         분야를 불문하고 능력치를 최대한 발휘해 문제를 정의하고 해결하는 것을
         좋아합니다. 많은 사람에게 도움이 되는 디자인과 소프트웨어를 만들기 위해
         끊임없이 고민하고 있습니다.
-      </BiggerIntro>
+      </BiggerSectionCaption>
       <Space h={32} />
       <Typo h3 no-margin>
         박수현 Suhyun Park
@@ -154,20 +139,23 @@ const Page = () => {
           </HistoryContent>
         </HistoryEntry>
       </HistoryEntries>
+      <Space h={16} />
+      <LinksRow>
+        <InternalLink href="/links">모든 연락처/링크</InternalLink>
+        <InternalLink href="/cv">자세한 이력</InternalLink>
+      </LinksRow>
       <Space h={72} />
       <figure>
-        <MainImage
+        <FullwidthImage
           src="/img/intro-solvedac.jpg"
           alt="solved.ac 그랜드 아레나 파티에서 대회에 참전 중인 참가자들의 뒷모습을 촬영한 사진."
         />
         <MainImageCaption>solved.ac Grand Arena (2024)</MainImageCaption>
       </figure>
-      <Space h={32} />
-      <Intro>
+      <SectionCaption>
         솔브드는 대한민국이 코딩 테스트와 알고리즘 문제해결을 공부하는 방법을
         바꿨습니다.
-      </Intro>
-      <Space h={16} />
+      </SectionCaption>
       <LinksRow>
         <ExternalLink href="https://solved.ac">solved.ac</ExternalLink>
         <ExternalLink href="https://www.youtube.com/watch?v=ggD9ry05axw">
@@ -193,19 +181,17 @@ const Page = () => {
       </Content>
       <Space h={72} />
       <figure>
-        <MainImage
+        <FullwidthImage
           src="/img/intro-icpc.jpg"
           alt="ICPC World Finals Moscow에서 서강대학교 Redshift 팀이 입장하는 모습을 촬영한 사진."
         />
         <MainImageCaption>ICPC World Finals Moscow (2021)</MainImageCaption>
       </figure>
-      <Space h={32} />
-      <Intro>
+      <SectionCaption>
         다양한 문제를 창의적으로 정의하고 논리적으로 해결해나가고 있습니다.
-      </Intro>
-      <Space h={16} />
+      </SectionCaption>
       <LinksRow>
-        {/* TODO: Link to awards */}
+        <InternalLink href="/cv">이력</InternalLink>
         <ExternalLink href="https://icpc.global/ICPCID/2ALMJW44APYS">
           ICPCID
         </ExternalLink>
@@ -235,16 +221,19 @@ const Page = () => {
       </Content>
       <Space h={72} />
       <figure>
-        <MainImage
+        <FullwidthImage
           src="/img/intro-hb.jpg"
           alt="한별이가 그려진 아크릴 스탠드를 한 손으로 들고 이륙 준비 중인 비행기에서 찍은 사진."
         />
         <MainImageCaption>박한별</MainImageCaption>
       </figure>
-      <Space h={32} />
-      <Intro>크리에이티브로 새로운 세상을 창조해가고 있습니다.</Intro>
-      <Space h={16} />
-      {/* TODO: Links <LinksRow></LinksRow> */}
+      <SectionCaption>
+        크리에이티브로 새로운 세상을 창조해가고 있습니다.
+      </SectionCaption>
+      <LinksRow>
+        <InternalLink href="/gallery">작업</InternalLink>
+        <InternalLink href="/downloads">자료</InternalLink>
+      </LinksRow>
       <Content>
         생각하는 어떤 것이든 실제로 만들어 보려 하는 선천적 기질은 프로그래밍을
         시작하기 전에 시각디자인에 입문하는 계기가 되었으며, 현재까지도 이어지고

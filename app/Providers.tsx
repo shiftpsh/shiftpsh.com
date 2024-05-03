@@ -4,9 +4,11 @@ import { Global, ThemeProvider } from "@emotion/react";
 import { SolvedGlobalStyles, solvedThemes } from "@solved-ac/ui-react";
 import { PropsWithChildren } from "react";
 
+const THEME = solvedThemes.light;
+
 export const Providers = ({ children }: PropsWithChildren) => {
   return (
-    <ThemeProvider theme={solvedThemes.light}>
+    <ThemeProvider theme={THEME}>
       <SolvedGlobalStyles />
       <Global
         styles={{
