@@ -11,24 +11,23 @@ import {
 
 // https://github.com/vercel/next.js/discussions/50897
 
-export const GALLERY_FOLDER_PATH = path.join(
-  process.cwd(),
-  "app",
-  "gallery",
-  "(posts)"
-);
+const CWD = process.cwd();
+
+export const GALLERY_FOLDER_PATH = path.join(CWD, "public", "posts", "gallery");
 
 export const HANBYEOL_FOLDER_PATH = path.join(
-  process.cwd(),
-  "app",
-  "hanbyeol",
-  "(posts)"
+  CWD,
+  "public",
+  "posts",
+  "hanbyeol"
 );
 
 const FrontmatterGuard = Record({
   title: StringType,
   date: StringType,
   thumbnail: StringType.optional(),
+  mainImage: StringType.optional(),
+  link: StringType.optional(),
   tags: ArrayType(StringType).optional(),
 });
 
@@ -57,6 +56,29 @@ export const readPostFileContent = async (slug: string, folder: string) => {
   return fileContent;
 };
 
+type ResolveImageUrlFn = {
+  (src: undefined, slug: string, folder: string): null;
+  (src: string, slug: string, folder: string): string;
+  (src: string | undefined, slug: string, folder: string): string | null;
+};
+
+const resolveImageUrl: ResolveImageUrlFn = (
+  src,
+  slug: string,
+  folder: string
+) => {
+  if (typeof src !== "string") return null;
+  if (/\.\//.test(src)) {
+    const localFolderPath = path.join(folder, slug);
+    const localImgPath = src
+      .replace(/^\.\//, `${localFolderPath}/`)
+      .replace(CWD, "")
+      .replace(/^\/?public/, "");
+    return localImgPath;
+  }
+  return src as any;
+};
+
 export const getPostBySlug = async (slug: string, folder: string) => {
   const fileSlug = slug.replace(/\.mdx$/, "");
   const fileContent = await readPostFileContent(fileSlug, folder);
@@ -68,16 +90,20 @@ export const getPostBySlug = async (slug: string, folder: string) => {
     },
   });
   const { frontmatter } = serialized;
-  const { title, date, thumbnail, tags } = FrontmatterGuard.check(frontmatter);
+  const { title, date, thumbnail, mainImage, tags, link } =
+    FrontmatterGuard.check(frontmatter);
 
   return {
     meta: {
       title,
       date: new Date(date).toISOString(),
       // TODO create and replace thumnail image
-      thumbnail: thumbnail || "/img/logo-splash.svg",
+      thumbnail:
+        resolveImageUrl(thumbnail, slug, folder) || "/img/logo-splash.svg",
+      mainImage: resolveImageUrl(mainImage, slug, folder) || undefined,
       tags: tags || [],
       slug: fileSlug,
+      link,
     } satisfies Frontmatter,
     serialized,
   };
