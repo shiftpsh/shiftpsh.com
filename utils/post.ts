@@ -27,6 +27,7 @@ const FrontmatterGuard = Record({
   date: StringType,
   thumbnail: StringType.optional(),
   mainImage: StringType.optional(),
+  downloadableImage: StringType.optional(),
   link: StringType.optional(),
   tags: ArrayType(StringType).optional(),
 });
@@ -35,6 +36,7 @@ export type Frontmatter = Static<typeof FrontmatterGuard> & {
   slug: string;
   thumbnail: string;
   tags: string[];
+  downloadableImageSize: number | null;
 };
 
 export const readPostFileContent = async (slug: string, folder: string) => {
@@ -90,8 +92,18 @@ export const getPostBySlug = async (slug: string, folder: string) => {
     },
   });
   const { frontmatter } = serialized;
-  const { title, date, thumbnail, mainImage, tags, link } =
+  const { title, date, thumbnail, mainImage, downloadableImage, tags, link } =
     FrontmatterGuard.check(frontmatter);
+
+  const resolvedMainImage =
+    resolveImageUrl(mainImage, slug, folder) || undefined;
+
+  const resolvedDownloadableImage =
+    resolveImageUrl(downloadableImage, slug, folder) || resolvedMainImage;
+
+  const downloadableImageSize = resolvedDownloadableImage
+    ? fs.statSync(path.join(CWD, "public", resolvedDownloadableImage)).size
+    : null;
 
   return {
     meta: {
@@ -100,7 +112,9 @@ export const getPostBySlug = async (slug: string, folder: string) => {
       // TODO create and replace thumnail image
       thumbnail:
         resolveImageUrl(thumbnail, slug, folder) || "/img/logo-splash.svg",
-      mainImage: resolveImageUrl(mainImage, slug, folder) || undefined,
+      mainImage: resolvedMainImage,
+      downloadableImage: resolvedDownloadableImage,
+      downloadableImageSize,
       tags: tags || [],
       slug: fileSlug,
       link,
