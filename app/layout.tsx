@@ -2,7 +2,7 @@ import React from "react";
 
 /* eslint-disable @next/next/no-page-custom-font */
 /* eslint-disable @next/next/no-css-tags */
-import { Metadata } from "next";
+import { Metadata, Viewport } from "next";
 import { Providers } from "./Providers";
 import ClientLayout from "./ClientLayout";
 
@@ -47,10 +47,6 @@ export const metadata: Metadata = {
     "박수현",
     "솔브드",
   ],
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-  },
   robots: {
     index: true,
     follow: true,
@@ -63,6 +59,12 @@ export const metadata: Metadata = {
     url: "https://shiftpsh.com",
     images: "https://shiftpsh.com/og.png",
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "white",
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default RootLayout;

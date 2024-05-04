@@ -97,7 +97,11 @@ const Gallery = ({ prefix, items }: Props) => {
     <GalleryGrid>
       {items.map((item) => (
         <GalleryItem key={item.slug}>
-          <GalleryItemLink href={`${prefix}/${item.slug}`}>
+          <GalleryItemLink
+            href={`${prefix}/${item.slug
+              .replace(/^\//, "")
+              .replace(/\/$/, "")}/`}
+          >
             <GalleryImage
               style={{
                 backgroundImage: `url(${item.thumbnail})`,
