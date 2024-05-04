@@ -23,6 +23,14 @@ const TopImage = styled.img`
   object-fit: scale-down;
 `;
 
+const TopVideo = styled.video`
+  display: block;
+  width: 100%;
+  max-height: 100vmin;
+  margin: 0 auto;
+  object-fit: scale-down;
+`;
+
 interface Props {
   frontmatter: Frontmatter;
 }
@@ -40,12 +48,21 @@ const ClientPage = ({ frontmatter, children }: PropsWithChildren<Props>) => {
 
   const dateObject = new Date(date);
 
+  const type = /\.mp4$/.test(mainImage || "") ? "비디오" : "이미지";
+  const mainIsNotOriginal = mainImage !== downloadableImage;
+
   return (
     <>
       {mainImage && (
         <>
           <TopPadding />
-          <TopImage src={mainImage} />
+          {/\.mp4$/.test(mainImage) ? (
+            <TopVideo autoPlay loop muted playsInline>
+              <source src={mainImage} type="video/mp4" />
+            </TopVideo>
+          ) : (
+            <TopImage src={mainImage} alt={title} />
+          )}
         </>
       )}
       <MainContainer>
@@ -56,9 +73,7 @@ const ClientPage = ({ frontmatter, children }: PropsWithChildren<Props>) => {
           {link && <ExternalLink href={link}>링크</ExternalLink>}
           {downloadableImage && (
             <DownloadLink href={downloadableImage}>
-              {downloadableImage !== mainImage
-                ? "이미지 원본 다운로드"
-                : "이미지 다운로드"}
+              {mainIsNotOriginal ? `${type} 원본 다운로드` : `${type} 다운로드`}
               {downloadableImageSize
                 ? ` (${formatFilesize(downloadableImageSize)})`
                 : ""}
