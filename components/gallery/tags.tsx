@@ -42,6 +42,17 @@ export const TAGS: {
       </>
     ),
   },
+  "author:im_rhrl": {
+    children: (
+      <>
+        하고기{" "}
+        <Typo description small>
+          작가
+        </Typo>
+      </>
+    ),
+    href: "https://twitter.com/im_rhrl",
+  },
   /**
    * Characters
    */
