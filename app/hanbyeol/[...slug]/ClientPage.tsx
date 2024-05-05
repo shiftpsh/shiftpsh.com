@@ -1,7 +1,7 @@
 "use client";
 
 import styled from "@emotion/styled";
-import { Space, Typo } from "@solved-ac/ui-react";
+import { Divider, Space, Typo } from "@solved-ac/ui-react";
 import { PropsWithChildren } from "react";
 import DownloadLink from "../../../components/DownloadLink";
 import ExternalLink from "../../../components/ExternalLink";
@@ -9,6 +9,9 @@ import LinksRow from "../../../components/LinksRow";
 import MainContainer from "../../../components/MainContainer";
 import { formatFilesize } from "../../../utils/formatNumber";
 import { Frontmatter } from "../../../utils/post";
+import { getTag } from "../../../components/gallery/tags";
+import Tag from "../../../components/gallery/Tag";
+import ItemsRow from "../../../components/ItemsRow";
 
 const TopPadding = styled.div`
   padding-top: 96px;
@@ -80,6 +83,17 @@ const ClientPage = ({ frontmatter, children }: PropsWithChildren<Props>) => {
             </DownloadLink>
           )}
         </LinksRow>
+        <Divider />
+        {tags && (
+          <>
+            <ItemsRow style={{ alignItems: "center" }}>
+              {tags.map((tag, index) => (
+                <Tag key={index} {...getTag(tag)} />
+              ))}
+            </ItemsRow>
+            <Divider />
+          </>
+        )}
         {children}
         <Space h={80} />
       </MainContainer>
