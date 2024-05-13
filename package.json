@@ -12,7 +12,6 @@
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@floating-ui/react": "^0.26.12",
-    "@next/font": "13.1.1",
     "@solved-ac/ui-react": "^0.6.4",
     "@tabler/icons-react": "^3.2.0",
     "@types/node": "18.11.18",
