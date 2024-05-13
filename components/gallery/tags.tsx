@@ -32,6 +32,18 @@ export const TAGS: {
     href: "https://twitter.com/havana723_",
     src: "/tag/author-havana723.png",
   },
+  "author:suisou610": {
+    children: (
+      <>
+        すいそう{" "}
+        <Typo description small>
+          작가
+        </Typo>
+      </>
+    ),
+    href: "https://twitter.com/suisou610",
+    src: "/tag/author-suisou610.png",
+  },
   "author:merryu": {
     children: (
       <>
@@ -101,6 +113,9 @@ export const TAGS: {
   },
   "solvedac-background": {
     children: "solved.ac 배경",
+  },
+  "kakao-emoticon": {
+    children: "카카오 이모티콘",
   },
 };
 
