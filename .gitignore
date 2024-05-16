@@ -23,21 +23,14 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-# .env
-.env
+.pnpm-debug.log*
 
 # local env files
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env*.local
 
 # vercel
 .vercel
 
-# database
-db.sqlite
-
-# database configuration
-db_config.ts
+# typescript
+*.tsbuildinfo
+next-env.d.ts
