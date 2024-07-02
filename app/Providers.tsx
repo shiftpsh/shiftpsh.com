@@ -3,6 +3,7 @@
 import { Global, ThemeProvider } from "@emotion/react";
 import { SolvedGlobalStyles, solvedThemes } from "@solved-ac/ui-react";
 import { PropsWithChildren } from "react";
+import { IntersectionObserverProvider } from "../contexts/IntersectionObserverContext";
 
 const THEME = solvedThemes.light;
 
@@ -21,7 +22,7 @@ export const Providers = ({ children }: PropsWithChildren) => {
           },
         }}
       />
-      {children}
+      <IntersectionObserverProvider>{children}</IntersectionObserverProvider>
     </ThemeProvider>
   );
 };
