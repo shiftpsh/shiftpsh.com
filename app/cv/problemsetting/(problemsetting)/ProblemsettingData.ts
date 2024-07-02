@@ -43,6 +43,15 @@ const ProblemsettingData: ProblemsettingRowData[] = [
   },
   {
     year: "2021",
+    contest: "2021 Sogang Programming Contest (SPC)",
+    contestLink: "https://icpc.team/spc",
+    title: "연결 요소와 쿼리",
+    number: "Champion H",
+    bojProblemId: 23753,
+    coAuthored: "문제 원형 개발",
+  },
+  {
+    year: "2021",
     contest: "2021 신촌연합 여름 대회 (SUAPC)",
     contestLink: "https://icpc-sinchon.io/suapc",
     title: "조각 체스판",
@@ -72,6 +81,7 @@ const ProblemsettingData: ProblemsettingRowData[] = [
     title: "성싶당",
     number: "F",
     bojProblemId: 20941,
+    coAuthored: "지문 작성 및 데이터 준비",
   },
   {
     year: "2020",

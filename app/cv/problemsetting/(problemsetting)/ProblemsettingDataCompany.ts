@@ -8,6 +8,7 @@ const ProblemsettingDataCompany: ProblemsettingRowData[] = [
     title: "과부하 방지",
     number: "1B/2F",
     bojProblemId: 31396,
+    coAuthored: "데이터 작성",
   },
   {
     year: "2024",
@@ -16,6 +17,7 @@ const ProblemsettingDataCompany: ProblemsettingRowData[] = [
     title: "사전 순 최대 공통 부분 수열",
     number: "2D",
     bojProblemId: 30805,
+    coAuthored: "데이터 작성",
   },
   {
     year: "2022",
@@ -25,6 +27,7 @@ const ProblemsettingDataCompany: ProblemsettingRowData[] = [
     number: "1519부문 5번",
     bikoProblemId: 125,
     bold: true,
+    coAuthored: "문제 원형 개발",
   },
   {
     year: "2021",
@@ -34,6 +37,7 @@ const ProblemsettingDataCompany: ProblemsettingRowData[] = [
     number: "1일차 1번",
     bikoProblemId: 1778,
     bold: true,
+    coAuthored: "문제 원형 개발",
   },
   {
     year: "2021",
@@ -43,6 +47,7 @@ const ProblemsettingDataCompany: ProblemsettingRowData[] = [
     number: "2일차 7번",
     bikoProblemId: 1784,
     bold: true,
+    coAuthored: "문제 원형 개발",
   },
 ];
 

@@ -13,6 +13,7 @@ export interface ProblemsettingRowData {
   bold?: boolean;
   bojProblemId?: number;
   bikoProblemId?: number;
+  coAuthored?: string;
 }
 
 interface Props {
@@ -29,7 +30,10 @@ const ProblemsettingRow = ({ data }: Props) => {
     bold,
     bojProblemId,
     bikoProblemId,
+    coAuthored: coAuthoredCaption,
   } = data;
+
+  const coAuthored = !!coAuthoredCaption;
 
   const contestStyle = bold
     ? {
@@ -40,7 +44,7 @@ const ProblemsettingRow = ({ data }: Props) => {
   return (
     <>
       <Row>
-        <Cell>
+        <Cell rowSpan={coAuthored ? 2 : 1}>
           <Typo tabular>{year}</Typo>
         </Cell>
         <Cell>
@@ -71,7 +75,7 @@ const ProblemsettingRow = ({ data }: Props) => {
                 <IconCookie />{" "}
                 <b>
                   <ExternalLinkInline
-                    href={`https://www.biko.kr/problem/${bojProblemId}`}
+                    href={`https://www.biko.kr/problem/${bikoProblemId}`}
                   >
                     {bikoProblemId}
                   </ExternalLinkInline>
@@ -82,6 +86,13 @@ const ProblemsettingRow = ({ data }: Props) => {
           )}
         </Cell>
       </Row>
+      {coAuthored && (
+        <Row>
+          <Cell colSpan={2}>
+            <Typo description>(공저 &ndash; {coAuthoredCaption})</Typo>
+          </Cell>
+        </Row>
+      )}
     </>
   );
 };
