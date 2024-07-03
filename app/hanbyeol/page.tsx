@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { HANBYEOL_FOLDER_PATH, getAllPostFrontmatters } from "../../utils/post";
 import ClientPage from "./ClientPage";
 
@@ -7,7 +8,11 @@ const Page = async () => {
     return new Date(b.date).getTime() - new Date(a.date).getTime();
   });
 
-  return <ClientPage posts={allPostsSorted} />;
+  return (
+    <Suspense>
+      <ClientPage posts={allPostsSorted} />;
+    </Suspense>
+  );
 };
 
 export default Page;
