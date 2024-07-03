@@ -131,6 +131,7 @@ const ClientPage = ({ posts }: Props) => {
         <Space h={160} />
         <TextField
           placeholder="검색"
+          defaultValue={searchParams.get("query") || ""}
           onChange={(e) => throttledSetQuery(e.target.value)}
           fullWidth
         />
@@ -138,7 +139,11 @@ const ClientPage = ({ posts }: Props) => {
       </MainContainer>
       <ToggleableTagsRow>
         {allTags
-          .filter(({ tag }) => tagCountsInFilteredPosts.get(tag.key))
+          .filter(
+            ({ tag }) =>
+              tagCountsInFilteredPosts.get(tag.key) ||
+              selectedTagsSet.has(tag.key)
+          )
           .map(({ tag }, i) => (
             <ToggleableTag
               tag={tag}
