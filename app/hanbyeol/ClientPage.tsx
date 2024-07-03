@@ -1,6 +1,11 @@
 "use client";
 
-import { Space, TextField, Typo } from "@solved-ac/ui-react";
+import {
+  EmptyStatePlaceholder,
+  Space,
+  TextField,
+  Typo,
+} from "@solved-ac/ui-react";
 import { useEffect, useMemo, useState } from "react";
 import MainContainer from "../../components/MainContainer";
 import Gallery from "../../components/gallery/Gallery";
@@ -154,6 +159,12 @@ const ClientPage = ({ posts }: Props) => {
       </ToggleableTagsRow>
       <Space h={64} />
       <Gallery prefix="/hanbyeol" items={filteredPosts} />
+      {filteredPosts.length === 0 && (
+        <>
+          <EmptyStatePlaceholder>검색 결과가 없습니다.</EmptyStatePlaceholder>
+          <Space h={64} />
+        </>
+      )}
     </>
   );
 };
