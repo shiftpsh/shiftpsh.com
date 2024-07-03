@@ -1,15 +1,24 @@
-import { PropsWithChildren } from "react";
-import { TagProps } from "./Tag";
 import { Typo } from "@solved-ac/ui-react";
 
+export interface TagData {
+  src?: string;
+  href?: string;
+  aliases?: string[];
+  render?: string | JSX.Element;
+}
+
+export interface Tag extends TagData {
+  key: string;
+}
+
 export const TAGS: {
-  [key: string]: PropsWithChildren<TagProps>;
+  [key: string]: TagData;
 } = {
   /**
    * Authors
    */
   "author:shiftpsh": {
-    children: (
+    render: (
       <>
         shiftpsh{" "}
         <Typo description small>
@@ -19,9 +28,10 @@ export const TAGS: {
     ),
     href: "/",
     src: "/tag/author-shiftpsh.png",
+    aliases: ["시프트"],
   },
   "author:havana723": {
-    children: (
+    render: (
       <>
         havana723{" "}
         <Typo description small>
@@ -31,9 +41,10 @@ export const TAGS: {
     ),
     href: "https://twitter.com/havana723_",
     src: "/tag/author-havana723.png",
+    aliases: ["아바나", "하바나"],
   },
   "author:suisou610": {
-    children: (
+    render: (
       <>
         すいそう{" "}
         <Typo description small>
@@ -43,9 +54,10 @@ export const TAGS: {
     ),
     href: "https://twitter.com/suisou610",
     src: "/tag/author-suisou610.png",
+    aliases: ["수조", "すいそう"],
   },
   "author:merryu": {
-    children: (
+    render: (
       <>
         MerryU{" "}
         <Typo description small>
@@ -53,9 +65,10 @@ export const TAGS: {
         </Typo>
       </>
     ),
+    aliases: ["메리유"],
   },
   "author:im_rhrl": {
-    children: (
+    render: (
       <>
         하고기{" "}
         <Typo description small>
@@ -64,12 +77,13 @@ export const TAGS: {
       </>
     ),
     href: "https://twitter.com/im_rhrl",
+    aliases: ["하고기"],
   },
   /**
    * Characters
    */
   "character:eunha": {
-    children: (
+    render: (
       <>
         은하{" "}
         <Typo description small>
@@ -78,9 +92,10 @@ export const TAGS: {
       </>
     ),
     src: "/tag/character-eunha.png",
+    aliases: ["은하"],
   },
   "character:hina": {
-    children: (
+    render: (
       <>
         히나{" "}
         <Typo description small>
@@ -89,9 +104,10 @@ export const TAGS: {
       </>
     ),
     src: "/tag/character-hina.png",
+    aliases: ["히나"],
   },
   "character:semia": {
-    children: (
+    render: (
       <>
         세미아{" "}
         <Typo description small>
@@ -99,9 +115,10 @@ export const TAGS: {
         </Typo>
       </>
     ),
+    aliases: ["세미아"],
   },
   "character:imos": {
-    children: (
+    render: (
       <>
         いもす{" "}
         <Typo description small>
@@ -110,19 +127,25 @@ export const TAGS: {
       </>
     ),
     src: "/tag/character-imos.png",
+    aliases: ["이모스", "いもす"],
   },
   "solvedac-background": {
-    children: "solved.ac 배경",
+    render: "solved.ac 배경",
+    aliases: ["솔브드", "배경", "프로필"],
   },
   "kakao-emoticon": {
-    children: "카카오 이모티콘",
+    render: "카카오 이모티콘",
+    aliases: ["카카오", "이모티콘", "카톡"],
   },
 };
 
-export const getTag = (key: string): TagProps => {
-  return (
-    TAGS[key] || {
-      children: key,
-    }
-  );
+export const getTag = (key: string): Tag => {
+  const tag = TAGS[key] || {
+    render: key,
+  };
+
+  return {
+    key,
+    ...tag,
+  };
 };

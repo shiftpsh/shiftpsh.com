@@ -1,13 +1,12 @@
 import styled from "@emotion/styled";
 import { Typo } from "@solved-ac/ui-react";
 import { IconTag } from "@tabler/icons-react";
-import { PropsWithChildren } from "react";
+import { Tag } from "./tags";
 
 const TagContainer = styled.span`
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  flex-wrap: wrap;
 `;
 
 const TagContainerLink = styled.a`
@@ -21,23 +20,28 @@ const TagContainerLink = styled.a`
   }
 `;
 
-const ProfileImage = styled.img`
-  width: 36px;
-  height: 36px;
+const ProfileImage = styled.img<{
+  compact?: boolean;
+}>`
+  width: ${({ compact }) => (compact ? "1.5em" : "36px")};
+  height: ${({ compact }) => (compact ? "1.5em" : "36px")};
   border-radius: 50%;
   margin-right: 4px;
 `;
 
-export interface TagProps {
-  src?: string;
-  href?: string;
+interface Props {
+  tag: Tag;
+  unclickable?: boolean;
+  compact?: boolean;
 }
 
-const Tag = ({ src, href, children }: PropsWithChildren<TagProps>) => {
+const TagItem = ({ tag, unclickable, compact = false }: Props) => {
+  const { src, href, render } = tag;
+
   const renderedChildren = (
     <>
       {src ? (
-        <ProfileImage src={src} />
+        <ProfileImage src={src} compact={compact} />
       ) : (
         <>
           <Typo description>
@@ -45,11 +49,11 @@ const Tag = ({ src, href, children }: PropsWithChildren<TagProps>) => {
           </Typo>
         </>
       )}
-      <span>{children}</span>
+      <span>{render}</span>
     </>
   );
 
-  if (href) {
+  if (href && !unclickable) {
     return (
       <TagContainerLink href={href} target="_blank" rel="noopener noreferrer">
         {renderedChildren}
@@ -59,4 +63,4 @@ const Tag = ({ src, href, children }: PropsWithChildren<TagProps>) => {
   return <TagContainer>{renderedChildren}</TagContainer>;
 };
 
-export default Tag;
+export default TagItem;

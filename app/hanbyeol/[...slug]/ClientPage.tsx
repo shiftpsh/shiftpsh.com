@@ -10,7 +10,7 @@ import MainContainer from "../../../components/MainContainer";
 import { formatFilesize } from "../../../utils/formatNumber";
 import { Frontmatter } from "../../../utils/post";
 import { getTag } from "../../../components/gallery/tags";
-import Tag from "../../../components/gallery/Tag";
+import TagItem from "../../../components/gallery/TagItem";
 import ItemsRow from "../../../components/ItemsRow";
 
 const TopPadding = styled.div`
@@ -87,8 +87,8 @@ const ClientPage = ({ frontmatter, children }: PropsWithChildren<Props>) => {
         {tags && (
           <>
             <ItemsRow style={{ alignItems: "center" }}>
-              {tags.map((tag, index) => (
-                <Tag key={index} {...getTag(tag)} />
+              {tags.map((tag) => (
+                <TagItem key={tag} tag={getTag(tag)} />
               ))}
             </ItemsRow>
             <Divider />
