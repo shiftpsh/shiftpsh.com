@@ -40,7 +40,7 @@ const Page = ({ profile }: { profile: GameDynamicProfile }) => {
             <>
               ｓｏｌｖｅｄａｃ{" "}
               <Typo description tabular>
-                (15,712)
+                (15,802)
               </Typo>
               <br />
               <Typo readable small>
