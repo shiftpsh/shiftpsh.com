@@ -2,6 +2,7 @@
 
 import { Cell, Row, Typo } from "@solved-ac/ui-react";
 import { IconStar, IconTrophy } from "@tabler/icons-react";
+import { ReactNode } from "react";
 import ExternalLinkInline from "../../../../components/ExternalLinkInline";
 import { formatNumber } from "../../../../utils/formatNumber";
 
@@ -10,7 +11,7 @@ export interface UCPCRowData {
   phase: "PRELIMINARY" | "FINALS";
   contest: string;
   contestLink: string;
-  team: string;
+  team: ReactNode;
   rank: number;
   totalTeams: number;
   score: number;
