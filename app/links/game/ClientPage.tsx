@@ -3,12 +3,13 @@
 import { Divider, Space, Typo } from "@solved-ac/ui-react";
 import { IconBrandSteam, IconCopy } from "@tabler/icons-react";
 import { GameDynamicProfile } from "../../../dynamicProfile/loadGames";
-import { CopyLinkItem, GameIcon, LinkItem } from "../LinkItem";
+import { GameIcon, LinkItem } from "../LinkItem";
 import { Links } from "../Links";
 import LinkItemJyantama from "./(external)/LinkItemJyantama";
+import LinkItemMaimai from "./(external)/LinkItemMaimai";
 
 const Page = ({ profile }: { profile: GameDynamicProfile }) => {
-  const { jyantama3, jyantama4 } = profile;
+  const { jyantama3, jyantama4, maimai } = profile;
 
   return (
     <>
@@ -25,33 +26,7 @@ const Page = ({ profile }: { profile: GameDynamicProfile }) => {
           href="https://steamcommunity.com/id/shiftpsh"
           color="#00adee"
         />
-        <CopyLinkItem
-          icon={<GameIcon src="/img/games/maimai-48px.png" />}
-          caption={
-            <>
-              maimai DX
-              <br />
-              <Typo description small>
-                BUDDiES &middot; Intl. ver.
-              </Typo>
-            </>
-          }
-          description={
-            <>
-              ｓｏｌｖｅｄａｃ{" "}
-              <Typo description tabular>
-                (15,802)
-              </Typo>
-              <br />
-              <Typo readable small>
-                7061399728945
-              </Typo>
-            </>
-          }
-          copyText="7061399728945"
-          copyTextMessage="친구 코드를 복사했습니다."
-          color="#42bbcd"
-        />
+        <LinkItemMaimai maimai={maimai} />
         <LinkItemJyantama jyantama3={jyantama3} jyantama4={jyantama4} />
         <LinkItem
           icon={<GameIcon src="/img/games/maple-48px.png" />}
