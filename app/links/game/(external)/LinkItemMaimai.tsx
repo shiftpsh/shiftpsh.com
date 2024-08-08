@@ -5,7 +5,7 @@ import { GameIcon, LinkItem } from "../../LinkItem";
 const LinkItemMaimai = ({ maimai }: { maimai: MaimaiResponse | null }) => {
   return (
     <LinkItem
-      icon={<GameIcon src="/img/games/maple-48px.png" />}
+      icon={<GameIcon src="/img/games/maimai-48px.png" />}
       caption={
         <>
           maimai DX
