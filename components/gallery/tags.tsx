@@ -79,6 +79,18 @@ export const TAGS: {
     href: "https://twitter.com/im_rhrl",
     aliases: ["하고기"],
   },
+  "author:sun3_cm": {
+    render: (
+      <>
+        해삼{" "}
+        <Typo description small>
+          작가
+        </Typo>
+      </>
+    ),
+    href: "https://twitter.com/sun3_cm",
+    aliases: ["해삼"],
+  },
   /**
    * Characters
    */
