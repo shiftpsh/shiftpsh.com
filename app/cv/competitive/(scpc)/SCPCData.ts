@@ -2,6 +2,23 @@ import { SCPCRowData } from "./SCPCRow";
 
 const SCPCData: SCPCRowData[] = [
   {
+    year: "2024",
+    phase: "FINALS",
+    score: 420,
+  },
+  {
+    year: "2024",
+    phase: "ROUND_2",
+    score: 1200,
+    advanced: true,
+  },
+  {
+    year: "2024",
+    phase: "ROUND_1",
+    score: 1200,
+    advanced: true,
+  },
+  {
     year: "2023",
     phase: "ROUND_2",
     score: 480,
@@ -10,6 +27,7 @@ const SCPCData: SCPCRowData[] = [
     year: "2023",
     phase: "ROUND_1",
     score: 400,
+    advanced: true,
   },
   {
     year: "2022",
