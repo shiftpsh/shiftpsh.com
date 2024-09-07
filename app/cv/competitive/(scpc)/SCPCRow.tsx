@@ -10,6 +10,7 @@ export interface SCPCRowData {
   phase: "ROUND_1" | "ROUND_2" | "FINALS";
   score: number;
   advanced?: boolean;
+  award?: string;
 }
 
 interface Props {
@@ -17,13 +18,13 @@ interface Props {
 }
 
 const SCPCRow = ({ data }: Props) => {
-  const { year, phase, score, advanced } = data;
+  const { year, phase, score, advanced, award } = data;
 
   const style = {
     fontWeight: phase === "FINALS" ? "bold" : "normal",
   };
 
-  const rowSpan = 1 + (advanced ? 1 : 0);
+  const rowSpan = 1 + (advanced ? 1 : 0) + (award ? 1 : 0);
 
   const contestName = (
     <>
@@ -51,6 +52,15 @@ const SCPCRow = ({ data }: Props) => {
           <Typo tabular>={formatNumber(score)}</Typo>
         </Cell>
       </Row>
+      {award && (
+        <Row>
+          <Cell colSpan={2}>
+            <Typo warn>
+              <IconTrophy /> <b>{award}</b>
+            </Typo>
+          </Cell>
+        </Row>
+      )}
       {advanced && (
         <Row>
           <Cell colSpan={2}>

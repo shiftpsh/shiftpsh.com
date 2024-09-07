@@ -5,6 +5,7 @@ const SCPCData: SCPCRowData[] = [
     year: "2024",
     phase: "FINALS",
     score: 420,
+    award: "4등상",
   },
   {
     year: "2024",
