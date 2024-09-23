@@ -11,6 +11,8 @@ import InternalLink from "../components/InternalLink";
 import LinksRow from "../components/LinksRow";
 import MainContainer from "../components/MainContainer";
 import SectionCaption from "../components/SectionCaption";
+import useTranslation from "../hooks/useTranslation";
+import { translations } from "./translations";
 
 const Logo = styled.img`
   width: 64px;
@@ -69,6 +71,7 @@ const Email = styled.img`
 `;
 
 const Page = () => {
+  const { t } = useTranslation(translations);
   const [clientInitialized, setClientInitialized] = useState(false);
 
   useEffect(() => {
@@ -80,10 +83,7 @@ const Page = () => {
       <Space h={160} />
       <Logo src="/shiftpsh-logo-2019.svg" alt="shiftpsh" />
       <BiggerSectionCaption>
-        <IntroBold>안녕하세요, 개발자 겸 디자이너 박수현입니다.</IntroBold>{" "}
-        분야를 불문하고 능력치를 최대한 발휘해 문제를 정의하고 해결하는 것을
-        좋아합니다. 많은 사람에게 도움이 되는 디자인과 소프트웨어를 만들기 위해
-        끊임없이 고민하고 있습니다.
+        <IntroBold>{t.intro.title}</IntroBold> {t.intro.content}
       </BiggerSectionCaption>
       <Space h={32} />
       <Typo h3 no-margin>
@@ -110,9 +110,9 @@ const Page = () => {
           </HistoryIcon>
           <HistoryContent>
             <ExternalLinkInline href="https://solved.ac">
-              솔브드
+              {t.history.solved.title}
             </ExternalLinkInline>{" "}
-            대표
+            {t.history.solved.content}
           </HistoryContent>
         </HistoryEntry>
         <HistoryEntry>
@@ -121,9 +121,9 @@ const Page = () => {
           </HistoryIcon>
           <HistoryContent>
             <ExternalLinkInline href="https://www.sogang.ac.kr">
-              서강대학교
+              {t.history.sogang.title}
             </ExternalLinkInline>{" "}
-            컴퓨터공학과 학부 4학년
+            {t.history.sogang.content}
           </HistoryContent>
         </HistoryEntry>
         <HistoryEntry>
@@ -131,11 +131,11 @@ const Page = () => {
             <IconBriefcase />
           </HistoryIcon>
           <HistoryContent>
-            前{" "}
+            {t.history.ngine.former}{" "}
             <ExternalLinkInline href="https://career.nexon.com/user/recruit/member/postList?joinCorp=GN">
-              엔진스튜디오(넥슨)
+              {t.history.ngine.title}
             </ExternalLinkInline>{" "}
-            소프트웨어 엔지니어 (파트장)
+            {t.history.ngine.content}
           </HistoryContent>
         </HistoryEntry>
       </HistoryEntries>

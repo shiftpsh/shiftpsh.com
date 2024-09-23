@@ -7,7 +7,7 @@ const SectionCaption = styled.p`
   margin-top: 32px;
   margin-bottom: 16px;
   margin-left: -0.05ch;
-  text-align: justify;
+  text-align: ${({ theme }) => (theme.lang === "ko" ? "justify" : "left")};
 
   @media (max-width: 768px) {
     font-size: 1.25em;
