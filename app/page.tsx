@@ -12,6 +12,7 @@ import LinksRow from "../components/LinksRow";
 import MainContainer from "../components/MainContainer";
 import SectionCaption from "../components/SectionCaption";
 import useTranslation from "../hooks/useTranslation";
+import { Content } from "./components";
 import { translations } from "./translations";
 
 const Logo = styled.img`
@@ -29,12 +30,6 @@ const BiggerSectionCaption = styled(SectionCaption)`
   font-size: 1.8em;
   margin-left: -0.1ch;
   color: ${({ theme }) => theme.color.text.secondary.main};
-`;
-
-const Content = styled.p`
-  color: #393e45;
-  text-align: justify;
-  margin: 1em 0;
 `;
 
 const HistoryEntries = styled.div`
@@ -141,84 +136,45 @@ const Page = () => {
       </HistoryEntries>
       <Space h={16} />
       <LinksRow>
-        <InternalLink href="/links">모든 연락처/링크</InternalLink>
-        <InternalLink href="/cv">자세한 이력</InternalLink>
+        <InternalLink href="/links">{t.links}</InternalLink>
+        <InternalLink href="/cv">{t.cv}</InternalLink>
       </LinksRow>
       <Space h={72} />
       <figure>
         <FullwidthImage
           src="/img/intro-solvedac.jpg"
-          alt="solved.ac 그랜드 아레나 파티에서 대회에 참전 중인 참가자들의 뒷모습을 촬영한 사진."
+          alt={t.solved.figure.alt}
         />
-        <MainImageCaption>solved.ac Grand Arena (2024)</MainImageCaption>
+        <MainImageCaption>{t.solved.figure.caption}</MainImageCaption>
       </figure>
-      <SectionCaption>
-        솔브드는 대한민국이 코딩 테스트와 알고리즘 문제해결을 공부하는 방법을
-        바꿨습니다.
-      </SectionCaption>
+      <SectionCaption>{t.solved.title}</SectionCaption>
       <LinksRow>
-        <ExternalLink href="https://solved.ac">solved.ac</ExternalLink>
-        <ExternalLink href="https://www.youtube.com/watch?v=ggD9ry05axw">
-          소개 (프로그래머스 컨퍼런스)
+        <ExternalLink href="https://solved.ac">
+          {t.solved.links.solved}
+        </ExternalLink>
+        <ExternalLink href={t.solved.links.youtubeLink}>
+          {t.solved.links.youtube}
         </ExternalLink>
       </LinksRow>
       <Space h={16} />
-      <Content>
-        커뮤니티의 문제 난이도 기여를 기반으로 하여 알고리즘 문제해결을
-        게이미피케이션하고, 이를 통해 즐겁게 문제를 풀면서 성장한 프로그래머들이
-        다시 커뮤니티에 기여하도록 하는 선순환 모델은 대한민국 최대 온라인
-        저지인{" "}
-        <ExternalLinkInline href="https://acmicpc.net">
-          백준 온라인 저지
-        </ExternalLinkInline>
-        의 방대한 문제 데이터베이스와 만나 국내외 15만 개발자의 성장을 돕고
-        있습니다.
-      </Content>
-      <Content>
-        솔브드만의 문제 난이도는 이제는 알고리즘 문제 난이도 체계의 de facto가
-        되어, 여러 서적에서 난이도 지표로 활용되고 다른 온라인 저지 및
-        프로그래밍 대회 출제자들이 활발히 참고하고 있습니다.
-      </Content>
+      {t.solved.content}
       <Space h={72} />
       <figure>
         <FullwidthImage
           src="/img/intro-icpc.jpg"
-          alt="ICPC World Finals Moscow에서 서강대학교 Redshift 팀이 입장하는 모습을 촬영한 사진."
+          alt={t.problemsolving.figure.alt}
         />
-        <MainImageCaption>ICPC World Finals Moscow (2021)</MainImageCaption>
+        <MainImageCaption>{t.problemsolving.figure.caption}</MainImageCaption>
       </figure>
-      <SectionCaption>
-        다양한 문제를 창의적으로 정의하고 논리적으로 해결해나가고 있습니다.
-      </SectionCaption>
+      <SectionCaption>{t.problemsolving.title}</SectionCaption>
       <LinksRow>
-        <InternalLink href="/cv">이력</InternalLink>
+        <InternalLink href="/cv">{t.problemsolving.links.cv}</InternalLink>
         <ExternalLink href="https://icpc.global/ICPCID/2ALMJW44APYS">
-          ICPCID
+          {t.problemsolving.links.icpc}
         </ExternalLink>
       </LinksRow>
       <Space h={16} />
-      <Content>
-        현실의 문제를 기술적으로 해결하는 것을 좋아하며, 기술적인 문제 자체를
-        해결하는 것도 즐깁니다. 솔브드 또한 기술적인 문제를 해결하는 필드에서
-        현실의 문제를 발견하고, 다시 현실의 문제를 기술적으로 해결해나가는
-        과정이자 결과물입니다.
-      </Content>
-      <Content>
-        최대 규모의 국제 프로그래밍 대회인{" "}
-        <ExternalLinkInline href="https://icpc.global/">
-          국제 대학생 프로그래밍 대회(ICPC)
-        </ExternalLinkInline>{" "}
-        한국 대표로 결승에 진출하고, 대규모 국제 해커톤인{" "}
-        <ExternalLinkInline href="https://asia.hackjunction.com/home/">
-          정션 아시아
-        </ExternalLinkInline>{" "}
-        해커톤에서 2위를 차지하는 등 여러 대회에 도전하여 유수한 성과를
-        거두었습니다. 또한,{" "}
-        <ExternalLinkInline href="https://www.nypc.co.kr/">
-          넥슨 청소년 프로그래밍 챌린지(NYPC)
-        </ExternalLinkInline>{" "}
-        출제위원으로 여러 문제를 출제하였습니다.
-      </Content>
+      {t.problemsolving.content}
       <Space h={72} />
       <figure>
         <FullwidthImage
