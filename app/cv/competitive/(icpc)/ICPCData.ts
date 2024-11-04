@@ -3,6 +3,18 @@ import { ICPCRowData } from "./ICPCRow";
 const ICPCData: ICPCRowData[] = [
   {
     year: "2023-2024",
+    phase: "NATIONAL",
+    venue: "서울",
+    contest: "2024 대학생 프로그래밍 경시대회 온라인 예선",
+    contestLink: "https://icpckorea.org/2024-seoul/preliminary",
+    team: "Redshift (박수현, 채성우, 조원빈)",
+    score: 5,
+    penalty: 414,
+    rank: 22,
+    totalTeams: 455,
+  },
+  {
+    year: "2023-2024",
     phase: "SUPERREGIONAL",
     venue: "하노이",
     contest: "2024 아시아태평양지역 챔피언십",
