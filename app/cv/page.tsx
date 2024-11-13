@@ -13,7 +13,7 @@ const Page = () => {
           <ExternalLinkInline href="https://sogang.ac.kr">
             서강대학교
           </ExternalLinkInline>{" "}
-          컴퓨터공학과 학부(재학, 7학기)
+          컴퓨터공학과 학부(재학, 8학기)
           <Year>2018. 3 &ndash; 2025. 2</Year>
         </Item>
       </Itemize>
