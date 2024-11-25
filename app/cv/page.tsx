@@ -70,7 +70,7 @@ const Page = () => {
               <ExternalLinkInline href="https://www.nypc.co.kr/">
                 넥슨 청소년 프로그래밍 챌린지 (NYPC)
               </ExternalLinkInline>{" "}
-              출제사무국 선제/출제위원 (2020&ndash;2023)
+              출제사무국 선제/출제위원 (2020&ndash;2024)
             </Item>
           </Itemize>
         </Item>
