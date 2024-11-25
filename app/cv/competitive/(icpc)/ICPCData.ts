@@ -2,7 +2,21 @@ import { ICPCRowData } from "./ICPCRow";
 
 const ICPCData: ICPCRowData[] = [
   {
-    year: "2023-2024",
+    year: "2024-2025",
+    phase: "REGIONAL",
+    venue: "서울",
+    contest: "2024 아시아 서울 리저널",
+    contestLink: "https://icpckorea.org/2024-seoul/regional",
+    team: "Redshift (박수현, 이준석, 채성우)",
+    score: 7,
+    penalty: 983,
+    rank: 18,
+    totalTeams: 88,
+    firstToSolve: ["L"],
+    award: "장려상",
+  },
+  {
+    year: "2024-2025",
     phase: "NATIONAL",
     venue: "서울",
     contest: "2024 대학생 프로그래밍 경시대회 온라인 예선",
