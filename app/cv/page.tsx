@@ -96,6 +96,15 @@ const Page = () => {
       <Itemize>
         <Item>
           <b>
+            <ExternalLinkInline href="https://www.codeground.org/scpc/commons/honer/listc">
+              삼성 대학생 프로그래밍 경진대회 (SCPC)
+            </ExternalLinkInline>{" "}
+            2024
+          </b>
+          <Year>2024. 8. 31</Year>개인, 4등상
+        </Item>
+        <Item>
+          <b>
             <ExternalLinkInline href="https://icpc.asia/">
               International Collegiate Programming Contest (ICPC)
             </ExternalLinkInline>{" "}
