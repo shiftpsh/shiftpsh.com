@@ -13,7 +13,7 @@ const Page = () => {
           <ExternalLinkInline href="https://sogang.ac.kr">
             서강대학교
           </ExternalLinkInline>{" "}
-          컴퓨터공학과 학부(재학, 8학기)
+          컴퓨터공학과 학부(졸업예정)
           <Year>2018. 3 &ndash; 2025. 2</Year>
         </Item>
       </Itemize>
@@ -21,12 +21,26 @@ const Page = () => {
       <Itemize>
         <Item>
           <b>
+            <ExternalLinkInline href="https://company.nexon.com/ko/">
+              넥슨코리아
+            </ExternalLinkInline>{" "}
+            소프트웨어 엔지니어 (예정)
+          </b>
+          <Year>2025. 1 &ndash; 현재</Year>
+          인텔리전스랩스 알고리즘연구팀
+          <Itemize>
+            <Item>프로그래밍 대회 기획 및 알고리즘 문제 연구개발</Item>
+            <Item>사내 분야불문 여러 최적화 문제의 해결</Item>
+          </Itemize>
+        </Item>
+        <Item>
+          <b>
             <ExternalLinkInline href="https://solved.ac">
               솔브드
             </ExternalLinkInline>{" "}
             대표
           </b>
-          <Year>2022. 12 &ndash; 현재</Year>
+          <Year>2022. 12 &ndash; 2025. 1</Year>
           <Itemize>
             <Item>솔브드 프로젝트 전반의 기획 및 개발</Item>
             <Item>
@@ -52,6 +66,7 @@ const Page = () => {
             소프트웨어 엔지니어 (파트장)
           </b>
           <Year>2020. 6 &ndash; 2022. 11</Year>
+          기술연구팀
           <Itemize>
             <Item>웹 프론트엔드 엔지니어링; 산업기능요원 복무만료</Item>
             <Item>
@@ -82,6 +97,7 @@ const Page = () => {
             소프트웨어 엔지니어 (인턴)
           </b>
           <Year>2018. 6 &ndash; 2018. 8</Year>
+          Hyper-X
           <Itemize>
             <Item>Android 엔지니어링</Item>
             <Item>
