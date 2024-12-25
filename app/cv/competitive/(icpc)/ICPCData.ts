@@ -7,7 +7,7 @@ const ICPCData: ICPCRowData[] = [
     venue: "서울",
     contest: "2024 아시아 서울 리저널",
     contestLink: "https://icpckorea.org/2024-seoul/regional",
-    team: "Redshift (박수현, 이준석, 채성우)",
+    team: "Redshift (박수현, 채성우, 조원빈)",
     score: 7,
     penalty: 983,
     rank: 18,

@@ -7,7 +7,7 @@ import ExternalLinkInline from "../../../../components/ExternalLinkInline";
 export interface ProblemsettingRowData {
   year: string;
   contest: string;
-  contestLink: string;
+  contestLink?: string;
   number: string;
   title: string;
   bold?: boolean;
@@ -48,9 +48,13 @@ const ProblemsettingRow = ({ data }: Props) => {
           <Typo tabular>{year}</Typo>
         </Cell>
         <Cell>
-          <ExternalLinkInline href={contestLink} style={contestStyle}>
-            {contest}
-          </ExternalLinkInline>
+          {contestLink ? (
+            <ExternalLinkInline href={contestLink} style={contestStyle}>
+              {contest}
+            </ExternalLinkInline>
+          ) : (
+            <span style={contestStyle}>{contest}</span>
+          )}
           <br />〈{title}〉<Typo description> &ndash; {number}</Typo>
         </Cell>
         <Cell>

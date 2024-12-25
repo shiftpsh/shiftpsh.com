@@ -272,6 +272,13 @@ const Page = () => {
       <Typo h3>기타 활동</Typo>
       <Itemize>
         <Item>
+          <ExternalLinkInline href="https://www.sogang.ac.kr/ko/home">
+            서강대학교
+          </ExternalLinkInline>{" "}
+          문제해결프로그래밍(CSE4152) 출제조교
+          <Year>2024. 9 &ndash; 2024. 12</Year>
+        </Item>
+        <Item>
           <b>
             <ExternalLinkInline href="https://ucpc.me">
               전국 대학생 프로그래밍 대회 동아리 연합
