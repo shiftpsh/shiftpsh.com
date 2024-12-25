@@ -2,7 +2,7 @@
 
 import styled from "@emotion/styled";
 import { Space, Typo } from "@solved-ac/ui-react";
-import { IconAt, IconBriefcase, IconSchool } from "@tabler/icons-react";
+import { IconAt, IconBriefcase, IconCheck, IconSchool } from "@tabler/icons-react";
 import { useEffect, useState } from "react";
 import ExternalLink from "../components/ExternalLink";
 import ExternalLinkInline from "../components/ExternalLinkInline";
@@ -109,10 +109,21 @@ const Page = () => {
             <IconBriefcase />
           </HistoryIcon>
           <HistoryContent>
+            <ExternalLinkInline href="https://company.nexon.com">
+              넥슨
+            </ExternalLinkInline>{" "}
+            인텔리전스랩스 알고리즘연구팀 (예정)
+          </HistoryContent>
+        </HistoryEntry>
+        <HistoryEntry>
+          <HistoryIcon>
+            <IconCheck />
+          </HistoryIcon>
+          <HistoryContent>
             <ExternalLinkInline href="https://solved.ac">
               솔브드
             </ExternalLinkInline>{" "}
-            대표
+            개발자
           </HistoryContent>
         </HistoryEntry>
         <HistoryEntry>
@@ -123,19 +134,7 @@ const Page = () => {
             <ExternalLinkInline href="https://www.sogang.ac.kr">
               서강대학교
             </ExternalLinkInline>{" "}
-            컴퓨터공학과 학부 4학년
-          </HistoryContent>
-        </HistoryEntry>
-        <HistoryEntry>
-          <HistoryIcon>
-            <IconBriefcase />
-          </HistoryIcon>
-          <HistoryContent>
-            前{" "}
-            <ExternalLinkInline href="https://career.nexon.com/user/recruit/member/postList?joinCorp=GN">
-              엔진스튜디오(넥슨)
-            </ExternalLinkInline>{" "}
-            소프트웨어 엔지니어 (파트장)
+            컴퓨터공학과 학부 (졸업예정)
           </HistoryContent>
         </HistoryEntry>
       </HistoryEntries>
