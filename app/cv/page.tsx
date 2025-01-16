@@ -24,7 +24,7 @@ const Page = () => {
             <ExternalLinkInline href="https://company.nexon.com/ko/">
               넥슨코리아
             </ExternalLinkInline>{" "}
-            소프트웨어 엔지니어 (예정)
+            소프트웨어 엔지니어
           </b>
           <Year>2025. 1 &ndash; 현재</Year>
           인텔리전스랩스 알고리즘연구팀

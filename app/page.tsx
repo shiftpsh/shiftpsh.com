@@ -2,7 +2,12 @@
 
 import styled from "@emotion/styled";
 import { Space, Typo } from "@solved-ac/ui-react";
-import { IconAt, IconBriefcase, IconCheck, IconSchool } from "@tabler/icons-react";
+import {
+  IconAt,
+  IconBriefcase,
+  IconCheck,
+  IconSchool,
+} from "@tabler/icons-react";
 import { useEffect, useState } from "react";
 import ExternalLink from "../components/ExternalLink";
 import ExternalLinkInline from "../components/ExternalLinkInline";
@@ -112,7 +117,7 @@ const Page = () => {
             <ExternalLinkInline href="https://company.nexon.com">
               넥슨
             </ExternalLinkInline>{" "}
-            인텔리전스랩스 알고리즘연구팀 (예정)
+            알고리즘연구팀
           </HistoryContent>
         </HistoryEntry>
         <HistoryEntry>
