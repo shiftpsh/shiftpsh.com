@@ -17,6 +17,7 @@ import {
   IconBrandSteam,
   IconBrandThreads,
   IconBrandTwitter,
+  IconBrandVsco,
   IconBrandYoutube,
   IconCheck,
   IconSquareLetterC,
@@ -101,6 +102,19 @@ const ClientPage = ({ profile }: Props) => {
           description="solved.ac"
           href="https://solved.ac"
           color="#17ce3a"
+        />
+        <LinkItem
+          icon={
+            <IconBrandVsco
+              style={{
+                transform: `rotate(${45 / 2}deg)`,
+              }}
+            />
+          }
+          caption="maishift"
+          description="mai.sft.sh"
+          href="https://mai.sft.sh"
+          color="#42bbcc"
         />
       </Links>
       <Divider />

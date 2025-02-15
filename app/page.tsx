@@ -139,7 +139,7 @@ const Page = () => {
             <ExternalLinkInline href="https://www.sogang.ac.kr">
               서강대학교
             </ExternalLinkInline>{" "}
-            컴퓨터공학과 학부 (졸업예정)
+            컴퓨터공학과 학부 졸업
           </HistoryContent>
         </HistoryEntry>
       </HistoryEntries>
