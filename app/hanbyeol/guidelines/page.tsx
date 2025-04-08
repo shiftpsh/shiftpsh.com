@@ -42,7 +42,7 @@ const Page = () => {
           </Item>
           <Item>
             <b>권리자</b>란 본인(박수현, shiftpsh.com) 및 본인이 운영하는 회사인
-            시프트디자인 및 솔브드(solved.ac)를 의미합니다.
+            시프트디자인을 의미합니다.
           </Item>
         </Itemize>
       </Paragraph>
