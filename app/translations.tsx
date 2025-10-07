@@ -2,6 +2,13 @@ import ExternalLinkInline from "../components/ExternalLinkInline";
 import { Content } from "./components";
 
 const KO = {
+  top_navigation: {
+    links: "링크",
+    cv: "이력",
+    gallery: "작업",
+    downloads: "자료",
+    blog: "블로그",
+  },
   intro: {
     title: "안녕하세요, 개발자 겸 디자이너 박수현입니다.",
     content:
@@ -142,6 +149,13 @@ const KO = {
 };
 
 const EN = {
+  top_navigation: {
+    links: "Links",
+    cv: "CV",
+    gallery: "Works",
+    downloads: "Downloads",
+    blog: "Blog",
+  },
   intro: {
     title: "I'm Suhyun Park, a developer and designer.",
     content:

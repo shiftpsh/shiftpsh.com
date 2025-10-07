@@ -41,7 +41,7 @@ const Page = ({ profile }: { profile: GameDynamicProfile }) => {
           }
           description={
             <>
-              싶프트 <Typo description>(Lv.279 아크)</Typo>
+              싶프트 <Typo description>(Lv.285 아크)</Typo>
               <br />
               <Typo readable small>
                 오로라
