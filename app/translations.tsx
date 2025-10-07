@@ -8,18 +8,18 @@ const KO = {
       "분야를 불문하고 능력치를 최대한 발휘해 문제를 정의하고 해결하는 것을 좋아합니다. 많은 사람에게 도움이 되는 디자인과 소프트웨어를 만들기 위해 끊임없이 고민하고 있습니다.",
   },
   history: {
+    location: "경기도 성남시",
+    nexon: {
+      title: "넥슨코리아",
+      content: "알고리즘연구팀",
+    },
     solved: {
       title: "솔브드",
-      content: "대표",
+      content: "디렉터",
     },
     sogang: {
       title: "서강대학교",
-      content: "컴퓨터공학과 학부 4학년",
-    },
-    ngine: {
-      former: "前",
-      title: "엔진스튜디오(넥슨)",
-      content: "소프트웨어 엔지니어 (파트장)",
+      content: "컴퓨터공학과 학부 졸업",
     },
   },
   links: "모든 연락처/링크",
@@ -90,7 +90,51 @@ const KO = {
           <ExternalLinkInline href="https://www.nypc.co.kr/">
             넥슨 청소년 프로그래밍 챌린지(NYPC)
           </ExternalLinkInline>{" "}
-          출제위원으로 여러 문제를 출제하였습니다.
+          출제위원으로 여러 문제를 출제하고 있습니다.
+        </Content>
+      </>
+    ),
+  },
+  creative: {
+    figure: {
+      caption: "박한별",
+      alt: "한 손으로 한별이 아크릴 스탠드를 들고 이륙 준비 중인 비행기에서 찍은 사진.",
+    },
+    title: "크리에이티브로 새로운 세상을 창조해가고 있습니다.",
+    links: {
+      gallery: "작업",
+      downloads: "자료",
+    },
+    content: (
+      <>
+        <Content>
+          생각하는 어떤 것이든 실제로 만들어 보려 하는 기질은 프로그래밍을
+          시작하기 전에 시각디자인에 입문하는 계기가 되었으며, 현재까지도
+          이어지고 있습니다. 지금 보시는 웹 사이트를 포함해, 포스터, 브랜딩,
+          인쇄물, UI/UX 등, 폼 팩터를 넘나드는 다양한 디자인을 시도하고
+          있습니다. 카카오 이모티콘{" "}
+          <ExternalLinkInline href="https://e.kakao.com/t/cool-for-nothing">
+            〈쓸데없이 멋진 답장〉
+          </ExternalLinkInline>
+          과{" "}
+          <ExternalLinkInline href="https://koi.or.kr">
+            한국정보올림피아드
+          </ExternalLinkInline>{" "}
+          응시자 시스템은 제 작업들 중 가장 잘 알려져 있는 것들입니다.
+        </Content>
+        <Content>
+          2014년에 디자인한 저의 인터넷 페르소나 캐릭터 박한별(한별이)은
+          havana723 작가님의 도움으로 솔브드의 몇몇 프로필 배경에 등장하여
+          프로그래밍을 하는 사람들에게 친근함을 전달하며 사랑받고 있습니다.
+          카카오톡에서 havana723 작가님의{" "}
+          <ExternalLinkInline href="https://e.kakao.com/t/coding-with-hanbyeol">
+            〈코딩하는 한별이〉
+          </ExternalLinkInline>{" "}
+          이모티콘과 수조 작가님의{" "}
+          <ExternalLinkInline href="https://e.kakao.com/t/hanbyeol-eunha-suisous-ver">
+            〈코딩하는 한별이와 은하 (수조 ver.)〉
+          </ExternalLinkInline>
+          를 만나보실 수 있습니다.
         </Content>
       </>
     ),
@@ -104,18 +148,18 @@ const EN = {
       "I enjoy defining and solving problems to the best of my ability, regardless of the field. I’m always focused on creating designs and software that have a positive impact on many people.",
   },
   history: {
+    location: "Gyeonggi-do, Republic of Korea",
+    nexon: {
+      title: "Nexon Korea",
+      content: "Algorithm Research Team",
+    },
     solved: {
-      title: "Solved Company",
-      content: "CEO",
+      title: "solved.ac",
+      content: "Executive Director",
     },
     sogang: {
       title: "Sogang University",
-      content: "Computer Science and Engineering, Senior",
-    },
-    ngine: {
-      former: "Former",
-      title: "Ngine Studios (NEXON)",
-      content: "Software Engineer (Part Lead)",
+      content: "B.S. in Computer Science",
     },
   },
   links: "All Links",
@@ -157,7 +201,7 @@ const EN = {
       caption: "ICPC World Finals Moscow (2021)",
       alt: "Sogang University Redshift team entering ICPC World Finals Moscow.",
     },
-    title: "Problems defined creatively and solved logically.",
+    title: "I define inventive problems and solve them logically.",
     links: {
       cv: "CV",
       icpc: "ICPCID",
@@ -180,11 +224,54 @@ const EN = {
           <ExternalLinkInline href="https://asia.hackjunction.com/home/">
             Junction Asia
           </ExternalLinkInline>
-          . I have also served as a problem setter for the{" "}
+          . I am also serving as a problem setter for the{" "}
           <ExternalLinkInline href="https://www.nypc.co.kr/">
             NEXON Youth Programming Challenge (NYPC)
           </ExternalLinkInline>
           .
+        </Content>
+      </>
+    ),
+  },
+  creative: {
+    figure: {
+      caption: "Hanbyeol Park",
+      alt: "A photo taken at the airport, showing an acrylic stand of Hanbyeol being held by one hand, ready for takeoff.",
+    },
+    title: "I develop a new world with my creativity.",
+    links: {
+      gallery: "Gallery",
+      downloads: "Downloads",
+    },
+    content: (
+      <>
+        <Content>
+          My tendency to create whatever I think of led me to do visual designs
+          before I started programming, and it continues to this day. I have
+          tried various designs that transcend form factors, including posters,
+          branding, print materials, and UI/UX, including this website you are
+          currently viewing. My KakaoTalk emoticons{" "}
+          <ExternalLinkInline href="https://e.kakao.com/t/cool-for-nothing">
+            <em>Cool for Nothing</em>
+          </ExternalLinkInline>{" "}
+          and the{" "}
+          <ExternalLinkInline href="https://koi.or.kr">
+            Korea Olympiad in Informatics
+          </ExternalLinkInline>{" "}
+          candidate system are among my most well-known works.
+        </Content>
+        <Content>
+          My internet persona character Hanbyeol, which I designed in 2014, is
+          loved by programmers for its friendliness, appearing in several
+          profile backgrounds of solved.ac. You can find{" "}
+          <ExternalLinkInline href="https://e.kakao.com/t/coding-with-hanbyeol">
+            <em>Coding with Hanbyeol</em>
+          </ExternalLinkInline>{" "}
+          by havana723 and{" "}
+          <ExternalLinkInline href="https://e.kakao.com/t/hanbyeol-eunha-suisous-ver">
+            <em>Hanbyeol & Eunha (Suisou&apos;s Ver.)</em>
+          </ExternalLinkInline>
+          , by suisou on KakaoTalk.
         </Content>
       </>
     ),

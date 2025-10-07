@@ -21,10 +21,12 @@ export const Providers = ({ children }: PropsWithChildren) => {
         styles={{
           html: {
             fontFamily: lang === "ko" ? KOREAN_FONTS : ENGLISH_FONTS,
-            fontSize: "calc(12px + 0.7vmin)",
+            fontSize: 14,
+            lineHeight: lang === "ko" ? 1.6 : 1.4,
           },
           ".tabler-icon": {
-            fontSize: "1.2em",
+            width: "1.2em",
+            height: "1.2em",
             verticalAlign: "middle",
           },
         }}

@@ -6,6 +6,9 @@ import {
   IconAt,
   IconBriefcase,
   IconCheck,
+  IconGlobe,
+  IconLocationPin,
+  IconMapPin,
   IconSchool,
 } from "@tabler/icons-react";
 import { useEffect, useState } from "react";
@@ -17,7 +20,6 @@ import LinksRow from "../components/LinksRow";
 import MainContainer from "../components/MainContainer";
 import SectionCaption from "../components/SectionCaption";
 import useTranslation from "../hooks/useTranslation";
-import { Content } from "./components";
 import { translations } from "./translations";
 
 const Logo = styled.img`
@@ -106,13 +108,19 @@ const Page = () => {
         </HistoryEntry>
         <HistoryEntry>
           <HistoryIcon>
+            <IconMapPin />
+          </HistoryIcon>
+          <HistoryContent>{t.history.location}</HistoryContent>
+        </HistoryEntry>
+        <HistoryEntry>
+          <HistoryIcon>
             <IconBriefcase />
           </HistoryIcon>
           <HistoryContent>
             <ExternalLinkInline href="https://company.nexon.com">
-              넥슨
+              {t.history.nexon.title}
             </ExternalLinkInline>{" "}
-            알고리즘연구팀
+            {t.history.nexon.content}
           </HistoryContent>
         </HistoryEntry>
         <HistoryEntry>
@@ -123,7 +131,7 @@ const Page = () => {
             <ExternalLinkInline href="https://solved.ac">
               {t.history.solved.title}
             </ExternalLinkInline>{" "}
-            개발자
+            {t.history.solved.content}
           </HistoryContent>
         </HistoryEntry>
         <HistoryEntry>
@@ -134,7 +142,7 @@ const Page = () => {
             <ExternalLinkInline href="https://www.sogang.ac.kr">
               {t.history.sogang.title}
             </ExternalLinkInline>{" "}
-            컴퓨터공학과 학부 졸업
+            {t.history.sogang.content}
           </HistoryContent>
         </HistoryEntry>
       </HistoryEntries>
@@ -181,48 +189,17 @@ const Page = () => {
       {t.problemsolving.content}
       <Space h={72} />
       <figure>
-        <FullwidthImage
-          src="/img/intro-hb.jpg"
-          alt="한별이가 그려진 아크릴 스탠드를 한 손으로 들고 이륙 준비 중인 비행기에서 찍은 사진."
-        />
-        <MainImageCaption>박한별</MainImageCaption>
+        <FullwidthImage src="/img/intro-hb.jpg" alt={t.creative.figure.alt} />
+        <MainImageCaption>{t.creative.figure.caption}</MainImageCaption>
       </figure>
-      <SectionCaption>
-        크리에이티브로 새로운 세상을 창조해가고 있습니다.
-      </SectionCaption>
+      <SectionCaption>{t.creative.title}</SectionCaption>
       <LinksRow>
-        <InternalLink href="/gallery">작업</InternalLink>
-        <InternalLink href="/downloads">자료</InternalLink>
+        <InternalLink href="/gallery">{t.creative.links.gallery}</InternalLink>
+        <InternalLink href="/downloads">
+          {t.creative.links.downloads}
+        </InternalLink>
       </LinksRow>
-      <Content>
-        생각하는 어떤 것이든 실제로 만들어 보려 하는 선천적 기질은 프로그래밍을
-        시작하기 전에 시각디자인에 입문하는 계기가 되었으며, 현재까지도 이어지고
-        있습니다. 지금 보시는 웹 사이트를 포함해, 포스터, 브랜딩, 인쇄물, UI/UX
-        등, 폼 팩터를 넘나드는 다양한 디자인을 시도하고 있습니다. 카카오
-        이모티콘{" "}
-        <ExternalLinkInline href="https://e.kakao.com/t/cool-for-nothing">
-          〈쓸데없이 멋진 답장〉
-        </ExternalLinkInline>
-        과{" "}
-        <ExternalLinkInline href="https://koi.or.kr">
-          한국정보올림피아드
-        </ExternalLinkInline>{" "}
-        응시자 시스템은 제 작업들 중 가장 잘 알려져 있는 것들입니다.
-      </Content>
-      <Content>
-        2014년에 디자인한 저의 인터넷 페르소나 캐릭터 박한별(한별이)은 havana723
-        작가님의 도움으로 솔브드의 몇몇 프로필 배경에 등장하여 프로그래밍을 하는
-        사람들에게 친근함을 전달하며 사랑받고 있습니다. 카카오톡에서 havana723
-        작가님의{" "}
-        <ExternalLinkInline href="https://e.kakao.com/t/coding-with-hanbyeol">
-          〈코딩하는 한별이〉
-        </ExternalLinkInline>{" "}
-        이모티콘과 수조 작가님의{" "}
-        <ExternalLinkInline href="https://e.kakao.com/t/hanbyeol-eunha-suisous-ver">
-          〈코딩하는 한별이와 은하 (수조 ver.)〉
-        </ExternalLinkInline>
-        를 만나보실 수 있습니다.
-      </Content>
+      {t.creative.content}
       <Space h={160} />
     </MainContainer>
   );
