@@ -2,7 +2,12 @@
 
 import styled from "@emotion/styled";
 import { Space, Typo } from "@solved-ac/ui-react";
-import { IconAt, IconBriefcase, IconSchool } from "@tabler/icons-react";
+import {
+  IconAt,
+  IconBriefcase,
+  IconCheck,
+  IconSchool,
+} from "@tabler/icons-react";
 import { useEffect, useState } from "react";
 import ExternalLink from "../components/ExternalLink";
 import ExternalLinkInline from "../components/ExternalLinkInline";
@@ -104,10 +109,21 @@ const Page = () => {
             <IconBriefcase />
           </HistoryIcon>
           <HistoryContent>
+            <ExternalLinkInline href="https://company.nexon.com">
+              넥슨
+            </ExternalLinkInline>{" "}
+            알고리즘연구팀
+          </HistoryContent>
+        </HistoryEntry>
+        <HistoryEntry>
+          <HistoryIcon>
+            <IconCheck />
+          </HistoryIcon>
+          <HistoryContent>
             <ExternalLinkInline href="https://solved.ac">
               {t.history.solved.title}
             </ExternalLinkInline>{" "}
-            {t.history.solved.content}
+            개발자
           </HistoryContent>
         </HistoryEntry>
         <HistoryEntry>
@@ -118,19 +134,7 @@ const Page = () => {
             <ExternalLinkInline href="https://www.sogang.ac.kr">
               {t.history.sogang.title}
             </ExternalLinkInline>{" "}
-            {t.history.sogang.content}
-          </HistoryContent>
-        </HistoryEntry>
-        <HistoryEntry>
-          <HistoryIcon>
-            <IconBriefcase />
-          </HistoryIcon>
-          <HistoryContent>
-            {t.history.ngine.former}{" "}
-            <ExternalLinkInline href="https://career.nexon.com/user/recruit/member/postList?joinCorp=GN">
-              {t.history.ngine.title}
-            </ExternalLinkInline>{" "}
-            {t.history.ngine.content}
+            컴퓨터공학과 학부 졸업
           </HistoryContent>
         </HistoryEntry>
       </HistoryEntries>

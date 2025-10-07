@@ -19,10 +19,11 @@ const LinkItemMaimai = ({ maimai }: { maimai: MaimaiResponse | null }) => {
         <>
           {maimai && (
             <>
-              {maimai.name}{" "}
+              {maimai.name}
+              {/* {" "}
               <Typo description tabular>
                 ({maimai.rating.toLocaleString()})
-              </Typo>
+              </Typo> */}
             </>
           )}
           <br />
@@ -31,7 +32,7 @@ const LinkItemMaimai = ({ maimai }: { maimai: MaimaiResponse | null }) => {
           </Typo>
         </>
       }
-      href="https://shiftpsh.com/maimai"
+      href="https://maimai.shiftpsh.com/shiftpsh"
       color="#42bbcd"
     />
   );

@@ -2,6 +2,14 @@ import { ProblemsettingRowData } from "./ProblemsettingRow";
 
 const ProblemsettingData: ProblemsettingRowData[] = [
   {
+    year: "2024",
+    contest: "2024 Sogang Programming Contest (SPC)",
+    contestLink: "https://icpc.team/spc",
+    title: "직사각형",
+    number: "Master B",
+    bojProblemId: 32629,
+  },
+  {
     year: "2022",
     contest: "2022 Sogang Programming Contest (SPC)",
     contestLink: "https://icpc.team/spc",
