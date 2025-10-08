@@ -644,8 +644,8 @@ export const CV: CVSection[] = [
             en: "First used in the 2021 contest held online due to COVID-19, it was continuously maintained and used until the 2023 contest, after which contests are held based on the BIKO system",
           },
           {
-            ko: "WebSocket을 활용한 실시간 채점 결과 확인, 부정행위 방지를 위한 화면 녹화 등 여러 챌린징한 기능 구현 &ndash; React, Typescript",
-            en: "Implemented several challenging features such as real-time judging results using WebSocket and screen recording to prevent cheating &ndash; React, Typescript",
+            ko: "WebSocket을 활용한 실시간 채점 결과 확인, 부정행위 방지를 위한 화면 녹화 등 여러 챌린징한 기능 구현 – React, Typescript",
+            en: "Implemented several challenging features such as real-time judging results using WebSocket and screen recording to prevent cheating – React, Typescript",
           },
         ],
       },
