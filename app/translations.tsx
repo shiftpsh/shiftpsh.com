@@ -164,7 +164,7 @@ const EN = {
   history: {
     location: "Gyeonggi-do, Republic of Korea",
     nexon: {
-      title: "Nexon Korea",
+      title: "NEXON Korea",
       content: "Algorithm Research Team",
     },
     solved: {
