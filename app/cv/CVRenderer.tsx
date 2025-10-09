@@ -70,6 +70,8 @@ interface CVItemRendererProps {
 const CVItemRenderer = ({ item }: CVItemRendererProps) => {
   const { lang } = useTranslation();
   const { iconSrc, color, bold, date, title, description, subitems } = item;
+  const alt =
+    title[lang] && typeof title[lang] === "string" ? title[lang] : "icon";
   return (
     <CVItemLayout>
       {iconSrc && (
@@ -83,10 +85,7 @@ const CVItemRenderer = ({ item }: CVItemRendererProps) => {
               : {}
           }
         >
-          <CVItemIcon
-            src={`/img/cv/${iconSrc}`}
-            alt={typeof title[lang] === "string" ? title[lang] : "icon"}
-          />
+          <CVItemIcon src={`/img/cv/${iconSrc}`} alt={alt} />
         </CVItemIconContainer>
       )}
       <CVItemContent>

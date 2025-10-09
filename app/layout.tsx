@@ -1,10 +1,10 @@
-import React from "react";
+import React, { Suspense } from "react";
 
 /* eslint-disable @next/next/no-page-custom-font */
 /* eslint-disable @next/next/no-css-tags */
 import { Metadata, Viewport } from "next";
 import { Providers } from "./Providers";
-import ClientLayout from "./ClientLayout";
+import ClientNavigation from "./ClientNavigation";
 
 const APP_TITLE = "shiftpsh";
 
@@ -32,9 +32,14 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         />
       </head>
       <body>
-        <Providers>
-          <ClientLayout>{children}</ClientLayout>
-        </Providers>
+        <Suspense>
+          <Providers>
+            <Suspense>
+              <ClientNavigation />
+            </Suspense>
+            <Suspense>{children}</Suspense>
+          </Providers>
+        </Suspense>
       </body>
     </html>
   );

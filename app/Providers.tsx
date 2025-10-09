@@ -2,7 +2,7 @@
 
 import { Global, ThemeProvider } from "@emotion/react";
 import { SolvedGlobalStyles, solvedThemes } from "@solved-ac/ui-react";
-import { PropsWithChildren } from "react";
+import { PropsWithChildren, Suspense } from "react";
 import { IntersectionObserverProvider } from "../contexts/IntersectionObserverContext";
 import useTranslation from "../hooks/useTranslation";
 

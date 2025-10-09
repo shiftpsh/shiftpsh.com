@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import MDXRenderer from "../../../components/mdx/MDXRenderer";
 import {
   HANBYEOL_FOLDER_PATH,
@@ -23,9 +24,11 @@ const Page = async ({ params }: Props) => {
       HANBYEOL_FOLDER_PATH
     );
     return (
-      <ClientPage frontmatter={meta}>
-        <MDXRenderer {...serialized} />
-      </ClientPage>
+      <Suspense>
+        <ClientPage frontmatter={meta}>
+          <MDXRenderer {...serialized} />
+        </ClientPage>
+      </Suspense>
     );
   } catch (e) {
     console.error(e);
