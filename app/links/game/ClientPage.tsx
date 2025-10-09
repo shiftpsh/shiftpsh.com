@@ -7,16 +7,17 @@ import { GameIcon, LinkItem } from "../LinkItem";
 import { Links } from "../Links";
 import LinkItemJyantama from "./(external)/LinkItemJyantama";
 import LinkItemMaimai from "./(external)/LinkItemMaimai";
+import useTranslation from "../../../hooks/useTranslation";
+import { translations } from "../translations";
 
 const Page = ({ profile }: { profile: GameDynamicProfile }) => {
+  const { t } = useTranslation(translations);
   const { jyantama3, jyantama4, maimai } = profile;
 
   return (
     <>
-      <Typo h2>주력 게임</Typo>
-      <Typo description>
-        <IconCopy /> 버튼을 눌러 친구 코드, UID 등을 복사할 수 있습니다.
-      </Typo>
+      <Typo h2>{t.games.caption}</Typo>
+      <Typo description>{t.games.copy_uid}</Typo>
       <Space h="1em" />
       <Links>
         <LinkItem
@@ -32,7 +33,7 @@ const Page = ({ profile }: { profile: GameDynamicProfile }) => {
           icon={<GameIcon src="/img/games/maple-48px.png" />}
           caption={
             <>
-              메이플스토리
+              {t.games.maplestory.title}
               <br />
               <Typo description small>
                 KMS
@@ -41,10 +42,11 @@ const Page = ({ profile }: { profile: GameDynamicProfile }) => {
           }
           description={
             <>
-              싶프트 <Typo description>(Lv.279 아크)</Typo>
+              싶프트{" "}
+              <Typo description>(Lv.285 {t.games.maplestory.class})</Typo>
               <br />
               <Typo readable small>
-                오로라
+                {t.games.maplestory.server}
               </Typo>
             </>
           }
@@ -53,8 +55,8 @@ const Page = ({ profile }: { profile: GameDynamicProfile }) => {
         />
       </Links>
       <Divider />
-      <Typo h2>아이디가 있는 게임</Typo>
-      <Typo description>생각나는 대로 업데이트 예정입니다.</Typo>
+      <Typo h2>{t.games_all.caption}</Typo>
+      <Typo description>{t.games_all.description}</Typo>
     </>
   );
 };

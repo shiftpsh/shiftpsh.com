@@ -23,11 +23,11 @@ const ExternalLinkInline = ({
   return (
     <Link target="_blank" rel="noopener noreferrer" {...rest}>
       <LinkText>{children}</LinkText>
-      <Space w={4} as="span" />
+      <Space w={2} as="span" />
       <Typo description>
-        <IconExternalLink />
+        <IconExternalLink size="0.8em" />
       </Typo>
-      <Space w={4} as="span" />
+      <Space w={2} as="span" />
     </Link>
   );
 };

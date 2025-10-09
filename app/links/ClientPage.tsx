@@ -24,20 +24,24 @@ import {
   IconTrophy,
 } from "@tabler/icons-react";
 import { DynamicProfile } from "../../dynamicProfile/load";
+import useTranslation from "../../hooks/useTranslation";
+import { translations } from "./translations";
 import LinkItemAtCoderAlgo from "./(external)/LinkItemAtCoderAlgo";
 import LinkItemBaekjoon from "./(external)/LinkItemBaekjoon";
 import LinkItemCodeforces from "./(external)/LinkItemCodeforces";
+import LinkItemSolvedac from "./(external)/LinkItemSolvedac";
 import LinkItemStackOverflow from "./(external)/LinkItemStackOverflow";
 import LinkItemTopcoder from "./(external)/LinkItemTopcoder";
 import { EmailLinkItem, LinkItem } from "./LinkItem";
 import { Links } from "./Links";
-import LinkItemSolvedac from "./(external)/LinkItemSolvedac";
 
 interface Props {
   profile: DynamicProfile;
 }
 
 const ClientPage = ({ profile }: Props) => {
+  const { t } = useTranslation(translations);
+
   const {
     atcoderAlgo,
     baekjoon,
@@ -49,18 +53,18 @@ const ClientPage = ({ profile }: Props) => {
 
   return (
     <>
-      <Typo h2>대표 연락처/링크</Typo>
+      <Typo h2>{t.links}</Typo>
       <Links>
         <EmailLinkItem
           icon={<IconAt />}
-          caption="이메일 (개인)"
+          caption={t.site.email_me}
           src="/img/email.svg"
           email="me@shiftpsh.com"
           color="#fe0c50"
         />
         <EmailLinkItem
           icon={<IconAt />}
-          caption="이메일 (솔브드)"
+          caption={t.site.email_shift}
           src="/img/email-solvedac.svg"
           email="shift@solved.ac"
           color="#17ce3a"
@@ -87,11 +91,11 @@ const ClientPage = ({ profile }: Props) => {
           color="#333333"
         />
       </Links>
-      <Typo h2>사이트/서비스</Typo>
+      <Typo h2>{t.sites_services}</Typo>
       <Links>
         <LinkItem
           icon={<IconArticle />}
-          caption="블로그"
+          caption={t.site.blog}
           description="blog.shift.moe"
           href="https://blog.shift.moe"
           color="#fe0c50"
@@ -118,10 +122,10 @@ const ClientPage = ({ profile }: Props) => {
         />
       </Links>
       <Divider />
-      <Typo h2>다른 모든 연락처/링크</Typo>
-      <Typo description>연락을 확인하지 못할 수도 있습니다.</Typo>
+      <Typo h2>{t.links_all.caption}</Typo>
+      <Typo description>{t.links_all.disclaimer}</Typo>
       <Space h="1em" />
-      <Typo h3>SNS/프로필</Typo>
+      <Typo h3>{t.sns}</Typo>
       <Links>
         <LinkItem
           icon={<IconBrandBluesky />}
@@ -173,7 +177,7 @@ const ClientPage = ({ profile }: Props) => {
           color="#00adee"
         />
       </Links>
-      <Typo h3>프로그래밍/기술</Typo>
+      <Typo h3>{t.programming_tech}</Typo>
       <Links>
         <LinkItem
           icon={<IconBrandNpm />}
@@ -184,7 +188,7 @@ const ClientPage = ({ profile }: Props) => {
         />
         <LinkItemStackOverflow stackOverflow={stackOverflow} />
       </Links>
-      <Typo h3>경쟁 프로그래밍/알고리즘 문제해결</Typo>
+      <Typo h3>{t.competitive_programming}</Typo>
       <Links>
         <LinkItem
           icon={<IconBalloon />}
@@ -220,7 +224,7 @@ const ClientPage = ({ profile }: Props) => {
           color="#1f8ac0"
         />
       </Links>
-      <Typo h3>디자인</Typo>
+      <Typo h3>{t.graphic_design}</Typo>
       <Links>
         <LinkItem
           icon={<IconBrandBehance />}

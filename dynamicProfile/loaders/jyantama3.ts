@@ -16,7 +16,7 @@ const JyantamaResponseGuard = Record({
 
 const URL = `https://5-data.amae-koromo.com/api/v2/pl3/player_stats/118354342/1262304000000/${Date.now()}?mode=26.24.22.25.23.21&tag=476208`;
 
-const resolveJyantamaLevel = (id: number) => {
+const resolveJyantamaLevelKorean = (id: number) => {
   if (id === 20101) return "초심 1";
   if (id === 20102) return "초심 2";
   if (id === 20103) return "초심 3";
@@ -33,6 +33,26 @@ const resolveJyantamaLevel = (id: number) => {
   if (id === 20502) return "작성 2";
   if (id === 20503) return "작성 3";
   if (id >= 20700) return `혼천 ${id - 20700}`;
+  return "???";
+};
+
+const resolveJyantamaLevelEnglish = (id: number) => {
+  if (id === 20101) return "Novice 1";
+  if (id === 20102) return "Novice 2";
+  if (id === 20103) return "Novice 3";
+  if (id === 20201) return "Adept 1";
+  if (id === 20202) return "Adept 2";
+  if (id === 20203) return "Adept 3";
+  if (id === 20301) return "Expert 1";
+  if (id === 20302) return "Expert 2";
+  if (id === 20303) return "Expert 3";
+  if (id === 20401) return "Master 1";
+  if (id === 20402) return "Master 2";
+  if (id === 20403) return "Master 3";
+  if (id === 20501) return "Saint 1";
+  if (id === 20502) return "Saint 2";
+  if (id === 20503) return "Saint 3";
+  if (id >= 20700) return `Celestial ${id - 20700}`;
   return "???";
 };
 
@@ -53,7 +73,10 @@ export const fetchJyantama3 = async () => {
   return {
     ...result,
     levelNumber: result.level.id % 10000,
-    levelTitle: resolveJyantamaLevel(result.level.id),
+    levelTitle: {
+      ko: resolveJyantamaLevelKorean(result.level.id),
+      en: resolveJyantamaLevelEnglish(result.level.id),
+    },
     levelColor: resolveJyantamaColor(result.level.id),
   };
 };
