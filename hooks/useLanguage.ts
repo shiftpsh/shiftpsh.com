@@ -13,10 +13,14 @@ const useLanguage = () => {
   const [lang, setLang] = useState<Language | null>(null);
 
   useEffect(() => {
-    const browserLanguage = navigator.languages.find((language) => {
-      const [lang] = language.split("-");
-      return availableLanguages.includes(lang);
-    }) as Language | undefined;
+    const browserLanguage = navigator.languages
+      .map((x) => {
+        const [lang] = x.split("-");
+        return lang;
+      })
+      .find((lang) => {
+        return availableLanguages.includes(lang);
+      }) as Language | undefined;
 
     setBrowserLang(browserLanguage || null);
   }, []);
@@ -45,6 +49,8 @@ const useLanguage = () => {
       availableLanguages.includes(storedLang)
     ) {
       setLang(storedLang as Language);
+    } else if (lang) {
+      window.localStorage.setItem(localStorageKey, lang as string);
     } else if (browserLang) {
       window.localStorage.setItem(
         localStorageKey,
