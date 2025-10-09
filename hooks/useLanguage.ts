@@ -45,8 +45,13 @@ const useLanguage = () => {
       availableLanguages.includes(storedLang)
     ) {
       setLang(storedLang as Language);
+    } else if (browserLang) {
+      window.localStorage.setItem(
+        localStorageKey,
+        (browserLang || defaultLang) as string
+      );
     }
-  }, [lang]);
+  }, [browserLang, lang]);
 
   useEffect(() => {
     handleLocalStorageUpdate();
