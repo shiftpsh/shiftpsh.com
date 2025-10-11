@@ -3,6 +3,18 @@ import { ICPCRowData } from "./ICPCRow";
 const ICPCData: ICPCRowData[] = [
   {
     year: "2024-2025",
+    phase: "SUPERREGIONAL",
+    venue: "싱가포르",
+    contest: "2025 아시아태평양지역 챔피언십",
+    contestLink: "https://apac.icpc.global/",
+    team: "Redshift (박수현, 채성우, 조원빈)",
+    score: 4,
+    penalty: 319,
+    rank: 46,
+    totalTeams: 65,
+  },
+  {
+    year: "2024-2025",
     phase: "REGIONAL",
     venue: "서울",
     contest: "2024 아시아 서울 리저널",
@@ -32,7 +44,7 @@ const ICPCData: ICPCRowData[] = [
     phase: "SUPERREGIONAL",
     venue: "하노이",
     contest: "2024 아시아태평양지역 챔피언십",
-    contestLink: "https://icpc.asia/",
+    contestLink: "https://apac.icpc.global/",
     team: "Redshift (박수현, 이준석, 채성우)",
     score: 5,
     penalty: 631,

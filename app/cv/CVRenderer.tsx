@@ -63,6 +63,18 @@ const CVItemContent = styled.div`
   min-width: 0;
 `;
 
+const CVSubitemList = styled.ul`
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+  padding-inline-start: 1em;
+  border-left: 1px solid ${({ theme }) => theme.color.border};
+`;
+
+const CVSubitem = styled.li`
+  margin-block-start: 0.25em;
+  margin-block-end: 0.25em;
+`;
+
 interface CVItemRendererProps {
   item: CVItem;
 }
@@ -93,11 +105,11 @@ const CVItemRenderer = ({ item }: CVItemRendererProps) => {
         {date ? <Year>{dateFormat(date, lang)}</Year> : <br />}
         {description && <div>{description[lang]}</div>}
         {subitems && subitems.length > 0 && (
-          <Itemize>
+          <CVSubitemList>
             {subitems.map((subitem, index) => (
-              <Item key={index}>{subitem[lang]}</Item>
+              <CVSubitem key={index}>{subitem[lang]}</CVSubitem>
             ))}
-          </Itemize>
+          </CVSubitemList>
         )}
       </CVItemContent>
     </CVItemLayout>

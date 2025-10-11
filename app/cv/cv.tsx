@@ -73,12 +73,46 @@ export const CV: CVSection[] = [
         },
         subitems: [
           {
-            ko: "프로그래밍 대회 기획 및 알고리즘 문제 연구개발",
-            en: "Planning programming contests and researching and developing algorithm problems",
+            ko: "웹 풀스택 및 DevOps 엔지니어링",
+            en: "Web full-stack and DevOps engineering",
           },
           {
-            ko: "사내 분야불문 여러 최적화 문제의 해결",
-            en: "Solving various optimization problems across different fields within the company",
+            ko: (
+              <>
+                <ExternalLinkInline href="https://www.nypc.co.kr/">
+                  넥슨 청소년 프로그래밍 챌린지 (NYPC)
+                </ExternalLinkInline>{" "}
+                대회 시스템의 인프라 설계 총괄 및 웹 엔지니어링
+              </>
+            ),
+            en: (
+              <>
+                Overall infrastructure design and web engineering for{" "}
+                <ExternalLinkInline href="https://www.nypc.co.kr/">
+                  NEXON Youth Programming Challenge (NYPC)
+                </ExternalLinkInline>{" "}
+                contest system
+              </>
+            ),
+          },
+          {
+            ko: (
+              <>
+                <ExternalLinkInline href="https://battle.nypc.co.kr/ko">
+                  NYPC 코드 배틀
+                </ExternalLinkInline>{" "}
+                신규 대회 기획 및 출제
+              </>
+            ),
+            en: (
+              <>
+                Planning and setting problems for the new{" "}
+                <ExternalLinkInline href="https://battle.nypc.co.kr/ko">
+                  NYPC CODE BATTLE
+                </ExternalLinkInline>{" "}
+                contest
+              </>
+            ),
           },
         ],
       },
@@ -119,8 +153,8 @@ export const CV: CVSection[] = [
                 <ExternalLinkInline href="https://solved.ac">
                   solved.ac
                 </ExternalLinkInline>{" "}
-                사이트의 개발 및 유지보수 (프론트엔드/백엔드/DevOps) &ndash;
-                Next.js, Express, AWS
+                사이트의 개발 및 유지보수 (웹 풀스택/DevOps) &ndash; Next.js,
+                Express, AWS
               </>
             ),
             en: (
@@ -129,7 +163,7 @@ export const CV: CVSection[] = [
                 <ExternalLinkInline href="https://solved.ac">
                   solved.ac
                 </ExternalLinkInline>{" "}
-                website (frontend/backend/DevOps) &ndash; Next.js, Express, AWS
+                website (web fullstack/DevOps) &ndash; Next.js, Express, AWS
               </>
             ),
           },
@@ -144,7 +178,7 @@ export const CV: CVSection[] = [
             ),
             en: (
               <>
-                Coordination and review of contests on{" "}
+                Coordination and reviewing of contests on{" "}
                 <ExternalLinkInline href="https://solved.ac/arena">
                   Arena
                 </ExternalLinkInline>
@@ -214,35 +248,16 @@ export const CV: CVSection[] = [
             ko: (
               <>
                 <ExternalLinkInline href="https://www.nypc.co.kr/">
-                  넥슨 청소년 프로그래밍 챌린지 (NYPC)
+                  NYPC
                 </ExternalLinkInline>{" "}
-                대회 참가자 시스템 프론트엔드 개발 &ndash; React
+                대회 시스템 프론트엔드 개발, 선제/출제
               </>
             ),
             en: (
               <>
-                Developed the frontend of the participant system for the{" "}
+                Frontend development and problemsetting for the{" "}
                 <ExternalLinkInline href="https://www.nypc.co.kr/">
-                  NEXON Youth Programming Challenge (NYPC)
-                </ExternalLinkInline>{" "}
-                &ndash; React
-              </>
-            ),
-          },
-          {
-            ko: (
-              <>
-                <ExternalLinkInline href="https://www.nypc.co.kr/">
-                  넥슨 청소년 프로그래밍 챌린지 (NYPC)
-                </ExternalLinkInline>{" "}
-                출제사무국 선제/출제위원
-              </>
-            ),
-            en: (
-              <>
-                Problem setter and committee member for the{" "}
-                <ExternalLinkInline href="https://www.nypc.co.kr/">
-                  NEXON Youth Programming Challenge (NYPC)
+                  NYPC
                 </ExternalLinkInline>
               </>
             ),
@@ -791,6 +806,34 @@ export const CV: CVSection[] = [
       en: "Other Activities",
     },
     items: [
+      {
+        date: [new Date("2025-06-01T00:00:00+09:00"), "present"],
+        bold: true,
+        title: {
+          ko: (
+            <>
+              <ExternalLinkInline href="https://icpckorea.org/">
+                ICPC Korea Site
+              </ExternalLinkInline>{" "}
+              기술위원
+            </>
+          ),
+          en: (
+            <>
+              Technical Committee Member,{" "}
+              <ExternalLinkInline href="https://icpckorea.org/">
+                ICPC Korea Site
+              </ExternalLinkInline>
+            </>
+          ),
+        },
+        subitems: [
+          {
+            ko: "2025년 국내 온라인 예선 인프라 담당",
+            en: "In charge of infrastructure for the 2025 national first round contest (online)",
+          },
+        ],
+      },
       {
         date: [
           new Date("2024-09-01T00:00:00+09:00"),
