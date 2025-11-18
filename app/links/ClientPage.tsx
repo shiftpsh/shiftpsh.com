@@ -20,12 +20,12 @@ import {
   IconBrandVsco,
   IconBrandYoutube,
   IconCheck,
+  IconHammer,
   IconSquareLetterC,
   IconTrophy,
 } from "@tabler/icons-react";
 import { DynamicProfile } from "../../dynamicProfile/load";
 import useTranslation from "../../hooks/useTranslation";
-import { translations } from "./translations";
 import LinkItemAtCoderAlgo from "./(external)/LinkItemAtCoderAlgo";
 import LinkItemBaekjoon from "./(external)/LinkItemBaekjoon";
 import LinkItemCodeforces from "./(external)/LinkItemCodeforces";
@@ -34,6 +34,7 @@ import LinkItemStackOverflow from "./(external)/LinkItemStackOverflow";
 import LinkItemTopcoder from "./(external)/LinkItemTopcoder";
 import { EmailLinkItem, LinkItem } from "./LinkItem";
 import { Links } from "./Links";
+import { translations } from "./translations";
 
 interface Props {
   profile: DynamicProfile;
@@ -98,6 +99,13 @@ const ClientPage = ({ profile }: Props) => {
           caption={t.site.blog}
           description="blog.shift.moe"
           href="https://blog.shift.moe"
+          color="#fe0c50"
+        />
+        <LinkItem
+          icon={<IconHammer />}
+          caption={t.site.tools}
+          description="tools.shiftpsh.com"
+          href="https://tools.shiftpsh.com"
           color="#fe0c50"
         />
         <LinkItem

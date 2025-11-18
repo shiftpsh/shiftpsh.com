@@ -20,6 +20,7 @@ const KO = {
     email_me: "이메일 (개인)",
     email_shift: "이메일 (solved.ac)",
     blog: "블로그",
+    tools: "도구 모음",
   },
   games: {
     copy_uid: (
@@ -65,6 +66,7 @@ const EN = {
     email_me: "Email (Personal)",
     email_shift: "Email (solved.ac)",
     blog: "Blog",
+    tools: "Tools",
   },
   games: {
     copy_uid: (
