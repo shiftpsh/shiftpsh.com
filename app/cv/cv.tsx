@@ -34,6 +34,10 @@ export const CV: CVSection[] = [
             </>
           ),
         },
+        description: {
+          ko: <>3.34/4.3</>,
+          en: <>3.34/4.3</>,
+        },
       },
     ],
   },
@@ -807,7 +811,10 @@ export const CV: CVSection[] = [
     },
     items: [
       {
-        date: [new Date("2025-06-01T00:00:00+09:00"), "present"],
+        date: [
+          new Date("2025-06-01T00:00:00+09:00"),
+          new Date("2025-11-23T00:00:00+09:00"),
+        ],
         bold: true,
         title: {
           ko: (
@@ -829,8 +836,8 @@ export const CV: CVSection[] = [
         },
         subitems: [
           {
-            ko: "2025년 국내 온라인 예선 인프라 담당",
-            en: "In charge of infrastructure for the 2025 national first round contest (online)",
+            ko: "2025년 국내 예선 및 온사이트 리저널 인프라 담당",
+            en: "In charge of infrastructure for the 2025 national first round and the onsite regionals",
           },
         ],
       },
