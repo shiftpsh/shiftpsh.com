@@ -71,12 +71,10 @@ const resolveImageUrl: ResolveImageUrlFn = (
 ) => {
   if (typeof src !== "string") return null;
   if (/\.\//.test(src)) {
-    const localFolderPath = path.join(folder, slug);
-    const localImgPath = src
-      .replace(/^\.\//, `${localFolderPath}/`)
-      .replace(CWD, "")
-      .replace(/^\/?public/, "");
-    return localImgPath;
+    return (
+      `https://` +
+      `static.shiftpsh.com/hanbyeol/${slug}/${src}`.replace(/\/+/g, "/")
+    );
   }
   return src as any;
 };
@@ -95,15 +93,14 @@ export const getPostBySlug = async (slug: string, folder: string) => {
   const { title, date, thumbnail, mainImage, downloadableImage, tags, link } =
     FrontmatterGuard.check(frontmatter);
 
-  const resolvedMainImage =
+  const resolvedMainImageUrl =
     resolveImageUrl(mainImage, slug, folder) || undefined;
 
-  const resolvedDownloadableImage =
-    resolveImageUrl(downloadableImage, slug, folder) || resolvedMainImage;
+  const resolvedDownloadableImageUrl =
+    resolveImageUrl(downloadableImage, slug, folder) || resolvedMainImageUrl;
 
-  const downloadableImageSize = resolvedDownloadableImage
-    ? fs.statSync(path.join(CWD, "public", resolvedDownloadableImage)).size
-    : null;
+  // TODO fetch image size using the S3 API
+  const downloadableImageSize = null;
 
   return {
     meta: {
@@ -112,8 +109,8 @@ export const getPostBySlug = async (slug: string, folder: string) => {
       // TODO create and replace thumnail image
       thumbnail:
         resolveImageUrl(thumbnail, slug, folder) || "/img/logo-splash.svg",
-      mainImage: resolvedMainImage,
-      downloadableImage: resolvedDownloadableImage,
+      mainImage: resolvedMainImageUrl,
+      downloadableImage: resolvedDownloadableImageUrl,
       downloadableImageSize,
       tags: tags || [],
       slug: fileSlug,
