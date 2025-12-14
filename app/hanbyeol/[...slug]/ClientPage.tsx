@@ -34,6 +34,12 @@ const TopVideo = styled.video`
   object-fit: scale-down;
 `;
 
+const CopyrightNotice = styled.p`
+  font-size: 90%;
+  color: ${({ theme }) => theme.color.text.secondary.main};
+  margin: 4px 0;
+`;
+
 interface Props {
   frontmatter: Frontmatter;
 }
@@ -53,6 +59,9 @@ const ClientPage = ({ frontmatter, children }: PropsWithChildren<Props>) => {
 
   const type = /\.mp4$/.test(mainImage || "") ? "비디오" : "이미지";
   const mainIsNotOriginal = mainImage !== downloadableImage;
+  const tagCopyrights = tags
+    ?.map((tag) => getTag(tag).copyrightRender)
+    .filter((v) => v);
 
   return (
     <>
@@ -95,6 +104,14 @@ const ClientPage = ({ frontmatter, children }: PropsWithChildren<Props>) => {
           </>
         )}
         {children}
+        {tagCopyrights.length > 0 && (
+          <>
+            <Space h={32} />
+            {tagCopyrights.map((copyright, index) => (
+              <CopyrightNotice key={index}>{copyright}</CopyrightNotice>
+            ))}
+          </>
+        )}
         <Space h={80} />
       </MainContainer>
     </>

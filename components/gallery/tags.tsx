@@ -5,6 +5,7 @@ export interface TagData {
   href?: string;
   aliases?: string[];
   render?: string | JSX.Element;
+  copyrightRender?: string | JSX.Element;
 }
 
 export interface Tag extends TagData {
@@ -26,6 +27,30 @@ const Character = ({ name }: { name: string }) => (
     <Typo description small>
       캐릭터
     </Typo>
+  </>
+);
+
+const CopyrightLink = ({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}) => (
+  <>
+    &copy;{" "}
+    <a href={href} target="_blank" rel="noopener noreferrer">
+      {children}
+    </a>
+  </>
+);
+
+const CopyrightHavana = ({ name }: { name: string }) => (
+  <>
+    {name}{" "}
+    <CopyrightLink href="https://twitter.com/havana723_">
+      havana723
+    </CopyrightLink>
   </>
 );
 
@@ -74,58 +99,94 @@ export const TAGS: {
     render: <Character name="은하" />,
     src: "/tag/character-eunha.png",
     aliases: ["은하", "havana723"],
+    copyrightRender: <CopyrightHavana name="은하" />,
   },
   "character:hina": {
     render: <Character name="히나" />,
     src: "/tag/character-hina.png",
     aliases: ["히나", "havana723"],
+    copyrightRender: <CopyrightHavana name="히나" />,
   },
   "character:semia": {
     render: <Character name="세미아" />,
     aliases: ["세미아"],
+    copyrightRender: (
+      <>
+        세미아{" "}
+        <CopyrightLink href="https://stonejjun.tistory.com/">
+          stonejjun
+        </CopyrightLink>
+      </>
+    ),
   },
   "character:imos": {
     render: <Character name="いもす" />,
     src: "/tag/character-imos.png",
     aliases: ["이모스", "いもす"],
+    copyrightRender: (
+      <>
+        いもす{" "}
+        <CopyrightLink href="https://twitter.com/imos">いもす</CopyrightLink>
+      </>
+    ),
+  },
+  "character:bebe": {
+    render: <Character name="ベベ" />,
+    src: "/tag/character-bebe.png",
+    aliases: ["베베", "ベベ"],
+    copyrightRender: (
+      <>
+        ベベ(NANANIMALS){" "}
+        <CopyrightLink href="https://nanahira.jp/">ななひら</CopyrightLink>
+      </>
+    ),
   },
   "character:bom": {
     render: <Character name="봄" />,
     src: "/tag/character-bom.png",
     aliases: ["gs18115"],
+    copyrightRender: <CopyrightHavana name="봄" />,
   },
   "character:hyea": {
     render: <Character name="혜아" />,
     src: "/tag/character-hyea.png",
     aliases: ["hyea"],
+    copyrightRender: <CopyrightHavana name="혜아" />,
   },
   "character:solvedac-bronze": {
     render: <Character name="브론즈" />,
     src: "/tag/character-solvedac-bronze.jpg",
+    copyrightRender: <CopyrightHavana name="브론즈" />,
   },
   "character:solvedac-silver": {
     render: <Character name="실버" />,
     src: "/tag/character-solvedac-silver.jpg",
+    copyrightRender: <CopyrightHavana name="실버" />,
   },
   "character:solvedac-gold": {
     render: <Character name="골드" />,
     src: "/tag/character-solvedac-gold.jpg",
+    copyrightRender: <CopyrightHavana name="골드" />,
   },
   "character:solvedac-platinum": {
     render: <Character name="플래티넘" />,
     src: "/tag/character-solvedac-platinum.jpg",
+    copyrightRender: <CopyrightHavana name="플래티넘" />,
   },
   "character:solvedac-diamond": {
     render: <Character name="다이아몬드" />,
     src: "/tag/character-solvedac-diamond.jpg",
+    copyrightRender: <CopyrightHavana name="다이아몬드" />,
   },
   "character:solvedac-ruby": {
     render: <Character name="루비" />,
     src: "/tag/character-solvedac-ruby.jpg",
+    copyrightRender: <CopyrightHavana name="루비" />,
   },
   "character:solvedac-master": {
     render: <Character name="마스터" />,
     src: "/tag/character-solvedac-master.jpg",
+    copyrightRender: <CopyrightHavana name="마스터" />,
   },
   "character:shifft": {
     render: (
