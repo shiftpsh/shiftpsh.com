@@ -130,17 +130,6 @@ export const TAGS: {
       </>
     ),
   },
-  "character:bebe": {
-    render: <Character name="ベベ" />,
-    src: "/tag/character-bebe.png",
-    aliases: ["베베", "ベベ"],
-    copyrightRender: (
-      <>
-        ベベ(NANANIMALS){" "}
-        <CopyrightLink href="https://nanahira.jp/">ななひら</CopyrightLink>
-      </>
-    ),
-  },
   "character:bom": {
     render: <Character name="봄" />,
     src: "/tag/character-bom.png",
@@ -199,6 +188,40 @@ export const TAGS: {
     ),
     src: "/tag/character-shifft.png",
     aliases: ["메이플"],
+  },
+  "character:bebe": {
+    render: <Character name="ベベ" />,
+    src: "/tag/character-bebe.png",
+    aliases: ["베베", "ベベ"],
+    copyrightRender: (
+      <>
+        ベベ(NANANIMALS){" "}
+        <CopyrightLink href="https://nanahira.jp/">ななひら</CopyrightLink>
+      </>
+    ),
+  },
+  "character:lumi": {
+    render: <Character name="루미" />,
+    src: "/tag/character-lumi.png",
+    aliases: ["루미", "lumi", "djeleanor2"],
+    copyrightRender: (
+      <>
+        루미{" "}
+        <CopyrightLink href="https://solved.ac/profile/djeleanor2">
+          djeleanor2
+        </CopyrightLink>
+      </>
+    ),
+  },
+  "character:maimai-ras": {
+    render: <Character name="ラズ" />,
+    src: "/tag/character-maimai-ras.png",
+    aliases: ["ラズ", "ras", "라즈"],
+    copyrightRender: (
+      <>
+        ラズ (maimai) <CopyrightLink href="https://www.sega.com">SEGA</CopyrightLink>
+      </>
+    ),
   },
   "solvedac-background": {
     render: "solved.ac 배경",
