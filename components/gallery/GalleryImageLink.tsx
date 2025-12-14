@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { useIntersectionObserver } from "../../contexts/IntersectionObserverContext";
 import { Frontmatter } from "../../utils/post";
+import { useSearchParams } from "next/navigation";
 
 const GalleryItem = styled.li`
   aspect-ratio: 1;
@@ -78,6 +79,7 @@ interface Props {
 }
 
 const GalleryImageLink = ({ prefix, item }: Props) => {
+  const searchParams = useSearchParams();
   const { register, deregister } = useIntersectionObserver();
   const galleryItemRef = useRef<HTMLLIElement>(null);
 
@@ -98,7 +100,14 @@ const GalleryImageLink = ({ prefix, item }: Props) => {
     return () => {
       deregister();
     };
-  }, [deregister, imageShown, item.thumbnail, register]);
+  }, [
+    deregister,
+    imageShown,
+    item.thumbnail,
+    register,
+    // Re-register the observer when search params change
+    searchParams,
+  ]);
 
   return (
     <GalleryItem ref={galleryItemRef}>

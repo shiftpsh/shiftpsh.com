@@ -52,7 +52,7 @@ export const IntersectionObserverProvider = ({
       },
       {
         rootMargin: "120px",
-        threshold: 0.1,
+        threshold: [0, 0.1, 1],
       }
     );
     return () => {
