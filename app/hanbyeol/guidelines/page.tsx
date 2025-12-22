@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  Divider,
   Enumerate,
   Item,
   Itemize,
@@ -8,10 +9,10 @@ import {
   Space,
   Typo,
 } from "@solved-ac/ui-react";
+import { IconAt } from "@tabler/icons-react";
 import MainContainer from "../../../components/MainContainer";
 import TitieBreadcrumb from "../../../components/TitleBreadcrumb";
 import { EmailLinkItem } from "../../links/LinkItem";
-import { IconAt } from "@tabler/icons-react";
 
 const Page = () => {
   return (
@@ -106,16 +107,31 @@ const Page = () => {
         가이드라인이 개정되면서 창작자에게 발생하는 불이익에 대해서는 권리자가
         책임지지 않습니다.
       </Paragraph>
-      <Typo h2>6. 문의</Typo>
+      <Typo h2>6. 문의 및 주의사항</Typo>
       <Paragraph>
         본 가이드라인과 관련하여 궁금하신 점이 있으시다면, 아래 연락처로 문의
         부탁드립니다.
       </Paragraph>
       <EmailLinkItem
+        color="#ff3b57"
         email="me@shiftpsh.com"
         src="/img/email.svg"
         icon={<IconAt />}
         caption="문의 이메일"
+      />
+      <Paragraph>
+        <b>
+          본 가이드라인은 솔브드에 등장하는 캐릭터들 중 한별이를 제외한 캐릭터에
+          대한 사항을 포함하지 않습니다.
+        </b>{" "}
+        해당 캐릭터들을 기반으로 한 2차 창작 활동에 대해서는 아래의 각
+        권리자에게 직접 문의해 주시기 바랍니다.
+      </Paragraph>
+      <EmailLinkItem
+        email="me@havana.moe"
+        src="/img/email-havana.svg"
+        icon={<IconAt />}
+        caption="은하, 봄, 및 솔브드 티어 캐릭터"
       />
       <Space h={160} />
     </MainContainer>

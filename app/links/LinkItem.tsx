@@ -1,11 +1,13 @@
 import styled from "@emotion/styled";
 import { IconCopy, IconExternalLink } from "@tabler/icons-react";
-import { ElementType, ReactNode, useEffect, useState } from "react";
 import { transparentize } from "polished";
+import { ReactNode, useEffect, useState } from "react";
 
-const LinkRow = styled.a<{
+interface LinkRowProps {
   $color?: string;
-}>`
+}
+
+const LinkRow = styled.a<LinkRowProps>`
   display: flex;
   align-items: center;
   text-decoration: none;
