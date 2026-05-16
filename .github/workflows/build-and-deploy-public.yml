@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Install dependencies
         run: yarn
       - name: Build
@@ -19,24 +19,40 @@ jobs:
   build-stable:
     # if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
     env:
-      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       PUBLIC_URL: https://shiftpsh.com
       GENERATE_SOURCEMAP: false
     steps:
       - name: Check out repository code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Install dependencies
         run: yarn
       - name: Build
         run: yarn build
-      - name: Deploy
-        uses: reggionick/s3-deploy@v3
+      - name: Configure AWS credentials (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
         with:
-          folder: out
-          bucket: ${{ vars.S3_BUCKET_PRODUCTION }}
-          bucket-region: ${{ vars.S3_BUCKET_REGION }}
-          dist-id: ${{ vars.CLOUDFRONT_DISTRIBUTION_ID_PRODUCTION }}
-          no-cache: true
-          private: true
+          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
+          aws-region: ${{ vars.S3_BUCKET_REGION }}
+      - name: Upload to S3 (immutable assets)
+        run: |
+          aws s3 sync out s3://${{ vars.S3_BUCKET_PRODUCTION }} \
+            --exclude "*" \
+            --include "_next/static/*" \
+            --cache-control "public, max-age=31536000, immutable" \
+            --acl private
+      - name: Upload to S3 (HTML and other)
+        run: |
+          aws s3 sync out s3://${{ vars.S3_BUCKET_PRODUCTION }} \
+            --delete \
+            --exclude "_next/static/*" \
+            --cache-control "public, max-age=0, must-revalidate" \
+            --acl private
+      - name: Invalidate CloudFront
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id ${{ vars.CLOUDFRONT_DISTRIBUTION_ID_PRODUCTION }} \
+            --paths "/*"
