@@ -32,12 +32,21 @@ const KO = {
     caption: "주력 게임",
     jyantama: {
       title: "작혼: 리치 마작",
-      server: "한국/글로벌 서버",
+      server: "한국/글로벌",
     },
     maplestory: {
       title: "메이플스토리",
       server: "오로라",
       class: "아크",
+    },
+    mobinogi: {
+      title: "마비노기 모바일",
+      region: "한국",
+      server: "메이븐",
+      class: "사제",
+    },
+    ongeki: {
+      region: "일본",
     },
   },
   games_all: {
@@ -78,12 +87,21 @@ const EN = {
     caption: "Main Games",
     jyantama: {
       title: "Mahjong Soul",
-      server: "Global Server",
+      server: "Global",
     },
     maplestory: {
       title: "MapleStory",
       server: "Aurora",
       class: "Ark",
+    },
+    mobinogi: {
+      title: "Mabinogi Mobile",
+      region: "Korea",
+      server: "Maven",
+      class: "Priest",
+    },
+    ongeki: {
+      region: "Japan",
     },
   },
   games_all: {

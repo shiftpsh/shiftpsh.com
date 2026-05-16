@@ -1,10 +1,10 @@
-import { Typo } from "@solved-ac/ui-react";
 import {
   Jyantama3Response,
   Jyantama4Response,
 } from "../../../../dynamicProfile/loaders";
 import useTranslation from "../../../../hooks/useTranslation";
-import { CopyLinkItem, GameIcon } from "../../LinkItem";
+import { GameLinkItem } from "../../GameLinkItem";
+import { GameIcon } from "../../LinkItem";
 import { translations } from "../../translations";
 
 const LinkItemJyantama = ({
@@ -21,42 +21,27 @@ const LinkItemJyantama = ({
       : jyantama4;
 
   return (
-    <CopyLinkItem
+    <GameLinkItem
       icon={<GameIcon src="/img/games/jyantama-48px.png" />}
-      caption={
-        <>
-          {t.games.jyantama.title}
-          <br />
-          <Typo description small>
-            {t.games.jyantama.server}
-          </Typo>
-        </>
+      title={t.games.jyantama.title}
+      subtitle={t.games.jyantama.server}
+      caption="shiftpsh"
+      rating={
+        higherRatingData ? (
+          <>
+            ◇{jyantama4?.levelTitle?.[lang] || "???"}/▽
+            {jyantama3?.levelTitle?.[lang] || "???"}
+          </>
+        ) : null
       }
-      description={
-        <>
-          {higherRatingData ? (
-            <>
-              <span style={{ color: higherRatingData.levelColor }}>
-                shiftpsh
-              </span>{" "}
-              <Typo description tabular>
-                (◇
-                {jyantama4?.levelTitle?.[lang] || "???"}/▽
-                {jyantama3?.levelTitle?.[lang] || "???"})
-              </Typo>
-            </>
-          ) : (
-            "shiftpsh"
-          )}
-          <br />
-          <Typo readable small>
-            80149226
-          </Typo>
-        </>
-      }
-      copyText="80149226"
-      copyTextMessage={t.games.uid_copied}
+      description="80149226"
+      href="https://ikeda.sapk.ch/player/118354342/24"
+      src="/img/games/bg/1hime.png"
+      bgWidth={280}
+      bgTop={-80}
+      bgRight={-50}
       color={higherRatingData ? higherRatingData.levelColor : "#cd3b40"}
+      ratingBorder={higherRatingData ? higherRatingData.levelColor : "#cd3b40"}
     />
   );
 };

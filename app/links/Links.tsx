@@ -5,3 +5,13 @@ export const Links = styled.div`
   flex-direction: column;
   gap: 8px;
 `;
+
+export const GameLinks = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+
+  @media (max-width: 720px) {
+    grid-template-columns: 1fr;
+  }
+`;

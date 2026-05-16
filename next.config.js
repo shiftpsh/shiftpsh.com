@@ -4,6 +4,9 @@ const nextConfig = {
   output: "export",
   trailingSlash: true,
   transpilePackages: ["next-mdx-remote"],
+  compiler: {
+    emotion: true,
+  },
 };
 
 module.exports = nextConfig;
