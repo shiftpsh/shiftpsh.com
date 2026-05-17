@@ -21,6 +21,7 @@ export type CVItem = {
     en: ReactNode;
   };
   subitems?: CVSubitem[];
+  excludeFromTotal?: boolean;
 };
 
 export type CVSection = {
@@ -29,4 +30,5 @@ export type CVSection = {
     en: string;
   };
   items: CVItem[];
+  showTotal?: boolean;
 };

@@ -8,6 +8,39 @@ import Year from "./Year";
 import styled from "@emotion/styled";
 import { transparentize } from "polished";
 
+const monthsBetween = (start: Date, end: Date): number => {
+  const m =
+    (end.getFullYear() - start.getFullYear()) * 12 +
+    (end.getMonth() - start.getMonth());
+  return Math.max(0, m);
+};
+
+const computeTotalMonths = (items: CVItem[], now: Date): number => {
+  let total = 0;
+  for (const item of items) {
+    if (item.excludeFromTotal) continue;
+    const d = item.date;
+    if (!Array.isArray(d)) continue;
+    const [start, endRaw] = d;
+    const end = endRaw === "present" ? now : endRaw;
+    total += monthsBetween(start, end);
+  }
+  return total;
+};
+
+const formatDuration = (months: number, lang: string): string => {
+  const y = Math.floor(months / 12);
+  const m = months % 12;
+  if (lang === "ko") {
+    if (y && m) return `${y}년 ${m}개월`;
+    if (y) return `${y}년`;
+    return `${m}개월`;
+  }
+  if (y && m) return `${y}y ${m}mos`;
+  if (y) return `${y} yrs`;
+  return `${m} mos`;
+};
+
 const dateFormat = (date: CVDate, lang: string, short?: boolean): string => {
   const i18nfo = lang === "ko" ? "ko-KR" : "en-US";
   if (date === "present") {
@@ -75,6 +108,15 @@ const CVSubitem = styled.li`
   margin-block-end: 0.25em;
 `;
 
+const SectionTotalAside = styled.span`
+  float: right;
+  margin-top: 0.6em;
+  color: ${({ theme }) => theme.color.text.secondary.main};
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0;
+`;
+
 interface CVItemRendererProps {
   item: CVItem;
 }
@@ -122,11 +164,19 @@ interface CVRendererProps {
 
 export const CVRenderer = ({ cv }: CVRendererProps) => {
   const { lang } = useTranslation();
+  const now = new Date();
   return (
     <>
       {cv.map((section, index) => (
         <Fragment key={index}>
-          <Typo h2>{section.title[lang]}</Typo>
+          <Typo h2>
+            {section.title[lang]}
+            {section.showTotal && (
+              <SectionTotalAside>
+                {formatDuration(computeTotalMonths(section.items, now), lang)}
+              </SectionTotalAside>
+            )}
+          </Typo>
           {section.items.map((item, itemIndex) => (
             <CVItemRenderer key={itemIndex} item={item} />
           ))}

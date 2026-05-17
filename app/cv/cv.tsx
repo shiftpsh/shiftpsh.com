@@ -47,6 +47,7 @@ export const CV: CVSection[] = [
       ko: "경력",
       en: "Experience",
     },
+    showTotal: true,
     items: [
       {
         date: [new Date("2025-01-06T00:00:00+09:00"), "present"],
@@ -128,6 +129,7 @@ export const CV: CVSection[] = [
         iconSrc: "solvedac.svg",
         color: "#17ce3a",
         bold: true,
+        excludeFromTotal: true,
         title: {
           ko: (
             <>
