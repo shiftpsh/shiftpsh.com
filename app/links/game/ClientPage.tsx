@@ -41,7 +41,7 @@ const Page = ({ profile }: { profile: GameDynamicProfile }) => {
           bgRight={15}
           rating={
             <>
-              <IconSwords /> 61,397
+              <IconSwords /> 63,130
             </>
           }
           color="#211f1e"
