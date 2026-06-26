@@ -16,7 +16,7 @@ const LinkItemMaimai = ({ maimai }: { maimai: MaimaiResponse | null }) => {
       bgWidth={210}
       bgTop={-40}
       bgRight={-20}
-      rating="16106"
+      rating="16112"
       ratingBorder="linear-gradient(120deg, #ff00a8, #d600ff, #0070ff, #00b8ff, #00e3a0, #ffe600, #ffac00, #ff6a00, #ff0040)"
     />
   );
