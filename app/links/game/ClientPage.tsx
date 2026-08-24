@@ -41,7 +41,7 @@ const Page = ({ profile }: { profile: GameDynamicProfile }) => {
           bgRight={15}
           rating={
             <>
-              <IconSwords /> 88,433
+              <IconSwords /> 103,617
             </>
           }
           color="#211f1e"
@@ -58,7 +58,7 @@ const Page = ({ profile }: { profile: GameDynamicProfile }) => {
           bgWidth={280}
           bgTop={-80}
           bgRight={-50}
-          rating={`Lv.287 ${t.games.maplestory.class}`}
+          rating={`Lv.289 ${t.games.maplestory.class}`}
           color="#ff9d00"
         />
         <GameLinkItem
