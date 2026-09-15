@@ -41,7 +41,7 @@ const Page = ({ profile }: { profile: GameDynamicProfile }) => {
           bgRight={15}
           rating={
             <>
-              <IconSwords /> 103,617
+              <IconSwords /> 108,071
             </>
           }
           color="#211f1e"
@@ -58,7 +58,7 @@ const Page = ({ profile }: { profile: GameDynamicProfile }) => {
           bgWidth={280}
           bgTop={-80}
           bgRight={-50}
-          rating={`Lv.289 ${t.games.maplestory.class}`}
+          rating={`Lv.290 ${t.games.maplestory.class}`}
           color="#ff9d00"
         />
         <GameLinkItem
@@ -72,9 +72,9 @@ const Page = ({ profile }: { profile: GameDynamicProfile }) => {
           bgWidth={160}
           bgTop={0}
           bgRight={0}
-          rating="18.789"
+          rating="19.175"
           color="#ff9bb3"
-          ratingBorder="linear-gradient(135deg, #ffe387 28%,#fff8c9 50%,#ffce68 51%,#fff8c9 80%)"
+          ratingBorder="linear-gradient(135deg,#f7fe12 20%,#00ffff 34%,#fe70d3 66%)"
         />
         <LinkItemJyantama jyantama3={jyantama3} jyantama4={jyantama4} />
       </GameLinks>
